@@ -9,5 +9,10 @@ python -m black --check .
 python -m mypy src
 ```
 
-Tests cover coordinate parsing, text normalization, source normalization, data quality reporting, filters, search ranking, app import, layout construction, and GeoJSON marker generation.
+Browser smoke tests use Playwright. Install Chromium once before running the full suite:
 
+```powershell
+python -m playwright install chromium
+```
+
+Tests cover coordinate parsing, text normalization, source normalization, data quality reporting, filters, search ranking, app import, layout construction, GeoJSON marker generation, selection state, details-panel visibility, and browser-level map/search/filter smoke paths.

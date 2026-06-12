@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any, Literal, SupportsInt, TypedDict, cast
 
-from dash import Input, Output, State, clientside_callback, ctx, no_update
+from dash import Input, Output, State, ctx, no_update
 
 
 class LayoutState(TypedDict):
@@ -104,6 +104,26 @@ def details_panel_class(state: dict[str, Any] | None) -> str:
     return " ".join(classes)
 
 
+def layout_state_for_trigger(
+    triggered_id: Any,
+    selected_id: str | None,
+    state: dict[str, Any] | None,
+) -> LayoutState | Any:
+    """Resolve the next layout state for a Dash trigger."""
+
+    if triggered_id in {"sidebar-toggle", "map-sidebar-toggle"}:
+        return reduce_layout_state(state, "toggle_sidebar")
+    if triggered_id in {"full-map-toggle", "map-full-map-toggle"}:
+        return reduce_layout_state(state, "toggle_full_map")
+    if triggered_id in {"fit-screen", "map-fit-screen"}:
+        return reduce_layout_state(state, "fit_to_screen")
+    if triggered_id == "close-details":
+        return reduce_layout_state(state, "close_details")
+    if triggered_id == "selected-location-id":
+        return reduce_layout_state(state, "open_details" if selected_id else "close_details")
+    return no_update
+
+
 def register_layout_callbacks(app: Any) -> None:
     """Register layout state and Leaflet resize callbacks."""
 
@@ -115,7 +135,6 @@ def register_layout_callbacks(app: Any) -> None:
         Input("map-full-map-toggle", "n_clicks"),
         Input("fit-screen", "n_clicks"),
         Input("map-fit-screen", "n_clicks"),
-        Input("close-details", "n_clicks"),
         Input("selected-location-id", "data"),
         State("layout-state", "data"),
         prevent_initial_call=True,
@@ -127,22 +146,10 @@ def register_layout_callbacks(app: Any) -> None:
         _map_full_map_clicks: int | None,
         _fit_clicks: int | None,
         _map_fit_clicks: int | None,
-        _close_details_clicks: int | None,
         selected_id: str | None,
         state: dict[str, Any] | None,
     ) -> LayoutState | Any:
-        triggered = ctx.triggered_id
-        if triggered in {"sidebar-toggle", "map-sidebar-toggle"}:
-            return reduce_layout_state(state, "toggle_sidebar")
-        if triggered in {"full-map-toggle", "map-full-map-toggle"}:
-            return reduce_layout_state(state, "toggle_full_map")
-        if triggered in {"fit-screen", "map-fit-screen"}:
-            return reduce_layout_state(state, "fit_to_screen")
-        if triggered == "close-details":
-            return reduce_layout_state(state, "close_details")
-        if triggered == "selected-location-id" and selected_id:
-            return reduce_layout_state(state, "open_details")
-        return no_update
+        return layout_state_for_trigger(ctx.triggered_id, selected_id, state)
 
     @app.callback(
         Output("app-shell", "className"),
@@ -162,7 +169,7 @@ def register_layout_callbacks(app: Any) -> None:
         side_label = sidebar_label(state)
         return shell_class, panel_class, full_label, full_label, side_label, side_label
 
-    clientside_callback(
+    app.clientside_callback(
         """
         function(layoutState) {
             const resizeMap = () => {

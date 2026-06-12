@@ -76,7 +76,7 @@ The dashboard is designed as a full-height geospatial workspace. The top bar and
 - `Collapse Sidebar`: hides the filter/search/data-quality sidebar to give the map more width; use `Show Sidebar` to restore it.
 - `Reset View`: returns the map to the initial Eurasian/global view.
 
-The details panel opens as a drawer when a location is selected and can be closed without clearing the selected marker. On narrower screens, filters become a drawer and details become a bottom sheet.
+The details panel opens as a drawer when a location is selected. Closing the details panel clears the active selection, while `Clear Selection` does the same from inside the panel. On narrower screens, filters become a drawer and details become a bottom sheet.
 
 Known browser-resize note: Leaflet sometimes needs an explicit resize after parent layout changes. The app sends a small clientside resize signal after Full Map, Fit to Screen, sidebar collapse, and details drawer changes so tiles and clustered markers repaint correctly.
 
@@ -87,6 +87,7 @@ python -m venv .venv
 .\.venv\Scripts\activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+python -m playwright install chromium
 python app.py
 ```
 
@@ -103,6 +104,12 @@ python -m pytest
 python -m ruff check .
 python -m black --check .
 python -m mypy src
+```
+
+Browser smoke tests use Playwright with Chromium. Install the browser once with:
+
+```powershell
+python -m playwright install chromium
 ```
 
 ## Adding A Country Or Metro CSV

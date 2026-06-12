@@ -37,7 +37,20 @@ def render_details_panel(record: LocationRecord | None) -> Any:
         return html.Div(
             className="details-empty",
             children=[
-                html.Div("Location Details", className="section-heading"),
+                html.Div(
+                    className="details-header",
+                    children=[
+                        html.Div("Location Details", className="section-heading"),
+                        dbc.Button(
+                            "Close",
+                            id="close-details",
+                            color="secondary",
+                            size="sm",
+                            outline=True,
+                            disabled=True,
+                        ),
+                    ],
+                ),
                 html.Div("No location selected", className="empty-state"),
                 html.Div(
                     className="detail-actions",

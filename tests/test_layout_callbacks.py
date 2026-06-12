@@ -7,6 +7,7 @@ from src.callbacks.layout_callbacks import (
     app_shell_class,
     details_panel_class,
     full_map_label,
+    layout_state_for_trigger,
     reduce_layout_state,
     sidebar_label,
 )
@@ -70,6 +71,15 @@ def test_details_panel_open_close_state() -> None:
     assert "is-collapsed" in details_panel_class(closed)
 
 
+def test_selected_location_state_controls_details_panel_visibility() -> None:
+    opened = layout_state_for_trigger("selected-location-id", "abc", DEFAULT_LAYOUT_STATE)
+    closed = layout_state_for_trigger("selected-location-id", None, opened)
+
+    assert opened["details_open"]
+    assert not closed["details_open"]
+    assert "is-collapsed" in details_panel_class(closed)
+
+
 def test_layout_contains_responsive_map_controls() -> None:
     settings = load_settings()
     dataset = load_location_dataset(settings.data_dir)
@@ -85,3 +95,4 @@ def test_layout_contains_responsive_map_controls() -> None:
     assert "map-full-map-toggle" in ids
     assert "map-fit-screen" in ids
     assert "map-reset-view" in ids
+    assert "close-details" in ids

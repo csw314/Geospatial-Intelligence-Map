@@ -12,6 +12,9 @@ select = ["E", "F", "I", "B", "UP"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra"
+markers = [
+    "browser: browser smoke tests that use Playwright",
+]
 
 [tool.mypy]
 python_version = "3.11"
@@ -30,4 +33,3 @@ module = [
     "pandas.*",
 ]
 ignore_missing_imports = true
-

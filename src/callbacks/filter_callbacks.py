@@ -75,6 +75,17 @@ def _option_values(options: list[dict[str, Any]] | None) -> list[str]:
     return [str(option["value"]) for option in options]
 
 
+def selected_id_visible_in_records(
+    records: list[LocationRecord],
+    selected_id: str | None,
+) -> str | None:
+    """Return selected_id only when it exists in the visible record set."""
+
+    if selected_id and any(record.id == selected_id for record in records):
+        return selected_id
+    return None
+
+
 def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
     """Register filter and search callbacks."""
 
@@ -152,7 +163,10 @@ def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
             f"Countervalue: {category_counts.get('Countervalue', 0):,}"
         )
         return (
-            records_to_geojson(filtered, selected_id=selected_id),
+            records_to_geojson(
+                filtered,
+                selected_id=selected_id_visible_in_records(filtered, selected_id),
+            ),
             count_text,
             render_search_results(search_results, query),
         )

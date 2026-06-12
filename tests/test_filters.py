@@ -1,6 +1,10 @@
 from __future__ import annotations
 
-from src.callbacks.filter_callbacks import type_options_for_country, types_for_country
+from src.callbacks.filter_callbacks import (
+    selected_id_visible_in_records,
+    type_options_for_country,
+    types_for_country,
+)
 from src.components.filters import country_filter_options
 from src.data.schemas import LocationRecord
 from src.utils.search import filter_records
@@ -142,3 +146,13 @@ def test_type_options_include_iran_and_dprk_types(
 
     assert "Air Base" in values
     assert "Missile operating base" in values
+
+
+def test_hidden_selected_id_is_removed_from_filtered_geojson_context(
+    sample_records: list[LocationRecord],
+) -> None:
+    russia_record = sample_records[0]
+    china_records = filter_records(sample_records, country="China")
+
+    assert selected_id_visible_in_records(china_records, russia_record.id) is None
+    assert selected_id_visible_in_records([russia_record], russia_record.id) == russia_record.id
