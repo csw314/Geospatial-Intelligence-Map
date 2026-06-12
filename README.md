@@ -2,7 +2,7 @@
 
 Production-style Dash application for visualizing provided military/location CSVs and metro-area/city CSVs in one interactive global map.
 
-<img src="README.md assets/Screenshot 2026-06-12 170319.png" alt="Application Screenshot" width="500">
+<img src="assets/Screenshot 2026-06-12 170319.png" alt="App Screenshot" width="500">
 
 ## Tech Stack
 
