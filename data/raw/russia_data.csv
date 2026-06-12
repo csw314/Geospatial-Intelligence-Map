@@ -1,0 +1,547 @@
+Oblast,Name,Latitude,Longitude,Country,Type
+Armenia,Erebuni air base,40.126686,44.472957,Russia,Air Base
+"Nakhimovsky District, Sevastopol",Kacha air base,44.779215,33.569155,Russia,Air Base
+Crimean Peninsula,Gvardeyskoye air base,45.117267,33.977795,Russia,Air Base
+"Yeysky District, Krasnodar Krai, Russia",Yeysk air base,46.681479,38.217316,Russia,Air Base
+"Millerovsky District, Rostov Oblast, Russia",Millerovo air base,48.956327,40.29476,Russia,Air Base
+"Krymsky District, Krasnodar Krai, Russia",Krymsk air base,44.963099,37.998962,Russia,Air Base
+"Morozovsky District, Rostov Oblast, Russia",Morozovsk air base,48.313799,41.78839,Russia,Air Base
+"Primorsko-Akhtarsky District, Krasnodar Krai, Russia",Primorsko-Akhtarsk air base,46.059297,38.239631,Russia,Air Base
+"Budyonnovsky District, Stavropol Krai, Russia",Budyonnovsk air base,44.832285,44.011223,Russia,Air Base
+"Kalachyovsky District, Volgograd Oblast, Russia",Marinovka air base,48.640283,43.788928,Russia,Air Base
+"Korenovskiy Rayon, Krasnodar Krai, Russia",Korenovsk helicopter base,45.444958,39.411564,Russia,Air Base
+"Prionezhsky District, Republic of Karelia, Russia",Besovets air base,61.881239,34.151519,Russia,Air Base
+"Gorod Monchegorsk, Murmansk Oblast, Russia",Monchegorsk air base,67.985445,33.012552,Russia,Air Base
+"Bologovsky District, Tver Oblast, Russia",Khotilovo air base,57.65839,34.100862,Russia,Air Base
+"Kursk Metropolitan Area, Kursk Oblast, Russia",Kursk-Vostochniy air base,51.753895,36.294149,Russia,Air Base
+"Pushkin, St Petersburg, Russia",Pushkin helicopter base,59.684168,30.335546,Russia,Air Base
+"Ostrovsky District, Pskov Oblast, Russia",Veretye air base,57.293611,28.435013,Russia,Air Base
+"Gorod Artem, Primorsky Krai, Russia",Centralnaya Uglovaya air base,43.343657,132.057037,Russia,Air Base
+"Komsomolsk-on-Amur, Khabarovsk Krai, Russia",Dzemgi air base,50.604704,137.079849,Russia,Air Base
+"Komsomolsky District, Khabarovsk Krai, Russia",Khurba air base,50.406548,136.941319,Russia,Air Base
+"Yakovlevsky District, Primorsky Krai, Russia",Varfolomeyevka air base,44.261614,133.414106,Russia,Air Base
+"Chernigovsky District, Primorsky Krai, Russia",Chernigovka air base,44.325199,132.547474,Russia,Air Base
+"Chitinskiy Rayon, Zabaykalsky Krai, Russia",Domna air base,51.913673,113.118668,Russia,Air Base
+"Chita, Zabaykalsky Krai, Russia",Cheremushki helicopter base,52.075923,113.429027,Russia,Air Base
+"Kamenskiy Rayon, Sverdlovsk Oblast, Russia",Travyany air base,56.434029,61.986235,Russia,Air Base
+"Kurchatovskiy Rayon, Chelyabinsk, Chelyabinsk Oblast, Russia",Shagol (Chelyabinsk) air base,55.25917,61.300955,Russia,Air Base
+"Permskiy Rayon, Perm Krai, Russia",Bolshoye Savino air base,57.912203,56.024265,Russia,Air Base
+"Kansky District, Krasnoyarsk Krai, Russia",Dalniy (Kansk) air base,56.13063,95.667935,Russia,Air Base
+"Ysyk-Ata, Kyrgyzstan",Kant air base,42.856903,74.846206,Russia,Air Base
+"Novosibirsk Oblast, Russia",Tolmachevo helicopter base,55.017493,82.60191,Russia,Air Base
+"Engelssky District, Saratov Oblast, Russia",Engels air base,51.484378,46.210897,Russia,Air Base
+"Kirovsky District, Kaluga Oblast, Russia",Shaykovka air base,54.229718,34.373989,Russia,Air Base
+"Gorod Monchegorsk, Murmansk Oblast, Russia",Olenya air base,68.148569,33.459545,Russia,Air Base
+"Seryshevsky District, Amur Oblast, Russia",Ukrainka air base,51.164921,128.443394,Russia,Air Base
+"Badai, Irkutsk Oblast, Russia, 665471",Belaya air base,52.913353,103.562965,Russia,Air Base
+"Akhtubinsky District, Astrakhan Oblast, Russia",Akhtubinsk air base,48.307861,46.197507,Russia,Air Base
+"Kulebaksky District, Nizhny Novgorod Oblast, Russia",Savasleika air base,55.446543,42.311783,Russia,Air Base
+"Odintsovsky District, Moscow Oblast, Russia",Kubinka air base,55.608414,36.65554,Russia,Air Base
+"Moskovskiy Rayon, Ryazan, Ryazan Oblast, Russia",Dyagilevo air base,54.645334,39.564343,Russia,Air Base
+"Gorod Torzhok, Torzhok, Tver Oblast, Russia",Torzhok helicopter base,57.044466,35.002785,Russia,Air Base
+"Armavir, Krasnodar Krai, Russia",Armavir air base,44.972207,41.107235,Russia,Air Base
+"Kushchyovsky District, Krasnodar Krai, Russia",Kushchyovskaya air base,46.539263,39.552327,Russia,Air Base
+"Tsentral'nyy Rayon, Kaliningrad, Kaliningrad Oblast, Russia",Chkalovsk air base,54.767622,20.393372,Russia,Air Base
+"Chernyakhovsk, Kaliningrad Oblast, Russia",Chernyakhovsk air base,54.599815,21.781941,Russia,Air Base
+"Donskoye, Kaliningrad Oblast, Russia, 238570",Donskoye air base,54.93878,19.979528,Russia,Air Base
+"Kaliningrad Oblast, Russia",Khrabrovo air base,54.888103,20.584067,Russia,Air Base
+Crimean Peninsula,Saki air base,45.08952,33.596363,Russia,Air Base
+"Anadyrsky District, Chukotka Autonomous Okrug, Russia",Ugolny air base,64.731952,177.73613,Russia,Air Base
+"Iultinsky District, Chukotka Autonomous Okrug, Russia",Mys Shmidta air base,68.869211,-179.380989,Russia,Air Base
+"Yelizovsky District, Kamchatka Krai, Russia",Yelizovo air base,53.165299,158.450317,Russia,Air Base
+"Partizansky District, Primorsky Krai, Russia",Nikolayevka Primorskaya air base,43.087946,133.192749,Russia,Air Base
+"Vaninsky District, Khabarovsk Krai, Russia",Sovetskaya Gavan air base,49.236879,140.190525,Russia,Air Base
+"Gorod Artem, Primorsky Krai, Russia, 692756",Vladivostok air base,43.3927,132.149563,Russia,Air Base
+"Yuzhny Island, Arkhangelsk Oblast, Russia",Amderma-2 (Rogachevo) air base,71.608932,52.465897,Russia,Air Base
+"Alexandra Land, Arkhangelsk Oblast, Russia",Nagurskoye air base,80.802525,47.665558,Russia,Air Base
+"Taymyrsky Dolgano-Nenetsky District, Krasnoyarsk Krai, Russia",Sredny air base,79.514661,91.233215,Russia,Air Base
+"Far Eastern Federal District, Russia",Temp air base,75.782317,137.630537,Russia,Air Base
+"Severomorsk, Murmansk Oblast, Russia",Severomorsk-1 air base,69.020308,33.43689,Russia,Air Base
+"Vologodsky District, Vologda Oblast, Russia",Kipelovo air base,59.190702,39.125748,Russia,Air Base
+"Novomoskovsky Administrative Okrug, Moscow, Russia",Ostafyevo air base,55.50725,37.506294,Russia,Air Base
+"Kolsky District, Murmansk Oblast, Russia",Severomorsk-3 air base,68.868964,33.718071,Russia,Air Base
+"Sovetskiy Rayon, Voronezh, Voronezh Oblast, Russia",Baltimor (Voronezh) air base,51.619829,39.144287,Russia,Air Base
+"Pochinkovsky District, Smolensk Oblast, Russia",Shatalovo air base,54.338746,32.474556,Russia,Air Base
+"Vyborgskiy, St Petersburg, Russia",Levashovo air base,60.087448,30.191674,Russia,Air Base
+"Vyborgsky District, Leningrad Oblast, Russia",Pribylovo helicopter base,60.459418,28.742809,Russia,Air Base
+"Vyazemsky District, Smolensk Oblast, Russia",Dvoyevka air base,55.145919,34.380341,Russia,Air Base
+"Oktyabr'skiy Rayon, Rostov-on-Don, Rostov Oblast, Russia",Tsentralny air base,47.277482,39.635754,Russia,Air Base
+"Nakhimovsky District, Sevastopol",Belbek air base,44.690136,33.572846,Russia,Air Base
+Crimean Peninsula,Dzhankoi helicopter base,45.698986,34.414673,Russia,Air Base
+"Zernogradsky District, Rostov Oblast, Russia",Zernograd helicopter base,46.835301,40.378189,Russia,Air Base
+"Mozdoksky District, North Ossetia–Alania Republic, Russia",Mozdok air base,43.783984,44.605179,Russia,Air Base
+"Sverdlovsk Oblast, Russia, 620025",Koltsovo air base,56.742934,60.801086,Russia,Air Base
+"Uvel'skiy Rayon, Chelyabinsk Oblast, Russia",Uprun air base,54.376758,61.352463,Russia,Air Base
+"Bombora, Akhalsopeli",Bombora air base,43.115943,40.56972,Russia,Air Base
+"Chuguyevsky District, Primorsky Krai, Russia",Sokolovka air base,44.082838,133.868065,Russia,Air Base
+"Dolinskiy Rayon, Sakhalin Oblast, Russia",Sokol air base,47.258495,142.765617,Russia,Air Base
+"Zheleznodorozhnyy Rayon, Khabarovsk, Khabarovsk Krai, Russia, 680032",Bolshoy air base,48.460287,135.146771,Russia,Air Base
+"Gorod Ussuriysk, Primorsky Krai, Russia",Vozdvizhenka air base,43.906922,131.91782,Russia,Air Base
+"Step', Zabaykalsky Krai, Russia, 674511",Step air base,51.017426,115.421848,Russia,Air Base
+Burevestnik,Burevestnik helicopter base,44.91741,147.624664,Russia,Air Base
+"Soletsky District, Novgorod Oblast, Russia",Soltsy air base,58.134471,30.328789,Russia,Air Base
+"Bulunsky District, Sakha Republic, Russia",Tiksi air base,71.699164,128.896751,Russia,Air Base
+"Gorod Vorkuta, Komi Republic, Russia",Sovetskiy air base,67.46203,64.301605,Russia,Air Base
+"Sovetskiy Rayon, Tambov, Tambov Oblast, Russia",Tambov air base,52.703019,41.375885,Russia,Air Base
+"Pskov, Pskov Oblast, Russia",Pskov air base,57.773968,28.391762,Russia,Air Base
+"Leninskiy Rayon, Orenburg, Orenburg Oblast, Russia",Orenburg-2 air base,51.709693,55.019016,Russia,Air Base
+"Gorod Taganrog, Rostov Oblast, Russia",Tsentralniy (Taganrog) air base,47.243814,38.83667,Russia,Air Base
+"Dubrovsky District, Bryansk Oblast, Russia",Seshcha air base,53.716013,33.343334,Russia,Air Base
+"Proletarskiy Rayon, Tver, Tver Oblast, Russia",Migalovo air base,56.825497,35.746422,Russia,Air Base
+"Oktyabr'skiy Rayon, Ivanovo, Ivanovo Oblast, Russia",Severny air base,57.060804,40.978918,Russia,Air Base
+"Shchyolkovsky District, Moscow Oblast, Russia",Chkalovskiy air base,55.879981,38.064795,Russia,Air Base
+"Jableh, Syria",Khmeimim air base,35.402693,35.950527,Russia,Air Base
+"???? ???????, Syria",Shayrat air base,34.493683,36.910801,Russia,Air Base
+"Qaryatein, Syria",Tiyas air base,34.523813,37.627487,Russia,Air Base
+"Volsky District, Saratov Oblast, Russia",Bagay-Baranovka air base,52.140653,46.961746,Russia,Air Base
+Crimean Peninsula,Kirovskoye air base,45.167515,35.182858,Russia,Air Base
+"Lipetsk, Lipetsk Oblast, Russia",Lipetsk-2 air base,52.643897,39.439201,Russia,Air Base
+"Klin, Moscow Oblast, Russia",Klin-5 air base,56.366011,36.730385,Russia,Air Base
+"Suzdalsky District, Vladimir Oblast, Russia, 601277",Dobrynskoye helicopter base,56.245472,40.585256,Russia,Air Base
+"Kharabalinsky District, Astrakhan Oblast, Russia",Ashuluk air base,47.422745,47.932663,Russia,Air Base
+"Narimanovsky District, Astrakhan Oblast, Russia",Privolzhskiy air base,46.395253,47.892151,Russia,Air Base
+"Kotelnikovsky District, Volgograd Oblast, Russia",Kotelnikovo air base,47.632082,43.097992,Russia,Air Base
+"Tikhoretsky District, Krasnodar Krai, Russia",Tikhoretsk air base,45.878776,40.109024,Russia,Air Base
+"Gorod Maykop, Adygea Republic, Russia",Khanskaya air base,44.684277,40.040875,Russia,Air Base
+"Borisoglebsky District, Voronezh Oblast, Russia",Otvesnyi air base,51.365993,42.180977,Russia,Air Base
+"Michurinsky District, Tambov Oblast, Russia",Michurinsk air base,52.917183,40.367546,Russia,Air Base
+"Balashovsky District, Saratov Oblast, Russia",Balashov air base,51.532669,43.299694,Russia,Air Base
+"Rtishchevsky District, Saratov Oblast, Russia",Rtishchevo air base,52.295777,43.724384,Russia,Air Base
+"Syzransky District, Samara Oblast, Russia",Troekurovka air base,53.222891,48.546867,Russia,Air Base
+"Saratovsky District, Saratov Oblast, Russia",Saratov-Sokol helicopter base,51.541317,45.848179,Russia,Air Base
+"Karmakshy District, Kazakhstan",Baikonur Cosmodrome,45.87519,63.312836,Russia,Air Base
+"Priozersky District, Leningrad Oblast, Russia",Gromovo air base,60.714686,30.109921,Russia,Air Base
+"Leninskiy Rayon, Vladimir, Vladimir Oblast, Russia",Semyazino air base,56.127089,40.314417,Russia,Air Base
+"Adlerskiy, Krasnodar Krai, Russia",Sochi air base,43.444569,39.945259,Russia,Air Base
+"Khankala, Chechnya, Russia",Khankala air base,43.296886,45.798054,Russia,Air Base
+"Gorod Yasnyy, Orenburg Oblast, Russia",Yasny air base,51.048193,59.854202,Russia,Air Base
+"Verkhnesaldinskiy Rayon, Sverdlovsk Oblast, Russia",Svobodny helicopter base,58.034771,60.403598,Russia,Air Base
+"Savino, Mari El Republic, Russia, 425221",Danilovo air base,56.65826,48.024683,Russia,Air Base
+"Karabudakhkentsky District, Republic of Dagestan, Russia",Makhachkala airport,42.815966,47.655249,Russia,Air Base
+"Cherdaklinsky District, Ulyanovsk Oblast, Russia",Ulyanovsk Vostochny air base,54.414107,48.800907,Russia,Air Base
+"Severo-Kurilsky District, Sakhalin Oblast, Russia, 694550",Matua air base,48.053176,153.252399,Russia,Air Base
+"Kyzyl, Tuva Republic, Russia",Kyzyl air base,51.65569,94.374101,Russia,Air Base
+Iturup,Yasny air base,45.250901,147.954327,Russia,Air Base
+"Zhukovskiy, Moscow Oblast, Russia",Ramenskoye air base,55.561471,38.137283,Russia,Air Base
+"Gogland, Leningrad Oblast, Russia, 188474",Gogland Island helicopter base,60.087423,26.973086,Russia,Air Base
+"Plesetsky District, Arkhangelsk Oblast, Russia",Plesetsk Cosmodrome,62.92455,40.553584,Russia,Air Base
+"Buturlinovsky District, Voronezh Oblast, Russia",Buturlinovka air base,50.787107,40.611412,Russia,Air Base
+"Quamishli, Syria",Qamishli Airport,37.003513,41.176424,Russia,Air Base
+"Plesetsky District, Arkhangelsk Oblast, Russia",Plesetsk air base,62.717915,40.493484,Russia,Air Base
+Syria,Al-Tabqah Airport,35.756153,38.564575,Russia,Air Base
+"Dushanbe, Tajikistan",Ayni/Hisor (Gissar) air base,38.511877,68.673352,Russia,Air Base
+"Baranavichy, Brest Region, Belarus",Baranovichi air base,53.095993,26.045463,Russia,Air Base
+"Rubtsovsky District, Altai Krai, Russia",Rubtsovsk airfield,51.590875,81.212946,Russia,Air Base
+"Shet District, Kazakhstan",Kambala air base,46.032122,73.494523,Russia,Air Base
+,Sevastopol naval base,44.615156,33.509846,Russia,Navy Base
+,Novorossiysk naval base,44.717222,37.832794,Russia,Navy Base
+,Kaspiysk naval base,42.88552,47.65217,Russia,Navy Base
+,Astrakhan naval base,46.302236,47.976265,Russia,Navy Base
+,Baltiysk naval base,54.642651,19.91684,Russia,Navy Base
+,Kronshtadt naval base,59.982932,29.784965,Russia,Navy Base
+,Trudfront naval base,45.939213,47.668648,Russia,Navy Base
+,Fokino naval base,42.937449,132.417183,Russia,Navy Base
+,Vladivostok naval base,43.073778,131.933613,Russia,Navy Base
+,Sovetskaya Gavan naval base,48.97864,140.284252,Russia,Navy Base
+,Petropavlovsk-Kamchatsky naval base,52.959497,158.665237,Russia,Navy Base
+,Severomorsk naval base,69.083277,33.421783,Russia,Navy Base
+,Severodvinsk naval base,64.584969,39.815397,Russia,Navy Base
+,Polyarny naval base,69.202944,33.458734,Russia,Navy Base
+,Vidyayevo naval base,69.330836,32.826548,Russia,Navy Base
+,Murmansk-150 (Zaozersk) naval base,69.440199,32.412071,Russia,Navy Base
+,Gadzhiyevo naval base,69.261712,33.315182,Russia,Navy Base
+,Lomonosov naval base,59.921092,29.775278,Russia,Navy Base
+,Naval station in Port Sudan,19.637834,37.238193,Russia,Navy Base
+,Tartus naval base,34.908382,35.872456,Russia,Navy Base
+,Temryuk naval base,45.307359,37.376516,Russia,Navy Base
+,Feodosia naval base,45.031963,35.382533,Russia,Navy Base
+,Nikolayevsk naval base,53.134861,140.726349,Russia,Navy Base
+,Vyborg naval base,60.701944,28.741784,Russia,Navy Base
+,Roslyakovo naval base,69.05106,33.213229,Russia,Navy Base
+,Murmansk naval base,68.973718,33.065738,Russia,Navy Base
+,Korsakov naval base,46.623418,142.770924,Russia,Navy Base
+,Makhachkala naval base,42.998797,47.472749,Russia,Navy Base
+,Gremikha naval base,68.066938,39.472187,Russia,Navy Base
+,Mishukovo naval base,69.046137,33.039446,Russia,Navy Base
+,1st Tank Army,55.886913,35.967178,Russia,Land Base
+,20th Army,51.669148,39.196472,Russia,Land Base
+,6th Army,61.514469,32.071113,Russia,Land Base
+,8th Army,50.125085,43.141932,Russia,Land Base
+,49th Army,45.04829,41.95129,Russia,Land Base
+,58th Army,43.02498,44.62921,Russia,Land Base
+,2nd Army,53.18546,50.09353,Russia,Land Base
+,41st Army,55.14591,82.91656,Russia,Land Base
+,36th Army,51.80139,107.63992,Russia,Land Base
+,29th Army ,52.15455,113.44894,Russia,Land Base
+,35th Army,50.94804,128.49197,Russia,Land Base
+,5th Army,45.788116,134.479864,Russia,Land Base
+,68th Army Corps,47.01912,142.72954,Russia,Land Base
+,1st Army Corps,47.999099,37.807385,Russia,Land Base
+,2nd Army Corps,48.579787,39.300842,Russia,Land Base
+,Black Sea Fleet,44.609535,33.544006,Russia,Land Base
+,Caspian Flotilla,46.361145,48.067932,Russia,Land Base
+,Baltic Fleet,54.703995,20.503922,Russia,Land Base
+,Northern Fleet Joint Strategic Command,67.736183,31.663791,Russia,Land Base
+,Pacific Fleet,43.376481,134.596767,Russia,Land Base
+,Russian military bases in Belarus,53.696707,27.773438,Russia,Land Base
+,Russian forces in Moldova,46.477021,28.707993,Russia,Land Base
+,Russian occupation forces in Georgia,41.857288,43.942566,Russia,Land Base
+,Russian military bases in Armenia,40.199843,44.461554,Russia,Land Base
+,Russian military installations in Kazakhstan,46.630579,74.366455,Russia,Land Base
+,Russian military installations in Kyrgyzstan,41.059741,74.967049,Russia,Land Base
+,Russian military bases in Tajikistan,38.515937,70.941467,Russia,Land Base
+,Russian military bases in Syria,34.890437,35.914307,Russia,Land Base
+,Western Military District,58.429772,32.649997,Russia,Land Base
+,Southern Military District,44.202878,38.257825,Russia,Land Base
+,Central Military District,55.831784,63.86491,Russia,Land Base
+,Eastern Military District,48.167931,138.365964,Russia,Land Base
+,6th Air and Air Defence Forces Army,60.026441,33.824158,Russia,Land Base
+,4th Air and Air Defence Forces Army,48.075785,45.464859,Russia,Land Base
+,45th Air and Air Defence Forces Army,67.732735,36.113333,Russia,Land Base
+,14th Air and Air Defence Forces Army,58.035735,63.948671,Russia,Land Base
+,11th Air and Air Defence Forces Army,50.100323,136.347197,Russia,Land Base
+,Russian naval station in Sudan,19.704898,36.693819,Russia,Land Base
+,Russian forces in Azerbaijan,39.715599,47.597599,Russia,Land Base
+,1st Air Defence and Missile Defence Army,56.116179,38.832576,Russia,Land Base
+,183rd Anti-Aircraft Missile Regiment,54.651193,21.037616,Russia,Air Defense
+,1545th Anti-Aircraft Missile Regiment,54.803321,20.055718,Russia,Air Defense
+,202nd Anti-Aircraft Missile Brigade,55.425214,36.710301,Russia,Air Defense
+,28th Anti-Aircraft Missile Brigade,58.31921,48.64409,Russia,Air Defense
+,1724th Anti-Aircraft Missile Regiment,46.890232,142.576447,Russia,Air Defense
+,"S-400 and S-300 systems in Abkhazia, Georgia",43.089588,40.702579,Russia,Air Defense
+,988th Anti-Aircraft Missile Regiment,40.75519,43.858967,Russia,Air Defense
+,77th Anti-Aircraft Missile Brigade,45.432973,39.457483,Russia,Air Defense
+,Anti-Aircraft Missile Battalion,75.641579,137.949829,Russia,Air Defense
+,33rd Anti-Aircraft Missile Regiment,71.615214,51.712647,Russia,Air Defense
+,1488th Anti-Aircraft Missile Regiment,60.19569,29.694185,Russia,Air Defense
+,500th Anti-Aircraft Missile Regiment,59.745024,29.624019,Russia,Air Defense
+,1489th Anti-Aircraft Missile Regiment,60.085657,31.028993,Russia,Air Defense
+,1544th Anti-Aircraft Missile Regiment,58.208879,29.069104,Russia,Air Defense
+,1490th Anti-Aircraft Missile Regiment,59.579356,30.733548,Russia,Air Defense
+,42nd Anti-Aircraft Missile Regiment,58.056741,32.934876,Russia,Air Defense
+,108th Anti-Aircraft Missile Regiment,51.560496,39.114677,Russia,Air Defense
+,1537th Anti-Aircraft Missile Regiment,44.801234,37.702871,Russia,Air Defense
+,1536th Anti-Aircraft Missile Regiment,47.237115,39.828202,Russia,Air Defense
+,1721st Anti-Aircraft Missile Regiment,43.624824,39.719967,Russia,Air Defense
+,12th Anti-Aircraft Missile Regiment,44.559548,33.544451,Russia,Air Defense
+,18th Anti-Aircraft Regiment,45.017112,35.275019,Russia,Air Defense
+,583rd Anti-Aircraft Missile Regiment,68.124545,33.075403,Russia,Air Defense
+,1528th Anti-Aircraft Missile Regiment,64.499084,40.023567,Russia,Air Defense
+,531st Anti-Aircraft Missile Regiment,69.224277,33.243641,Russia,Air Defense
+,511th Anti-Aircraft Missile Regiment,51.39788,46.079408,Russia,Air Defense
+,185th Anti-Aircraft Missile Regiment,56.918979,60.820856,Russia,Air Defense
+,568th Anti-Aircraft Regiment,53.223716,50.370499,Russia,Air Defense
+,590th Anti-Aircraft Missile Regiment,55.032528,83.118326,Russia,Air Defense
+,24th Anti-Aircraft Missile Brigade,53.712517,91.337487,Russia,Air Defense
+,1534th Anti-Aircraft Missile Regiment,52.521652,103.901538,Russia,Air Defense
+,1533rd Anti-Aircraft Missile Regiment,43.160377,132.040666,Russia,Air Defense
+,589th Anti-Aircraft Missile Regiment,42.850333,132.888267,Russia,Air Defense
+,1529th Anti-Aircraft Missile Regiment,48.604027,135.07691,Russia,Air Defense
+,1530th Anti-Aircraft Missile Regiment,50.388283,137.380847,Russia,Air Defense
+,38th Anti-Aircraft Missile Brigade,48.742411,132.978993,Russia,Air Defense
+,1723rd Anti-Aircraft Missile Regiment,52.096966,113.490397,Russia,Air Defense
+,549th Ant-Aircraft Missile Regiment,55.760238,37.229175,Russia,Air Defense
+,629th Anti-Aircraft Missile Regiment,55.801883,38.400941,Russia,Air Defense
+,606th Anti-Aircraft Missile Regiment,55.746705,38.51183,Russia,Air Defense
+,614th Anti-Aircraft Missile Regiment,56.061286,37.687812,Russia,Air Defense
+,584th Anti-Aircraft Missile Regiment,56.018704,37.015247,Russia,Air Defense
+,210th Anti-Aircraft Missile Regiment,56.202075,37.558497,Russia,Air Defense
+,93rd Anti-Aircraft Regiment,55.790847,36.84108,Russia,Air Defense
+,612th Anti-Aircraft Missile Regiment,55.599912,37.063946,Russia,Air Defense
+,Anti-Aircraft Battalion,80.635768,48.64466,Russia,Air Defense
+,1532nd Anti-Aircraft Missile Regiment,53.152834,158.722498,Russia,Air Defense
+,Anti-Aircraft Regiment,35.341596,36.08238,Russia,Air Defense
+,Air defence systems at Tartus naval base,34.866726,35.98671,Russia,Air Defense
+,Air defence systems at Masyaf base,35.064817,36.316377,Russia,Air Defense
+,155th Anti-Aircraft Missile Regiment,71.774244,129.395985,Russia,Air Defense
+,388th Anti-Aircraft Missile Regiment,56.285401,90.507991,Russia,Air Defense
+,Air defence systems at Qamishli Airport,37.031907,41.204114,Russia,Air Defense
+,Unit of S-300V4 systems,44.570841,147.06424,Russia,Air Defense
+,Air Defense Battalion,38.555187,69.056303,Russia,Air Defense
+,Mobile Air Defense Regiment,55.609848,37.773655,Russia,Air Defense
+,Mobile Air Defense Regiment,59.853523,30.847448,Russia,Air Defense
+,Anti-Aircraft Missile Battalion,53.66489,23.813475,Russia,Air Defense
+,Pantsir-S unit,48.288595,135.5101,Russia,Air Defense
+,"1st Separate Special Forces Battalion ""Khan""",47.985786,37.736664,Russia,Special Forces
+,2nd Special Forces Brigade,57.781648,28.263715,Russia,Special Forces
+,3rd Special Forces Battalion,47.96579,37.728081,Russia,Special Forces
+,3rd Special Forces Brigade,53.539491,49.281922,Russia,Special Forces
+,10th Special Forces Brigade,44.764041,39.220292,Russia,Special Forces
+,14th Special Forces Brigade,48.360264,135.047865,Russia,Special Forces
+,16th Special Forces Brigade,52.668483,41.496758,Russia,Special Forces
+,19th Separate Special Forces Company,44.998955,42.048943,Russia,Special Forces
+,22nd Special Forces Brigade,47.109613,39.746492,Russia,Special Forces
+,24th Special Forces Brigade,55.077573,82.85063,Russia,Special Forces
+,25th Special Forces Regiment,45.102041,42.084616,Russia,Special Forces
+,45th Special Forces Brigade,55.561456,36.682662,Russia,Special Forces
+,346th Special Forces Brigade,43.751877,44.034233,Russia,Special Forces
+,Special Forces Company,54.729565,82.426234,Russia,Special Forces
+,Special Forces Strengthened Company,51.666852,39.091773,Russia,Special Forces
+,2nd Army HQ,53.185465,50.093536,Russia,"Army, Army CORP, Fleet HQ"
+,5th Army HQ,43.83205,131.976013,Russia,"Army, Army CORP, Fleet HQ"
+,6th Army HQ,60.220337,30.280342,Russia,"Army, Army CORP, Fleet HQ"
+,8th Army HQ,47.395677,40.065765,Russia,"Army, Army CORP, Fleet HQ"
+,20th Army HQ,51.717885,39.230116,Russia,"Army, Army CORP, Fleet HQ"
+,29th Army HQ,52.154557,113.448944,Russia,"Army, Army CORP, Fleet HQ"
+,35th Army HQ,50.948045,128.491974,Russia,"Army, Army CORP, Fleet HQ"
+,36th Army HQ,51.801397,107.639923,Russia,"Army, Army CORP, Fleet HQ"
+,41st Army HQ,54.889247,82.916565,Russia,"Army, Army CORP, Fleet HQ"
+,49th Army HQ,45.0483,41.951294,Russia,"Army, Army CORP, Fleet HQ"
+,58th Army HQ,43.024982,44.629211,Russia,"Army, Army CORP, Fleet HQ"
+,1st Army Corps HQ,47.944404,37.85889,Russia,"Army, Army CORP, Fleet HQ"
+,2nd Army Corps HQ,48.543887,39.404526,Russia,"Army, Army CORP, Fleet HQ"
+,11th Army Corps HQ,54.573377,22.181666,Russia,"Army, Army CORP, Fleet HQ"
+,14th Army Corps HQ,68.942604,33.065586,Russia,"Army, Army CORP, Fleet HQ"
+,22nd Army Corps HQ,44.929803,34.124914,Russia,"Army, Army CORP, Fleet HQ"
+,68th Army Corps HQ,47.019126,142.72955,Russia,"Army, Army CORP, Fleet HQ"
+,Black Sea Fleet HQ,44.554271,33.65799,Russia,"Army, Army CORP, Fleet HQ"
+,Baltic Fleet HQ,54.722241,20.405388,Russia,"Army, Army CORP, Fleet HQ"
+,Caspian Flotilla HQ,46.338395,48.134537,Russia,"Army, Army CORP, Fleet HQ"
+,Pacific Fleet HQ,43.205676,131.943741,Russia,"Army, Army CORP, Fleet HQ"
+,Northern Fleet Joint Strategic Command HQ,69.054147,33.410625,Russia,"Army, Army CORP, Fleet HQ"
+,Troops and Forces in the North-East of Russia HQ,53.0568,158.759834,Russia,"Army, Army CORP, Fleet HQ"
+,"Special Purpose Center ""Senezh""",56.200088,37.03533,Russia,Special Operations
+,"Special Purpose Center ""Kubinka-2""",55.610466,36.730966,Russia,Special Operations
+,Special Operations Branch (Maritime),44.575912,33.401511,Russia,Special Operations
+,98th Airborne Division HQ,56.937297,40.975736,Russia,Airborne Divisons
+,106th Airborne Division HQ,54.147136,37.724322,Russia,Airborne Divisons
+,217th Airborne Regiment,57.012421,40.869141,Russia,Airborne Divisons
+,331st Airborne Regiment,57.731654,40.863648,Russia,Airborne Divisons
+,51st Airborne Regiment,54.215066,37.558136,Russia,Airborne Divisons
+,137th Airborne Regiment,54.568877,39.829559,Russia,Airborne Divisons
+,"Somali"" Separate Mechanized Battalion",48.003707,37.752113,Russia,Mechanized Division HQ
+,2nd Mechanized Division HQ,55.566213,36.996117,Russia,Mechanized Division HQ
+,3rd Mechanized Division HQ,49.930591,40.48012,Russia,Mechanized Division HQ
+,18th Mechanized Division HQ,54.591918,22.197613,Russia,Mechanized Division HQ
+,19th Mechanized Division HQ,43.039034,44.728772,Russia,Mechanized Division HQ
+,20th Mechanized Division HQ,48.848451,44.623718,Russia,Mechanized Division HQ
+,42nd Mechanized Division HQ,43.303893,45.747497,Russia,Mechanized Division HQ
+,127th Mechanized Division HQ,44.273938,131.697509,Russia,Mechanized Division HQ
+,144th Mechanized Division HQ,54.59237,33.13509,Russia,Mechanized Division HQ
+,150th Mechanized Division HQ,47.454369,40.194161,Russia,Mechanized Division HQ
+,4th Tank Division HQ,55.410795,36.766091,Russia,Tank Division HQ
+,90th Tank Division HQ,54.984704,60.565222,Russia,Tank Division HQ
+,1st Tank Army HQ,55.683441,37.31782,Russia,Tank Division HQ
+,Separate Tank Battalion,43.362879,45.752563,Russia,Tank Battalions
+,Separate Tank Battalion,38.646171,68.859646,Russia,Tank Battalions
+,Separate Tank Battalion,54.244766,37.886385,Russia,Tank Battalions
+,"2nd Separate Tank Battalion ""Dizel""",48.034019,37.795715,Russia,Tank Battalions
+,124th Separate Tank Battalion,57.928704,28.553466,Russia,Tank Battalions
+,104th Separate Tank Battalion,44.768187,37.658727,Russia,Tank Battalions
+,"Pantzir"" Special Mechanized Force (former 4th Separate Tank Battalion ""August"")",48.591824,39.353027,Russia,Tank Battalions
+,Separate Anti-Tank Artillery Battalion,47.533951,40.269442,Russia,Tank Battalions
+,159th Separate Anti-Tank Battalion,49.89198,40.501785,Russia,Tank Battalions
+,150th Separate Anti-Tank Artillery Battalion,43.293201,45.669822,Russia,Tank Battalions
+,1281st Anti-Tank Battalion,54.547177,33.169098,Russia,Tank Battalions
+,1174th Anti-Tank Battalion,55.552136,37.008305,Russia,Tank Battalions
+,205th Mechanized Brigade,44.779886,44.176025,Russia,Mechanized Brigades
+,136th Mechanized Brigade,42.819581,47.114868,Russia,Mechanized Brigades
+,34th Mechanized Brigade (Mountain),43.87711,41.44661,Russia,Mechanized Brigades
+,138th Mechanized Brigade,60.440454,29.099436,Russia,Mechanized Brigades
+,25th Mechanized Brigade,58.702256,29.770919,Russia,Mechanized Brigades
+,27th Mechanized Brigade,55.615792,37.466166,Russia,Mechanized Brigades
+,21st Mechanized Brigade (Heavy),52.5064,52.735234,Russia,Mechanized Brigades
+,15th Mechanized Brigade,53.077269,50.516853,Russia,Mechanized Brigades
+,74th Mechanized Brigade,55.757259,84.8711,Russia,Mechanized Brigades
+,57th Mechanized Brigade,46.813219,134.260483,Russia,Mechanized Brigades
+,38th Mechanized Brigade,50.872926,128.555489,Russia,Mechanized Brigades
+,37th Mechanized Brigade,50.349294,106.463699,Russia,Mechanized Brigades
+,36th Mechanized Brigade,50.380831,116.525116,Russia,Mechanized Brigades
+,39th Mechanized Brigade,46.850061,142.713382,Russia,Mechanized Brigades
+,"1st Mechanized Brigade/""Komsomolskoye"" Tactical Group",47.666554,38.0777,Russia,Mechanized Brigades
+,"3rd Mechanized Brigade/""Gorlovka"" Tactical Group",48.316081,38.023682,Russia,Mechanized Brigades
+,"5th Mechanized Brigade/""Oplot"" Tactical Group",48.058808,37.873988,Russia,Mechanized Brigades
+,"100th Mechanized Brigade of the Republican Guard/ ""Kupol"" Tactical Group",48.051464,37.834168,Russia,Mechanized Brigades
+,2nd Mechanized Brigade,48.60749,39.38633,Russia,Mechanized Brigades
+,4th Mechanized Brigade,48.469531,38.817178,Russia,Mechanized Brigades
+,7th Mechanized Brigade,48.506597,38.665352,Russia,Mechanized Brigades
+,30th Mechanized Brigade,53.0248,50.436859,Russia,Mechanized Brigades
+,55th Mechanized Brigade (Mountain),51.6998,94.482422,Russia,Mechanized Brigades
+,200th Mechanized Brigade,69.417037,31.114998,Russia,Mechanized Brigades
+,80th Arctic Mechanized Brigade,66.959643,30.376194,Russia,Mechanized Brigades
+,Tactical group from the 80th Arctic Mechanized Brigade,80.591074,45.837708,Russia,Mechanized Brigades
+,35th Mechanized Brigade,52.497414,82.783699,Russia,Mechanized Brigades
+,64th Mechanized Brigade,48.486122,135.462815,Russia,Mechanized Brigades
+,6th Tank Brigade,56.315867,42.94846,Russia,Tank Brigades
+,5th Tank Brigade,51.896939,107.505769,Russia,Tank Brigades
+,1st Tank Regiment,55.55,36.960239,Russia,Tank Regiments
+,6th Tank Regiment,55.008142,60.3685,Russia,Tank Regiments
+,11th Tank Regiment,54.61302,22.233223,Russia,Tank Regiments
+,12th Tank Regiment,55.396467,36.684723,Russia,Tank Regiments
+,13th Tank Regiment,55.374916,36.689702,Russia,Tank Regiments
+,59th Tank Regiment,54.615225,33.194504,Russia,Tank Regiments
+,68th Tank Regiment,47.514957,40.099165,Russia,Tank Regiments
+,80th Tank Regiment,54.972491,60.358887,Russia,Tank Regiments
+,163rd Tank Regiment,47.526576,40.106556,Russia,Tank Regiments
+,218th Tank Regiment,44.348551,131.594235,Russia,Tank Regiments
+,237th Tank Regiment,50.146987,38.095779,Russia,Tank Regiments
+,239th Tank Regiment,55.034712,60.437164,Russia,Tank Regiments
+,1st Mechanized Regiment,55.570435,36.949596,Russia,Mechanized Regiments
+,6th Mechanized Regiment,48.561884,38.648676,Russia,Mechanized Regiments
+,7th Mechanized Regiment,54.750586,20.582542,Russia,Mechanized Regiments
+,"9th Mechanized Regiment/""Novoazovsk"" Tactical Group",47.119672,38.084106,Russia,Mechanized Regiments
+,"11th Mechanized Regiment ""Vostok""",48.035856,37.967377,Russia,Mechanized Regiments
+,15th Mechanized Regiment,55.559418,36.94994,Russia,Mechanized Regiments
+,33rd Mechanized Regiment,50.076888,45.394407,Russia,Mechanized Regiments
+,70th Mechanized Regiment,43.13256,45.871697,Russia,Mechanized Regiments
+,71st Mechanized Regiment,43.571437,45.517731,Russia,Mechanized Regiments
+,79th Mechanized Regiment,55.057997,21.921258,Russia,Mechanized Regiments
+,92nd Mechanized Regiment,38.486383,68.758621,Russia,Mechanized Regiments
+,102nd Mechanized Regiment,47.498532,40.090828,Russia,Mechanized Regiments
+,103rd Mechanized Regiment,47.428973,40.107479,Russia,Mechanized Regiments
+,114th Mechanized Regiment,43.763156,131.97193,Russia,Mechanized Regiments
+,143rd Mechanized Regiment,44.732018,132.030391,Russia,Mechanized Regiments
+,149th Mechanized Regiment,38.536082,68.701974,Russia,Mechanized Regiments
+,191st Mechanized Regiment,37.86639,68.864441,Russia,Mechanized Regiments
+,228th Mechanized Regiment,56.860986,60.600586,Russia,Mechanized Regiments
+,252nd Mechanized Regiment,49.933544,40.55191,Russia,Mechanized Regiments
+,254th Mechanized Regiment,52.796621,32.322659,Russia,Mechanized Regiments
+,255th Mechanized Regiment,48.619724,44.378015,Russia,Mechanized Regiments
+,291st Mechanized Regiment,42.842367,45.632572,Russia,Mechanized Regiments
+,394th Mechanized Regiment,44.386302,131.706132,Russia,Mechanized Regiments
+,423rd Mechanized Regiment,55.372868,36.727638,Russia,Mechanized Regiments
+,429th Mechanized Regiment,43.001318,44.662222,Russia,Mechanized Regiments
+,488th Mechanized Regiment,52.76493,32.256319,Russia,Mechanized Regiments
+,503rd Mechanized Regiment,43.237165,45.051356,Russia,Mechanized Regiments
+,752nd Mechanized Regiment,50.267968,38.0609,Russia,Mechanized Regiments
+,51st Separate Coastal Missile Battalion,42.851696,47.701291,Russia,Missile Battalions
+,Coastal Missile Battalion,34.985651,35.887801,Russia,Missile Battalions
+,Coastal Missile Battalion,48.099982,153.237441,Russia,Missile Battalions
+,Coastal Missile Battalion,80.685778,47.219879,Russia,Missile Battalions
+,18th Machine Gun Artillery Division HQ,45.038809,147.749891,Russia,Artillery Division HQ
+,Reactive Artillery Battalion,38.592456,68.689957,Russia,Artillery Division HQ
+,Reactive Artillery Battery,43.730422,145.434265,Russia,Artillery Division HQ
+,1st Missile Brigade,44.819734,39.234047,Russia,Missile Brigades
+,3rd Missile Brigade,51.620575,113.04451,Russia,Missile Brigades
+,12th Missile Brigade,43.752745,44.699593,Russia,Missile Brigades
+,20th Missile Brigade,44.613934,132.813721,Russia,Missile Brigades
+,26th Missile Brigade,58.776567,29.917146,Russia,Missile Brigades
+,40th Missile Brigade,48.602044,45.610422,Russia,Missile Brigades
+,47th Missile Brigade,45.476332,39.39785,Russia,Missile Brigades
+,92nd Missile Brigade,52.457232,52.727084,Russia,Missile Brigades
+,103rd Missile Brigade,51.906313,107.560274,Russia,Missile Brigades
+,107th Missile Brigade,48.968076,132.598006,Russia,Missile Brigades
+,112th Missile Brigade,56.85329,41.355972,Russia,Missile Brigades
+,119th Missile Brigade,56.838175,62.506714,Russia,Missile Brigades
+,152nd Missile Brigade,54.627688,21.827015,Russia,Missile Brigades
+,448th Missile Brigade,51.733329,36.122067,Russia,Missile Brigades
+,11th Coastal Missile Brigade,45.095385,37.308889,Russia,Missile Brigades
+,15th Coastal Missile Brigade,44.596093,33.447875,Russia,Missile Brigades
+,27th Coastal Missile Brigade,54.920675,19.943733,Russia,Missile Brigades
+,72nd Coastal Missile Brigade,43.286219,132.457761,Russia,Missile Brigades
+,75th Coastal Missile Brigade,46.666752,142.444456,Russia,Missile Brigades
+,520th Coastal Missile Brigade,52.959703,158.803538,Russia,Missile Brigades
+,536th Coastal Missile Brigade,69.213468,33.368389,Russia,Missile Brigades
+,9th Artillery Brigade,58.778,29.855708,Russia,Artillery Brigades
+,30th Artillery Brigade,51.829412,107.808152,Russia,Artillery Brigades
+,120th Artillery Brigade,55.684309,84.975984,Russia,Artillery Brigades
+,165th Artillery Brigade,50.923272,128.294392,Russia,Artillery Brigades
+,200th Artillery Brigade,51.543771,112.973444,Russia,Artillery Brigades
+,227th Artillery Brigade,44.568825,40.103874,Russia,Artillery Brigades
+,236th Artillery Brigade,55.107942,38.743071,Russia,Artillery Brigades
+,238th Artillery Brigade,45.476493,39.48207,Russia,Artillery Brigades
+,244th Artillery Brigade,54.659932,20.569496,Russia,Artillery Brigades
+,288th Artillery Brigade,56.28906,42.913627,Russia,Artillery Brigades
+,291st Artillery Brigade,43.307942,44.970131,Russia,Artillery Brigades
+,305th Artillery Brigade,43.964128,131.637512,Russia,Artillery Brigades
+,385th Artillery Brigade,52.527491,52.762527,Russia,Artillery Brigades
+,Separate Artillery Brigade,48.567521,39.285049,Russia,Artillery Brigades
+,"Kalmius"" Artillery Brigade/""Kolchuga"" Tactical Group",47.942567,37.687912,Russia,Artillery Brigades
+,79th Reactive Artillery Brigade,56.872996,35.925293,Russia,Artillery Brigades
+,232nd Reactive Artillery Brigade,55.234624,62.737605,Russia,Artillery Brigades
+,338th Reactive Artillery Brigade,43.784434,131.885772,Russia,Artillery Brigades
+,439th Reactive Artillery Brigade,48.517059,45.793333,Russia,Artillery Brigades
+,45th High-Power Artillery Brigade,52.779892,41.39064,Russia,Artillery Brigades
+,Coastal Missile Battery,75.683595,137.236165,Russia,Missile Batteries and Units
+,Coastal Missile Battery,44.376142,146.22177,Russia,Missile Batteries and Units
+,Coastal Missile Battery,45.393809,148.617909,Russia,Missile Batteries and Units
+,854th Separate Coastal Missile Regiment,44.487535,33.632148,Russia,Missile Batteries and Units
+,Missile forces in Syria,35.476706,35.9488,Russia,Missile Batteries and Units
+,Coastal Missile Unit,60.013794,29.697145,Russia,Missile Batteries and Units
+,8th Artillery Regiment,44.977911,34.078913,Russia,Artillery Regiments
+,46th Machine Gun Artillery Regiment,44.081988,145.86632,Russia,Artillery Regiments
+,49th Machine Gun Artillery Regiment,44.977185,147.870698,Russia,Artillery Regiments
+,50th Self-Propelled Artillery Regiment,43.167502,45.912981,Russia,Artillery Regiments
+,99th Self-Propelled Artillery Regiment,49.910777,40.535088,Russia,Artillery Regiments
+,147th Self-Propelled Artillery Regiment,55.595322,37.014141,Russia,Artillery Regiments
+,275th Self-Propelled Artillery Regiment,55.371307,36.78257,Russia,Artillery Regiments
+,381st Artillery Regiment,47.443549,39.268257,Russia,Artillery Regiments
+,400th Self-Propelled Artillery Regiment,55.051289,60.514738,Russia,Artillery Regiments
+,856th Self-Propelled Artillery Regiment,52.931868,33.441464,Russia,Artillery Regiments
+,872nd Self-Propelled Artillery Regiment,44.282342,131.555959,Russia,Artillery Regiments
+,950th Reactive Artillery Regiment,52.544627,52.825009,Russia,Artillery Regiments
+,1065th Artillery Regiment,57.762797,41.038742,Russia,Artillery Regiments
+,1140th Artillery Regiment,57.948747,28.376309,Russia,Artillery Regiments
+,1141st Artillery Regiment,44.885701,37.319919,Russia,Artillery Regiments
+,1182nd Artillery Regiment,55.37833,36.89209,Russia,Artillery Regiments
+,76th Air Assault Division HQ,57.834152,28.341296,Russia,Air Assault Divisions and Battalions
+,7th Air Assault Division (Mountain) HQ,44.792865,37.778173,Russia,Air Assault Divisions and Battalions
+,56th Air Assault Regiment,45.086611,35.380097,Russia,Air Assault Divisions and Battalions
+,104th Air Assault Regiment,57.909012,28.182678,Russia,Air Assault Divisions and Battalions
+,108th Air Assault Regiment,44.659618,37.769623,Russia,Air Assault Divisions and Battalions
+,171st Separate Air Assault Battalion,45.000252,35.351257,Russia,Air Assault Divisions and Battalions
+,234th Air Assault Regiment,57.942188,28.268511,Russia,Air Assault Divisions and Battalions
+,237th Air Assault Regiment,57.848379,28.164642,Russia,Air Assault Divisions and Battalions
+,247th Air Assault Regiment,45.094368,41.783066,Russia,Air Assault Divisions and Battalions
+,11th Air Assault Brigade,51.849565,107.967968,Russia,Air Assault Divisions and Battalions
+,31st Air Assault Brigade,54.342149,48.383789,Russia,Air Assault Divisions and Battalions
+,83rd Air Assault Brigade,43.741833,132.042618,Russia,Air Assault Divisions and Battalions
+,Recon Battalion,38.63216,68.772354,Russia,Recon Battalions
+,"Sparta"" Separate Recon Battalion",48.021162,37.771683,Russia,Recon Battalions
+,"Greka"" Separate Recon Battalion",48.581604,39.337921,Russia,Recon Battalions
+,30th Recon Battalion,54.947654,60.441971,Russia,Recon Battalions
+,77th Separate Recon Battalion,44.279341,131.878881,Russia,Recon Battalions
+,84th Recon Battalion,50.191407,38.167878,Russia,Recon Battalions
+,136th Recon Battalion,55.587272,36.987876,Russia,Recon Battalions
+,137th Recon Battalion,55.370527,36.757507,Russia,Recon Battalions
+,148th Recon Battalion,54.74881,32.04573,Russia,Recon Battalions
+,162nd Separate Recon Battalion,44.717467,37.687567,Russia,Recon Battalions
+,173rd Separate Recon Battalion,54.235939,37.779923,Russia,Recon Battalions
+,174th Separate Recon Battalion,47.538297,40.117178,Russia,Recon Battalions
+,175th Separate Recon Battalion,57.941463,28.473812,Russia,Recon Battalions
+,215th Separate Recon Battalion,57.010087,41.100541,Russia,Recon Battalions
+,417th Separate Recon Battalion,43.317124,45.669479,Russia,Recon Battalions
+,20th Recon Battalion,55.062054,21.849062,Russia,Recon Battalions
+,96th Recon Brigade,56.354219,43.886948,Russia,Recon Battalions
+,100th Recon Brigade,43.731414,44.620628,Russia,Recon Battalions
+,127th Recon Brigade,44.589978,33.609238,Russia,Recon Battalions
+,561st Maritime Recon Point,54.77259,20.025313,Russia,Recon Battalions
+,388th Maritime Recon Point,44.517807,33.495599,Russia,Recon Battalions
+,42nd Maritime Recon Point,42.969487,131.860485,Russia,Recon Battalions
+,420th Maritime Recon Point,68.841944,33.105,Russia,Recon Battalions
+,Flamethrower Battalion,47.969784,43.640184,Russia,Flamethrower Battalions
+,Flamethrower Battalion,53.343143,50.236353,Russia,Flamethrower Battalions
+,Flamethrower Battalion,44.212746,131.59784,Russia,Flamethrower Battalions
+,Flamethrower Battalion,56.289537,42.793746,Russia,Flamethrower Battalions
+,Flamethrower Battalion,60.714712,29.957421,Russia,Flamethrower Battalions
+,Flamethrower Battalion,43.305444,45.013046,Russia,Flamethrower Battalions
+,Flamethrower Battalion,52.824769,83.119137,Russia,Flamethrower Battalions
+,Flamethrower Battalion,50.877044,128.441849,Russia,Flamethrower Battalions
+,Flamethrower Battalion,51.926272,108.075256,Russia,Flamethrower Battalions
+,Flamethrower Battalion,51.525407,113.073349,Russia,Flamethrower Battalions
+,Flamethrower Battalion,48.572448,135.374956,Russia,Flamethrower Battalions
+,Flamethrower Battalion,44.643845,33.542982,Russia,Flamethrower Battalions
+,"Amur"" Armored Train",48.541501,44.471626,Russia,Armored Train
+,"Baikal"" Armored Train",44.630551,41.963482,Russia,Armored Train
+,40th Naval Infantry Brigade,53.065357,158.562241,Russia,Naval Infantry
+,61st Naval Infantry Brigade,69.512179,31.310349,Russia,Naval Infantry
+,155th Naval Infantry Brigade,43.084937,131.848984,Russia,Naval Infantry
+,177th Naval Infantry Regiment,42.887286,47.608909,Russia,Naval Infantry
+,336th Naval Infantry Brigade,54.709181,19.945649,Russia,Naval Infantry
+,810th Naval Infantry Brigade,44.54889,33.426929,Russia,Naval Infantry
+,7th Military Base,43.100983,40.634394,Russia,Miltary Base
+,4th Military Base,42.223433,43.968658,Russia,Miltary Base
+,102nd Military Base,40.831086,43.826523,Russia,Miltary Base
+,201st Military Base HQ,38.55085,68.86093,Russia,Miltary Base
+,43rd Communications Node of the Russian Navy,54.497761,26.912899,Russia,Other Units
+,338th Communications Node,42.821246,73.853668,Russia,Other Units
+,954th Anti-Submarine Weapon Testing Base,42.576614,78.159514,Russia,Other Units
+,Early warning radar,52.836788,26.477051,Russia,Other Units
+,Space surveillance station,38.280252,69.224575,Russia,Other Units
+,Seismological Laboratory,41.251545,72.442192,Russia,Other Units
+,Sary Shagan missile testing range,46.4014,72.815121,Russia,Other Units
+,69th Covering Brigade,48.114881,132.477865,Russia,Unit Locations
+,50th Coastal Defense Regiment,64.414023,177.153044,Russia,Unit Locations
+,126th Coastal Defence Brigade,44.849143,34.310671,Russia,Unit Locations
+,Operational Group of Russian Forces in the Transnistria region of the Republic of Moldova,46.856434,29.605407,Russia,Other Forces
+,Russian Peacekeeping Force in Nagorno-Karabakh,39.826564,46.765997,Russia,Other Forces

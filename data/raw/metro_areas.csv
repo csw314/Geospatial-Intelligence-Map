@@ -1,0 +1,605 @@
+Country,ISO2,Metro Area / City,Admin Region,Longitude,Latitude,Population,Population Proper,Capital Status,Source Country Name,Source URL
+China,CN,Chongqing,Chongqing,106.5069,29.55,"32,054,159","32,054,159",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guangzhou,Guangdong,113.26,23.13,"26,940,000","18,676,605",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shanghai,Shanghai,121.4692,31.2325,"24,870,895","24,870,895",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Beijing,Beijing,116.4075,39.904,"21,893,095","21,893,095",primary,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chengdu,Sichuan,104.0633,30.66,"20,937,757","20,937,757",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shenzhen,Guangdong,114.0544,22.5467,"17,619,000","17,494,398",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tianjin,Tianjin,117.2056,39.1467,"13,866,009","13,866,009",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Suzhou,Jiangsu,120.6194,31.3,"12,748,262","12,748,262",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wuhan,Hubei,114.2975,30.595,"12,447,718","12,447,718",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xi’an,Shaanxi,108.9422,34.2611,"12,328,000","12,183,280",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hangzhou,Zhejiang,120.1675,30.25,"11,936,010","11,936,010",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baoding,Hebei,115.4845,38.8671,"11,544,036","11,544,036",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Linyi,Shandong,118.3502,35.1041,"11,018,365","11,018,365",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dongguan,Guangdong,113.7493,23.0475,"10,646,000","10,466,625",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Harbin,Heilongjiang,126.6333,45.75,"10,635,971","10,635,971",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qingdao,Shandong,120.4,36.1167,"10,071,722","10,071,722",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nanyang,Henan,112.5292,32.9987,"9,713,112","9,713,112",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Foshan,Guangdong,113.1056,23.0292,"9,498,863","9,498,863",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nanjing,Jiangsu,118.7789,32.0608,"9,314,685","9,314,685",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jinan,Shandong,116.9833,36.6667,"9,202,432","9,202,432",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tongshan,Jiangsu,117.1859,34.261,"9,083,790","9,083,790",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhoukou,Henan,114.6418,33.625,"9,026,015","9,026,015",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ganzhou,Jiangxi,114.9336,25.8292,"8,970,014","8,970,014",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Heze,Shandong,115.4333,35.2333,"8,795,939","8,795,939",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Quanzhou,Fujian,118.5858,24.9139,"8,782,285","8,782,285",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jining,Shandong,116.5667,35.4,"8,357,897","8,357,897",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shenyang,Liaoning,123.4281,41.8025,"8,294,000","8,294,000",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fuyang,Anhui,115.8045,32.8986,"8,200,264","8,200,264",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shangqiu,Henan,115.6467,34.4259,"7,816,831","7,816,831",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dalian,Liaoning,121.6,38.9,"7,450,785","7,450,785",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Cangzhou,Hebei,116.8452,38.3037,"7,300,783","7,300,783",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xingtai,Hebei,114.4753,37.0659,"7,111,106","7,111,106",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhumadian,Henan,114.0253,32.9773,"7,008,427","7,008,427",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhanjiang,Guangdong,110.4031,21.1967,"6,981,236","6,981,236",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Bijie,Guizhou,105.2863,27.3019,"6,899,636","6,899,636",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yancheng,Jiangsu,120.1569,33.35,"6,709,629","6,709,629",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hengyang,Hunan,112.5857,26.8968,"6,645,243","6,645,243",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zunyi,Guizhou,106.9336,27.705,"6,606,675","6,606,675",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shaoyang,Hunan,111.4725,27.2418,"6,563,520","6,563,520",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shangrao,Jiangxi,117.9633,28.4419,"6,491,088","6,491,088",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huanggang,Hubei,114.875,30.45,"6,333,000","6,333,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Maoming,Guangdong,110.9178,21.6618,"6,313,200","6,313,200",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nangandao,Henan,113.8851,35.2992,"6,251,929","6,251,929",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinyang,Henan,114.0672,32.1264,"6,234,401","6,234,401",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Liaocheng,Shandong,115.9833,36.45,"5,952,128","5,952,128",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yulin,Guangxi,110.1507,22.6293,"5,849,700","5,849,700",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changde,Hunan,111.6839,29.0397,"5,827,200","5,827,200",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yueyang,Hunan,113.1309,29.3647,"5,797,100","5,797,100",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qujing,Yunnan,103.8029,25.5102,"5,765,775","5,765,775",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Pudong,Shanghai,121.5397,31.2231,"5,681,512","5,681,512",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiangyang,Hubei,112.1531,32.0654,"5,680,000","5,680,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhengzhou,Henan,113.6605,34.7492,"5,621,594","5,621,594",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dezhou,Shandong,116.3105,37.4513,"5,611,194","5,611,194",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nanchong,Sichuan,106.0784,30.7991,"5,607,565","5,607,565",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jieyang,Guangdong,116.3649,23.5533,"5,577,814","5,577,814",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yichun,Jiangxi,114.383,27.8041,"5,573,200","5,573,200",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tai’an,Shandong,117.0809,36.2001,"5,472,217","5,472,217",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dazhou,Sichuan,107.4947,31.2152,"5,468,097","5,468,097",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Langfang,Hebei,116.7006,39.5196,"5,464,087","5,464,087",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Suihua,Heilongjiang,126.9808,46.6384,"5,418,153","5,418,153",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qiqihar,Heilongjiang,123.9512,47.3398,"5,367,003","5,367,003",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Suzhou,Anhui,116.9683,33.6333,"5,324,476","5,324,476",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yongzhou,Hunan,111.5953,26.4515,"5,289,824","5,289,824",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yuncheng,Shanxi,110.998,35.0304,"5,134,779","5,134,779",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhaotong,Yunnan,103.7144,27.3328,"5,092,611","5,092,611",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guilin,Guangxi,110.2864,25.2819,"5,085,500","5,085,500",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhangzhou,Fujian,117.6612,24.5093,"5,054,328","5,054,328",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Bozhou,Anhui,115.7742,33.8626,"4,996,844","4,996,844",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Pingdingshan,Henan,113.2999,33.735,"4,987,137","4,987,137",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Suqian,Jiangsu,118.2831,33.9331,"4,986,192","4,986,192",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huaihua,Hunan,109.9592,27.5494,"4,979,600","4,979,600",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ji’an,Jiangxi,114.9793,27.1172,"4,956,600","4,956,600",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiaoganzhan,Hubei,113.911,30.9273,"4,921,000","4,921,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiujiang,Jiangxi,116.0021,29.7048,"4,896,800","4,896,800",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yibin,Sichuan,104.64,28.7596,"4,887,242","4,887,242",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Mianyang,Sichuan,104.7385,31.4669,"4,868,243","4,868,243",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huanglongsi,Henan,114.345,34.795,"4,824,016","4,824,016",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiangmen,Guangdong,113.0833,22.5833,"4,798,090","4,798,090",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changsha,Hunan,112.9709,28.1987,"4,766,297","4,766,297",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chenzhou,Hunan,113.0267,25.7989,"4,744,500","4,744,500",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Weinan,Shaanxi,109.4684,34.4996,"4,688,744","4,688,744",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinpu,Jiangsu,119.1801,34.5906,"4,599,360","4,599,360",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yangzhou,Jiangsu,119.4363,32.3912,"4,559,797","4,559,797",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Taizhou,Jiangsu,119.9,32.4831,"4,512,762","4,512,762",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hengshui,Hebei,115.686,37.7348,"4,472,000","4,472,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Kunming,Yunnan,102.7061,25.0433,"4,422,687","4,422,687",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yiyang,Hunan,112.3333,28.5833,"4,413,800","4,413,800",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guigang,Guangxi,109.5944,23.1144,"4,409,200","4,409,200",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changchun,Jilin,125.3228,43.88,"4,408,155","4,408,155",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lu’an,Anhui,116.5078,31.7542,"4,393,699","4,393,699",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiangguanchi,Henan,113.8201,34.0244,"4,379,998","4,379,998",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Meizhou,Guangdong,116.1191,24.2998,"4,378,800","4,378,800",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhangjiakou,Hebei,114.8811,40.8108,"4,345,485","4,345,485",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chifeng,Inner Mongolia,118.8825,42.255,"4,341,245","4,341,245",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ürümqi,Xinjiang,87.6125,43.8225,"4,335,018","4,335,018",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shantou,Guangdong,116.6822,23.3539,"4,312,193","4,312,193",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Luzhou,Sichuan,105.4409,28.8918,"4,254,149","4,254,149",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hefei,Anhui,117.2808,31.8639,"4,216,941","4,216,941",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Anqing,Anhui,117.0333,30.5,"4,165,284","4,165,284",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Liuzhou,Guangxi,109.4281,24.3264,"4,157,934","4,157,934",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhaoqing,Guangdong,112.4667,23.05,"4,151,700","4,151,700",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shijiazhuang,Hebei,114.51,38.0425,"4,098,244","4,098,244",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ningbo,Zhejiang,121.5492,29.875,"4,087,524","4,087,524",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fuzhou,Jiangxi,116.3577,27.9814,"4,047,200","4,047,200",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhuzhou,Hunan,113.1469,27.8407,"4,020,800","4,020,800",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiaoxita,Hubei,111.2803,30.7083,"4,017,607","4,017,607",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chuzhou,Anhui,118.3115,32.3062,"3,987,054","3,987,054",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Linfen,Shanxi,111.5087,36.0812,"3,976,481","3,976,481",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qingyuan,Guangdong,113.0507,23.6842,"3,969,473","3,969,473",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xianyang,Shaanxi,108.7092,34.3297,"3,959,842","3,959,842",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Loudi,Hunan,111.9974,27.7378,"3,931,800","3,931,800",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Deyang,Sichuan,104.395,31.1289,"3,877,000","3,877,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Taiyuan,Shanxi,112.5425,37.8733,"3,875,054","3,875,054",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zaozhuang,Shandong,117.55,34.8667,"3,855,601","3,855,601",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nanning,Guangxi,108.315,22.8192,"3,837,979","3,837,979",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Puyang,Henan,115.03,35.7639,"3,772,088","3,772,088",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiamen,Fujian,118.0819,24.4797,"3,707,091","3,707,091",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Neijiang,Sichuan,105.0635,29.5872,"3,702,847","3,702,847",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fuzhou,Fujian,119.2917,26.0769,"3,671,193","3,671,193",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baicheng,Guangxi,106.6194,23.901,"3,669,400","3,669,400",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wuhu,Anhui,118.3622,31.334,"3,644,420","3,644,420",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yulinshi,Shaanxi,109.7388,38.2655,"3,624,750","3,624,750",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wenzhou,Zhejiang,120.6561,27.9991,"3,604,447","3,604,447",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changzhou,Jiangsu,119.9692,31.8122,"3,601,080","3,601,080",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiaozuo,Henan,113.2304,35.229,"3,590,700","3,590,700",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nanchang,Jiangxi,115.8872,28.6842,"3,576,548","3,576,548",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hohhot,Inner Mongolia,111.6629,40.8151,"3,446,100","3,446,100",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tangshan,Hebei,118.1739,39.6294,"3,399,232","3,399,232",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shiyan,Hubei,110.7755,32.6351,"3,398,000","3,398,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Siping,Jilin,124.3644,43.1715,"3,385,156","3,385,156",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changzhi,Shanxi,113.097,36.1953,"3,334,565","3,334,565",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Anshan,Liaoning,122.9895,41.1066,"3,325,372","3,325,372",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baojishi,Shaanxi,107.1751,34.3609,"3,321,853","3,321,853",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guozhen,Shaanxi,107.359,34.3659,"3,321,853","3,321,853",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qinzhou,Guangxi,108.6167,21.95,"3,304,400","3,304,400",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guiyang,Guizhou,106.7078,26.5794,"3,299,725","3,299,725",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tongren,Guizhou,109.1885,27.7233,"3,298,468","3,298,468",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Bengbu,Anhui,117.3531,32.9354,"3,296,408","3,296,408",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Bazhou,Sichuan,106.7559,31.8576,"3,283,148","3,283,148",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Suining,Sichuan,105.5737,30.5098,"3,252,619","3,252,619",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wuxi,Jiangsu,120.2833,31.5667,"3,245,180","3,245,180",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Leshan,Sichuan,103.7575,29.5854,"3,235,759","3,235,759",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hanzhong,Shaanxi,107.026,33.0794,"3,211,462","3,211,462",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Putian,Fujian,119.0103,25.4394,"3,210,714","3,210,714",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhenjiang,Jiangsu,119.4551,32.2109,"3,210,418","3,210,418",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ningde,Fujian,119.5228,26.6617,"3,146,789","3,146,789",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tongliao,Inner Mongolia,122.264,43.6172,"3,139,153","3,139,153",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qinhuangdao,Hebei,119.5881,39.9398,"3,136,879","3,136,879",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jinzhou,Liaoning,121.1292,41.1144,"3,126,463","3,126,463",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Heyuan,Guangdong,114.6923,23.7503,"3,093,900","3,093,900",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinzhou,Shanxi,112.7233,38.4178,"3,067,501","3,067,501",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lanzhou,Gansu,103.8318,36.0617,"3,067,142","3,067,142",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wuzhou,Guangxi,111.3167,23.4833,"3,061,100","3,061,100",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chaoyang,Liaoning,120.4486,41.5757,"3,044,641","3,044,641",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huainan,Anhui,117.0164,32.4831,"3,033,528","3,033,528",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shaoguan,Guangdong,113.5927,24.8011,"2,997,600","2,997,600",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qincheng,Gansu,105.7311,34.5809,"2,984,659","2,984,659",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Rizhao,Shandong,119.4331,35.4164,"2,968,365","2,968,365",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Meishan,Sichuan,103.8381,30.0575,"2,955,219","2,955,219",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhongshan,Guangdong,113.35,22.5333,"2,909,634","2,909,634",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Weihai,Shandong,122.1,37.5,"2,906,548","2,906,548",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Daqing,Heilongjiang,125.008,46.5979,"2,904,532","2,904,532",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Haikou,Hainan,110.32,20.02,"2,873,358","2,873,358",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiangtan,Hunan,112.9228,27.8431,"2,864,800","2,864,800",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Mudanjiang,Heilongjiang,129.5997,44.5861,"2,798,723","2,798,723",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shanwei,Guangdong,115.3331,22.7664,"2,738,482","2,738,482",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Longyan,Fujian,117.0244,25.0881,"2,723,637","2,723,637",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tieling,Liaoning,123.8365,42.2841,"2,717,732","2,717,732",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baotou,Inner Mongolia,109.8345,40.6562,"2,709,378","2,709,378",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Handan,Hebei,114.4894,36.6116,"2,708,016","2,708,016",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dingxi,Gansu,104.6263,35.5806,"2,698,624","2,698,624",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nanping,Fujian,118.1728,26.6448,"2,680,645","2,680,645",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zigong,Sichuan,104.7645,29.3498,"2,678,899","2,678,899",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chaozhou,Guangdong,116.63,23.67,"2,656,600","2,656,600",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Weifang,Shandong,119.1,36.7167,"2,636,155","2,636,155",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huai’an,Jiangsu,119.0192,33.5886,"2,632,789","2,632,789",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zibo,Shandong,118.0497,36.7831,"2,631,648","2,631,648",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huludao,Liaoning,120.8378,40.7094,"2,623,541","2,623,541",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Gulou,Fujian,119.298,26.0865,"2,606,000","2,606,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yangjiang,Guangdong,111.9627,21.8556,"2,602,959","2,602,959",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yanjiang,Sichuan,104.6397,30.1256,"2,593,843","2,593,843",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiamusi,Heilongjiang,130.3653,46.8081,"2,552,097","2,552,097",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shaoxing,Zhejiang,120.5833,30,"2,521,965","2,521,965",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yantai,Shandong,121.4478,37.4644,"2,511,054","2,511,054",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huizhou,Guangdong,114.4152,23.1115,"2,509,244","2,509,244",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lishui,Zhejiang,119.9167,28.45,"2,507,396","2,507,396",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xuanzhou,Anhui,118.7518,30.9475,"2,500,063","2,500,063",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ankang,Shaanxi,109.0235,32.6877,"2,493,436","2,493,436",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Sanming,Fujian,117.6302,26.2658,"2,486,450","2,486,450",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huangshi,Hubei,115.0326,30.2018,"2,471,700","2,471,700",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Anshun,Guizhou,105.934,26.2456,"2,470,630","2,470,630",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xining,Qinghai,101.7787,36.6239,"2,467,965","2,467,965",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dandong,Liaoning,124.3833,40.1167,"2,444,697","2,444,697",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhuhai,Guangdong,113.5719,22.2742,"2,439,585","2,439,585",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baoshan,Yunnan,99.169,25.1211,"2,431,211","2,431,211",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yingkou,Liaoning,122.2297,40.6653,"2,428,534","2,428,534",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lianshan,Liaoning,120.8533,40.7643,"2,426,000","2,426,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yunfu,Guangdong,112.0353,22.9242,"2,383,350","2,383,350",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Luoyang,Henan,112.4245,34.6587,"2,372,572","2,372,572",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Luohe,Henan,114.0109,33.583,"2,367,490","2,367,490",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yan’an,Shaanxi,109.4863,36.5952,"2,282,581","2,282,581",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changping,Beijing,116.2255,40.2197,"2,269,487","2,269,487",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Nantong,Jiangsu,120.8873,31.9829,"2,261,383","2,261,383",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lincang,Yunnan,100.0871,23.8864,"2,257,991","2,257,991",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yuxi,Yunnan,102.5432,24.3495,"2,249,502","2,249,502",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Laibin,Guangxi,109.2333,23.7333,"2,233,900","2,233,900",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qinbaling,Gansu,107.64,35.7278,"2,211,191","2,211,191",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jincheng,Shanxi,112.8483,35.4906,"2,194,545","2,194,545",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shengli,Shandong,118.4667,37.45,"2,193,518","2,193,518",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Gaoping,Sichuan,106.1029,30.7758,"2,174,000","2,174,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Taizhou,Zhejiang,121.4221,28.6583,"2,162,461","2,162,461",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ma’anshan,Anhui,118.5101,31.6858,"2,159,930","2,159,930",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Puning,Guangdong,116.1586,23.2993,"2,118,200","2,118,200",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chongzuo,Guangxi,107.3667,22.4167,"2,099,400","2,099,400",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hezhou,Guangxi,111.5478,24.4164,"2,072,600","2,072,600",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Pingliang,Gansu,106.6819,35.5412,"2,068,033","2,068,033",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Qingyang,Fujian,118.5792,24.8141,"2,061,600","2,061,600",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shangzhou,Shaanxi,109.9244,33.868,"2,041,231","2,041,231",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Sanmenxia,Henan,111.195,34.7736,"2,034,872","2,034,872",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baicheng,Jilin,122.832,45.6148,"2,032,356","2,032,356",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huaibei,Anhui,116.789,33.9562,"1,970,265","1,970,265",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Pingxiang,Jiangxi,113.85,27.6333,"1,933,200","1,933,200",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Songjiang,Shanghai,121.2291,31.0152,"1,909,713","1,909,713",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yinchuan,Ningxia,106.225,38.485,"1,901,793","1,901,793",admin,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jixi,Heilongjiang,130.965,45.2937,"1,862,165","1,862,165",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fushun,Liaoning,123.8917,41.8708,"1,861,372","1,861,372",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yiwu,Zhejiang,120.0698,29.3081,"1,859,390","1,859,390",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Liaoyang,Liaoning,123.1772,41.2643,"1,858,768","1,858,768",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Beihai,Guangxi,109.1,21.4667,"1,853,227","1,853,227",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xushan,Zhejiang,121.2665,30.1697,"1,829,488","1,829,488",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fuxin,Liaoning,121.6486,42.0127,"1,819,339","1,819,339",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wuwei,Gansu,102.6329,37.9278,"1,815,059","1,815,059",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shuyangzha,Jiangsu,118.7333,34.1,"1,770,000","1,770,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shuozhou,Shanxi,112.4292,39.3408,"1,714,857","1,714,857",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Benxi,Liaoning,123.761,41.292,"1,709,538","1,709,538",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baiyin,Gansu,104.1766,36.5448,"1,708,751","1,708,751",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Sanzhou,Chongqing,108.431,30.7458,"1,680,000","1,680,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Changshu,Jiangsu,120.7333,31.65,"1,677,050","1,677,050",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jingdezhen,Jiangxi,117.2036,29.2942,"1,673,200","1,673,200",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiangyin,Jiangsu,120.2653,31.9087,"1,595,138","1,285,785",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chengtangcun,Shandong,117.15,35.0833,"1,574,648","1,574,648",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huzhou,Zhejiang,120.0875,30.8925,"1,558,826","1,558,826",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhangjiajie,Hunan,110.4844,29.1255,"1,537,900","1,537,900",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Rui’an,Zhejiang,120.6526,27.778,"1,520,386","1,520,386",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiaxing,Zhejiang,120.75,30.7522,"1,518,654","1,518,654",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guiping,Guangxi,110.0833,23.4,"1,511,011","1,511,011",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lianjiang,Guangdong,110.2794,21.6146,"1,509,400","1,509,400",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yucheng,Sichuan,103.0007,29.9888,"1,507,258","1,507,258",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Leizhou,Guangdong,110.0806,20.9147,"1,494,700","1,494,700",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jinhua,Zhejiang,119.6494,29.1046,"1,463,990","1,463,990",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shuangyashan,Heilongjiang,131.1545,46.6388,"1,462,626","1,462,626",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Pizhou,Jiangsu,118.0097,34.3422,"1,462,563","1,462,563",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guankou,Hunan,113.6375,28.1675,"1,429,384","1,429,384",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Guyuan,Ningxia,106.2782,36.008,"1,426,000","1,426,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wenling,Zhejiang,121.3718,28.3797,"1,416,199","1,416,199",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Gaozhou,Guangdong,110.8481,21.9135,"1,414,100","1,414,100",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fuqing,Fujian,119.3735,25.7232,"1,390,487","1,390,487",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wuzhong,Ningxia,106.1919,37.9874,"1,382,713","1,382,713",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Chizhou,Anhui,117.4849,30.6583,"1,342,764","1,342,764",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xintai,Shandong,117.78,35.91,"1,338,254","1,338,254",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Liangshi,Hunan,111.7351,27.2578,"1,335,900","1,335,900",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huangshan,Anhui,118.3151,29.7132,"1,330,565","1,330,565",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yangquan,Shanxi,113.5762,37.8576,"1,318,505","1,318,505",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tongling,Anhui,117.8114,30.9456,"1,311,726","1,311,726",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wusong,Anhui,117.7833,30.95,"1,311,726","1,311,726",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yushu,Jilin,126.5451,44.8249,"1,304,436","1,304,436",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Kuaidamao,Jilin,125.9471,41.7302,"1,302,778","1,302,778",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huazhou,Guangdong,110.6294,21.654,"1,302,100","1,302,100",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Baishan,Jilin,126.4179,41.9377,"1,296,127","1,296,127",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Haicheng,Liaoning,122.7474,40.8523,"1,293,877","1,293,877",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Heihe,Heilongjiang,127.506,50.2431,"1,286,401","1,286,401",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yicheng,Jiangsu,119.8239,31.3697,"1,285,785","1,285,785",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiantao,Hubei,113.4,30.3833,"1,268,715","1,268,715",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huaiyin,Jiangsu,119.0192,33.5886,"1,264,000","1,264,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yongcheng,Henan,116.4459,33.9317,"1,256,409","1,256,409",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yuyao,Zhejiang,121.1546,30.0372,"1,254,032","1,254,032",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dayan,Yunnan,100.2208,26.8808,"1,253,878","1,253,878",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Laiwu,Shandong,117.6667,36.1833,"1,248,636","1,248,636",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Huazhou,Henan,112.079,32.6832,"1,247,807","1,247,807",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jingling,Hubei,113.1667,30.6667,"1,247,400","1,247,400",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhuji,Zhejiang,120.2314,29.7169,"1,218,072","1,218,072",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dadukou,Sichuan,101.7149,26.5849,"1,214,121","1,214,121",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lingcheng,Guangxi,110.35,22.7,"1,211,637","1,211,637",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinyu,Jiangxi,114.9242,27.795,"1,202,499","1,202,499",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhangye,Gansu,100.4553,38.9355,"1,199,515","1,199,515",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Pingdu,Shandong,119.9556,36.7833,"1,191,348","1,191,348",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Rongcheng,Yunnan,104.0966,26.2312,"1,189,813","1,189,813",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Liaoyuan,Jilin,125.1381,42.8976,"1,176,239","1,176,239",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yingtan,Jiangxi,117,28.2333,"1,175,000","1,175,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinhualu,Henan,113.7249,34.3962,"1,172,237","1,172,237",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dingzhou,Hebei,114.9845,38.5158,"1,165,182","1,165,182",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shouguang,Shandong,118.7333,36.8833,"1,163,364","1,163,364",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Lianyuan,Hunan,111.6659,27.6961,"1,162,928","1,162,928",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Rongcheng,Hubei,112.9019,29.8239,"1,162,770","1,162,770",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Kaiyuan,Henan,113.8153,36.0656,"1,160,000","1,160,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Leiyang,Hunan,112.8457,26.4179,"1,151,554","1,151,554",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yichun,Heilongjiang,128.8893,47.7235,"1,148,126","1,148,126",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shaoyang,Jiangsu,119.8404,32.9387,"1,128,204","1,128,204",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jiancheng,Sichuan,104.5465,30.3931,"1,117,265","1,117,265",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Sanya,Hainan,109.5036,18.2533,"1,116,100","1,031,396",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Linhai,Zhejiang,121.1409,28.8523,"1,114,146","1,114,146",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yingchuan,Henan,113.4733,34.1511,"1,109,782","1,109,782",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xibeijie,Gansu,98.5049,39.737,"1,095,947","1,095,947",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hanchuan,Hubei,113.8274,30.652,"1,092,700","1,092,700",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Gongzhuling,Jilin,124.8088,43.5036,"1,092,692","1,092,692",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Dongyang,Zhejiang,120.2282,29.2785,"1,087,950","1,087,950",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Ezhou,Hubei,114.8842,30.3972,"1,079,353","1,079,353",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhufeng,Shandong,119.4167,36,"1,078,178","1,078,178",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xiashi,Zhejiang,120.6833,30.5333,"1,076,199","1,076,199",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhongwei,Ningxia,105.1884,37.5139,"1,067,336","1,067,336",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xishan,Hunan,113.4946,27.6609,"1,060,000","1,060,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Hegang,Heilongjiang,130.2775,47.3139,"1,058,665","1,058,665",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fangchenggang,Guangxi,108.3,21.6,"1,046,068","1,046,068",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wutong,Zhejiang,120.5474,30.6326,"1,029,754","1,029,754",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Wafangdian,Liaoning,121.9972,39.6271,"1,024,876","1,024,876",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhongxiang,Hubei,112.5853,31.169,"1,022,514","1,022,514",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinyi,Guangdong,110.9369,22.3559,"1,014,577","1,014,577",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zaoyang,Hubei,112.7581,32.1287,"1,004,741","1,004,741",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xingyi,Guizhou,104.9011,25.091,"1,004,132","1,004,132",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shuizhai,Henan,114.8994,33.4433,"1,003,698","1,003,698",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shache,Xinjiang,77.2406,38.4167,"851,374","851,374",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Yuci,Shanxi,112.7319,37.6803,"840,000","840,000",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Fuyang,Zhejiang,119.9519,30.0533,"771,000","771,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Zhangjiakou Shi Xuanhua Qu,Hebei,115.0447,40.6103,"409,745","409,745",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xujing,Shanghai,121.432,31.076,"211,590","211,590",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Jinghai,Tianjin,116.9168,38.9295,"154,325","154,325",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xianshuigu,Tianjin,117.3887,38.9785,"148,602","148,602",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Xinjing,Shanghai,121.368,31.2141,"146,776","146,776",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Shiyan,Guangdong,113.8633,23.1251,"122,802","122,802",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tumen,Jilin,129.8425,42.9661,"121,000","121,000",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Tianmu,Tianjin,117.1431,39.2003,"116,084","116,084",,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+China,CN,Mazhang,Guangdong,110.3221,21.2757,"107,819","107,819",minor,China,https://simplemaps.com/static/data/country-cities/cn/cn.csv
+Russia,RU,Moscow,Moskva,37.6175,55.7506,"17,332,000","13,200,000",primary,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Saint Petersburg,Sankt-Peterburg,30.3167,59.95,"5,601,911","5,601,911",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novosibirsk,Novosibirskaya Oblast’,82.9167,55.0333,"1,637,266","1,637,266",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Yekaterinburg,Sverdlovskaya Oblast’,60.6128,56.8356,"1,468,833","1,468,833",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kazan,Tatarstan,49.1144,55.7908,"1,329,825","1,329,825",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nizhniy Novgorod,Nizhegorodskaya Oblast’,44.0075,56.3269,"1,198,245","1,198,245",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Chelyabinsk,Chelyabinskaya Oblast’,61.4,55.15,"1,176,770","1,176,770",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Krasnodar,Krasnodarskiy Kray,38.9833,45.0333,"1,154,885","1,154,885",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Samara,Samarskaya Oblast’,50.1167,53.1833,"1,154,223","1,154,223",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ufa,Bashkortostan,55.9475,54.7261,"1,144,809","1,144,809",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Rostov,Rostovskaya Oblast’,39.71,47.2225,"1,143,123","1,143,123",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Omsk,Omskaya Oblast’,73.3833,54.9667,"1,101,367","1,101,367",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Krasnoyarsk,Krasnoyarskiy Kray,92.8719,56.0089,"1,092,851","1,092,851",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Voronezh,Voronezhskaya Oblast’,39.2106,51.6717,"1,041,722","1,041,722",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Perm,Permskiy Kray,56.2489,58.0139,"1,027,518","1,027,518",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Volgograd,Volgogradskaya Oblast’,44.5147,48.7086,"1,012,219","1,012,219",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Tyumen,Tyumenskaya Oblast’,65.5333,57.15,"872,077","872,077",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Saratov,Saratovskaya Oblast’,46.035,51.53,"838,042","838,042",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Tolyatti,Samarskaya Oblast’,49.4167,53.5167,"662,683","662,683",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Makhachkala,Dagestan,47.505,42.9825,"662,660","662,660",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Barnaul,Altayskiy Kray,83.7872,53.3567,"621,598","621,598",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Izhevsk,Udmurtiya,53.2167,56.85,"616,297","616,297",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Khabarovsk,Khabarovskiy Kray,135.0667,48.4833,"615,600","615,600",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ulyanovsk,Ul’yanovskaya Oblast’,48.3667,54.3167,"612,516","612,516",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Irkutsk,Irkutskaya Oblast’,104.28,52.2892,"605,708","605,708",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Vladivostok,Primorskiy Kray,131.8853,43.115,"591,628","591,628",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Yaroslavl,Yaroslavskaya Oblast’,39.8933,57.6264,"567,443","567,443",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Naberezhnyye Chelny,Tatarstan,52.3697,55.7149,"548,221","548,221",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Tomsk,Tomskaya Oblast’,84.9522,56.4886,"544,566","544,566",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kemerovo,Kemerovskaya Oblast’,86.0667,55.3333,"542,928","542,928",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Orenburg,Orenburgskaya Oblast’,55.1,51.7667,"536,515","536,515",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Balashikha,Moskovskaya Oblast’,37.95,55.8,"530,311","530,311",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novokuznetsk,Kemerovskaya Oblast’,87.1167,53.75,"528,747","528,747",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ryazan,Ryazanskaya Oblast’,39.7425,54.63,"519,315","519,315",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Cheboksary,Chuvashiya,47.25,56.1333,"497,061","497,061",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kaliningrad,Kaliningradskaya Oblast’,20.5,54.7167,"488,690","488,690",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Penza,Penzenskaya Oblast’,45,53.2,"487,978","487,978",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Lipetsk,Lipetskaya Oblast’,39.6,52.6167,"483,040","483,040",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kirov,Kirovskaya Oblast’,49.65,58.6,"475,871","475,871",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Tula,Tul’skaya Oblast’,37.6167,54.2,"466,609","466,609",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Astrakhan,Astrakhanskaya Oblast’,48.035,46.35,"465,990","465,990",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Stavropol,Stavropol’skiy Kray,41.9833,45.05,"450,680","450,680",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Sochi,Krasnodarskiy Kray,39.7203,43.5853,"445,149","445,149",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ulan-Ude,Buryatiya,107.6064,51.8272,"435,067","435,067",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kursk,Kurskaya Oblast’,36.1872,51.7372,"434,696","434,696",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Surgut,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,73.4333,61.25,"420,347","420,347",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Tver,Tverskaya Oblast’,35.9219,56.8578,"412,806","412,806",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Magnitogorsk,Chelyabinskaya Oblast’,59.0333,53.3833,"408,487","408,487",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Bryansk,Bryanskaya Oblast’,34.3667,53.2425,"373,310","373,310",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ivanovo,Ivanovskaya Oblast’,41,57,"361,644","361,644",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Vladimir,Vladimirskaya Oblast’,40.4058,56.1286,"341,579","341,579",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Chita,Zabaykal’skiy Kray,113.5009,52.0334,"337,063","337,063",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kaluga,Kaluzhskaya Oblast’,36.2667,54.5333,"331,842","331,842",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nizhniy Tagil,Sverdlovskaya Oblast’,59.9667,57.9167,"328,157","328,157",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Belgorod,Belgorodskaya Oblast’,36.6,50.6,"321,761","321,761",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Volzhskiy,Volgogradskaya Oblast’,44.7667,48.7833,"313,034","313,034",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Podolsk,Moskovskaya Oblast’,37.5456,55.4311,"312,911","312,911",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Yakutsk,Sakha (Yakutiya),129.7319,62.0272,"311,760","311,760",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Vologda,Vologodskaya Oblast’,39.9,59.2167,"311,476","311,476",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Saransk,Mordoviya,45.1833,54.1833,"310,898","310,898",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Smolensk,Smolenskaya Oblast’,32.0453,54.7828,"310,460","310,460",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Orël,Orlovskaya Oblast’,36.0694,52.9686,"303,696","303,696",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Vladikavkaz,North Ossetia,44.6775,43.04,"303,597","303,597",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kurgan,Kurganskaya Oblast’,65.3411,55.4408,"300,763","300,763",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Cherepovets,Vologodskaya Oblast’,37.9167,59.1333,"298,160","298,160",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Arkhangelsk,Arkhangel’skaya Oblast’,40.5375,64.5431,"294,914","294,914",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Groznyy,Chechnya,45.6986,43.3125,"291,687","291,687",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Yoshkar-Ola,Mariy-El,47.8958,56.6328,"285,219","285,219",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nizhnevartovsk,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,76.595,60.9389,"283,256","283,256",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Petrozavodsk,Kareliya,34.35,61.7833,"279,190","279,190",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Sterlitamak,Bashkortostan,55.95,53.6333,"277,410","277,410",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Mytishchi,Moskovskaya Oblast’,37.7333,55.9167,"275,313","275,313",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kostroma,Kostromskaya Oblast’,40.9269,57.7681,"267,481","267,481",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Murmansk,Murmanskaya Oblast’,33.0833,68.9667,"264,339","264,339",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novorossiysk,Krasnodarskiy Kray,37.7667,44.7167,"261,973","261,973",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Engels,Saratovskaya Oblast’,46.1167,51.4667,"259,371","259,371",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Khimki,Moskovskaya Oblast’,37.445,55.8892,"256,684","256,684",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Tambov,Tambovskaya Oblast’,41.4539,52.7231,"254,940","254,940",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nalchik,Kabardino-Balkariya,43.6167,43.4833,"245,588","245,588",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Syktyvkar,Komi,50.8167,61.6667,"245,083","245,083",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nizhnekamsk,Tatarstan,51.8167,55.6333,"240,842","240,842",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Taganrog,Rostovskaya Oblast’,38.9,47.2333,"240,055","240,055",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Blagoveshchensk,Amurskaya Oblast’,127.5364,50.2578,"239,932","239,932",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Lyubertsy,Moskovskaya Oblast’,37.8944,55.6783,"236,339","236,339",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Komsomol’sk-na-Amure,Khabarovskiy Kray,137,50.55,"233,716","233,716",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Korolëv,Moskovskaya Oblast’,37.8167,55.9167,"226,007","226,007",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Velikiy Novgorod,Novgorodskaya Oblast’,31.2758,58.521,"222,669","222,669",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Bratsk,Irkutskaya Oblast’,101.633,56.152,"219,365","219,365",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Shakhty,Rostovskaya Oblast’,40.2333,47.7,"219,111","219,111",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Angarsk,Irkutskaya Oblast’,103.9167,52.5667,"216,973","216,973",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Staryy Oskol,Belgorodskaya Oblast’,37.835,51.2981,"215,937","215,937",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Dzerzhinsk,Nizhegorodskaya Oblast’,43.45,56.2333,"213,410","213,410",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Krasnogorsk,Moskovskaya Oblast’,37.3386,55.8217,"193,127","193,127",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Pskov,Pskovskaya Oblast’,28.3333,57.8167,"185,486","185,486",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Orsk,Orenburgskaya Oblast’,58.4681,51.229,"185,362","185,362",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Armavir,Krasnodarskiy Kray,41.1167,45,"185,356","185,356",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Abakan,Khakasiya,91.4167,53.7167,"184,284","184,284",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Yuzhno-Sakhalinsk,Sakhalinskaya Oblast’,142.7333,46.95,"181,976","181,976",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Balakovo,Saratovskaya Oblast’,47.7839,52.039,"180,694","180,694",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Biysk,Altayskiy Kray,85.1667,52.5167,"179,211","179,211",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ussuriysk,Primorskiy Kray,131.95,43.8,"178,803","178,803",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Norilsk,Krasnoyarskiy Kray,88.2167,69.3333,"175,773","175,773",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Prokopyevsk,Kemerovskaya Oblast’,86.7167,53.8833,"170,429","170,429",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Rybinsk,Yaroslavskaya Oblast’,38.8333,58.05,"169,579","169,579",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Almetyevsk,Tatarstan,52.3,54.9,"163,747","163,747",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Petropavlovsk-Kamchatskiy,Kamchatskiy Kray,158.65,53.0167,"162,992","162,992",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Volgodonsk,Rostovskaya Oblast’,42.15,47.5167,"162,908","162,908",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novocherkassk,Rostovskaya Oblast’,40.0939,47.4222,"160,529","160,529",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kamensk-Ural’skiy,Sverdlovskaya Oblast’,61.9333,56.4,"160,312","160,312",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Syzran,Samarskaya Oblast’,48.4667,53.1667,"159,587","159,587",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Zlatoust,Chelyabinskaya Oblast’,59.6667,55.1667,"157,244","157,244",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Domodedovo,Moskovskaya Oblast’,37.75,55.4333,"156,681","156,681",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Severodvinsk,Arkhangel’skaya Oblast’,39.85,64.5667,"155,365","155,365",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Khasavyurt,Dagestan,46.5833,43.25,"155,144","155,144",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Orekhovo-Borisovo Yuzhnoye,Moskva,37.7331,55.6031,"148,059","148,059",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Odintsovo,Moskovskaya Oblast’,37.2733,55.6733,"147,564","147,564",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Miass,Chelyabinskaya Oblast’,60.1,55.05,"146,650","146,650",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Salavat,Bashkortostan,55.9333,53.3667,"144,970","144,970",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kolpino,Sankt-Peterburg,30.6,59.7583,"143,914","143,914",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Pyatigorsk,Stavropol’skiy Kray,43.05,44.0333,"142,895","142,895",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Elektrostal,Moskovskaya Oblast’,38.45,55.8,"141,778","141,778",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Maykop,Adygeya,40.0833,44.6,"137,899","137,899",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Shchelkovo,Moskovskaya Oblast’,38,55.9167,"135,918","135,918",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Neftekamsk,Bashkortostan,54.25,56.0833,"133,874","133,874",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nakhodka,Primorskiy Kray,132.8833,42.8167,"133,859","133,859",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Serpukhov,Moskovskaya Oblast’,37.4,54.9167,"133,756","133,756",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Berezniki,Permskiy Kray,56.7833,59.4167,"132,841","132,841",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Obninsk,Kaluzhskaya Oblast’,36.6167,55.1,"132,477","132,477",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kolomna,Moskovskaya Oblast’,38.7833,55.0833,"132,247","132,247",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kyzyl,Tyva,94.45,51.7167,"131,981","131,981",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kaspiysk,Dagestan,47.6333,42.8833,"129,833","129,833",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kovrov,Vladimirskaya Oblast’,41.3197,56.3606,"127,831","127,831",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Derbent,Dagestan,48.2889,42.0578,"127,084","127,084",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nefteyugansk,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,72.6,61.1,"126,690","126,690",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nazran,Ingushetiya,44.7667,43.2167,"126,292","126,292",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kislovodsk,Stavropol’skiy Kray,42.72,43.91,"125,931","125,931",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Bataysk,Rostovskaya Oblast’,39.75,47.1333,"124,987","124,987",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Yessentuki,Stavropol’skiy Kray,42.8644,44.0431,"123,138","123,138",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Cherkessk,Karachayevo-Cherkesiya,42.0575,44.2222,"123,100","123,100",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Rubtsovsk,Altayskiy Kray,81.2,51.5167,"121,698","121,698",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novocheboksarsk,Chuvashiya,47.5,56.1167,"120,361","120,361",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Dolgoprudnyy,Moskovskaya Oblast’,37.5,55.9333,"119,089","119,089",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novomoskovsk,Tul’skaya Oblast’,38.2667,54.0333,"115,938","115,938",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Ramenskoye,Moskovskaya Oblast’,38.2303,55.5669,"113,897","113,897",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Khanty-Mansiysk,Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra,69,61,"113,663","113,663",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Nevinnomyssk,Stavropol’skiy Kray,41.9333,44.6333,"113,112","113,112",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Reutov,Moskovskaya Oblast’,37.8567,55.7622,"112,070","112,070",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Pushkino,Moskovskaya Oblast’,37.85,56.0167,"111,580","111,580",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Pervouralsk,Sverdlovskaya Oblast’,59.95,56.9167,"110,999","110,999",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Zhukovskiy,Moskovskaya Oblast’,38.1161,55.6011,"110,083","110,083",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Artëm,Primorskiy Kray,132.1833,43.35,"108,274","108,274",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Pushkin,Sankt-Peterburg,30.4167,59.7167,"108,187","108,187",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Dimitrovgrad,Ul’yanovskaya Oblast’,49.5833,54.2333,"108,073","108,073",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novyy Urengoy,Yamalo-Nenetskiy Avtonomnyy Okrug,76.6789,66.0847,"106,890","106,890",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Vidnoye,Moskovskaya Oblast’,37.7,55.55,"106,222","106,222",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Seversk,Tomskaya Oblast’,84.85,56.6,"104,982","104,982",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Orekhovo-Zuyevo,Moskovskaya Oblast’,38.9667,55.8,"104,728","104,728",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Kamyshin,Volgogradskaya Oblast’,45.4,50.0833,"104,220","104,220",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Elista,Kalmykiya,44.2667,46.3167,"104,082","104,082",admin,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Murom,Vladimirskaya Oblast’,42.0538,55.5809,"104,078","104,078",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Arzamas,Nizhegorodskaya Oblast’,43.8,55.3833,"103,538","103,538",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Noyabrsk,Yamalo-Nenetskiy Avtonomnyy Okrug,75.4517,63.2017,"102,938","102,938",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Noginsk,Moskovskaya Oblast’,38.4333,55.85,"102,392","102,392",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Berdsk,Novosibirskaya Oblast’,83.1,54.75,"101,987","101,987",minor,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Russia,RU,Novoshakhtinsk,Rostovskaya Oblast’,39.9167,47.7667,"100,738","100,738",,Russia,https://simplemaps.com/static/data/country-cities/ru/ru.csv
+Iran,IR,Tehran,Tehr?n,51.3897,35.6889,"14,148,000","9,033,003",primary,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mashhad,Khor?s?n-e Ra?av?,59.6059,36.2975,"3,317,381","3,001,184",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,E?fah?n,E?fah?n,51.675,32.6525,"2,219,343","1,961,260",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Karaj,Alborz,50.9917,35.8328,"1,973,470","1,592,492",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Sh?r?z,F?rs,52.5425,29.61,"1,565,572","1,565,572",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Tabr?z,?z?arb?yj?n-e Sharq?,46.2961,38.0739,"1,558,693","1,558,693",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Ahv?z,Kh?zest?n,48.6842,31.3189,"1,325,000","1,184,788",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Qom,Qom,50.8764,34.64,"1,201,158","1,201,158",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Kerm?nsh?h,Kerm?nsh?h,47.0686,34.3167,"946,651","946,651",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Kerm?n,Kerm?n,57.0678,30.2911,"738,374","537,718",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Or?m?yeh,?z?arb?yj?n-e Gharb?,45.0675,37.5486,"736,224","736,224",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Borv?yeh-ye Al B? ‘Az?z,Kh?zest?n,48.6147,31.6283,"690,000","690,000",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Rasht,G?l?n,49.5886,37.2761,"679,995","679,995",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Z?hed?n,S?st?n va Bal?chest?n,60.8503,29.4929,"587,730","587,730",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Hamad?n,Hamad?n,48.5162,34.8065,"554,406","554,406",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Yazd,Yazd,54.3675,31.8972,"529,673","529,673",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Ardab?l,Ardab?l,48.3,38.25,"529,374","529,374",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bandar ‘Abb?s,Hormozg?n,56.2808,27.1864,"526,648","526,648",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Ar?k,Markaz?,49.6981,34.095,"520,944","520,944",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Esl?mshahr,Tehr?n,51.235,35.5522,"448,129","448,129",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Zanj?n,Zanj?n,48.4833,36.6667,"430,871","430,871",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Sanandaj,Kordest?n,46.9989,35.3097,"412,767","412,767",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Qazv?n,Qazv?n,50.0041,36.2854,"402,748","402,748",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Khorram?b?d,Lorest?n,48.35,33.4667,"373,416","373,416",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Gorg?n,Golest?n,54.43,36.8467,"350,676","350,676",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Shahr??r,Tehr?n,51.0592,35.6597,"309,607","309,607",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Shahr-e Qods,Tehr?n,51.1089,35.7214,"309,605","309,605",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,K?sh?n,E?fah?n,51.4425,33.9881,"304,487","304,487",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mal?rd,Tehr?n,50.9767,35.6658,"281,027","281,027",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mar?gheh,?z?arb?yj?n-e Sharq?,46.2392,37.3919,"272,400","272,400",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Dezf?l,Kh?zest?n,48.4058,32.3811,"264,709","264,709",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,B?bol,M?zandar?n,52.6786,36.5511,"250,217","250,217",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Q?’em Shahr,M?zandar?n,52.86,36.4631,"247,953","204,953",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Khomeyn? Shahr,E?fah?n,51.5361,32.6856,"247,128","247,128",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Sabzev?r,Khor?s?n-e Ra?av?,57.6819,36.2125,"243,700","243,700",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,And?meshk,Kh?zest?n,48.3467,32.4719,"240,113","240,113",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,?mol,M?zandar?n,52.3508,36.4697,"237,528","237,528",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,P?kdasht,Tehr?n,51.6833,35.4786,"236,319","236,319",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Najaf?b?d,E?fah?n,51.3653,32.6347,"235,281","235,281",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bor?jerd,Lorest?n,48.7514,33.8972,"234,997","234,997",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Madan,Kh?zest?n,48.3042,30.3392,"231,476","231,476",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Qarchak,Tehr?n,51.5689,35.4394,"231,075","231,075",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bojn?rd,Khor?s?n-e Shom?l?,57.3333,37.4667,"228,931","228,931",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Var?m?n,Tehr?n,51.6458,35.3242,"225,628","225,628",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bandar-e B?shehr,B?shehr,50.8367,28.9689,"223,504","223,504",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Neysh?b?r,Khor?s?n-e Ra?av?,58.7958,36.2133,"221,700","221,700",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,S?veh,Markaz?,50.3567,35.0214,"220,762","220,762",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,B?rjand,Khor?s?n-e Jon?b?,59.2211,32.8664,"203,636","203,636",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Nas?m Shahr,Tehr?n,51.1633,35.565,"200,393","200,393",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Khowy,?z?arb?yj?n-e Gharb?,44.9595,38.5517,"198,845","198,845",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,B?k?n,?z?arb?yj?n-e Gharb?,46.2089,36.5211,"193,501","193,501",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Shahr-e Kord,Chah?r Ma??l va Bakht??r?,50.8644,32.3256,"190,441","190,441",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Semn?n,Semn?n,53.3833,35.5833,"185,129","185,129",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Fard?s,Alborz,50.9883,35.7225,"181,174","181,174",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Sh?h?n Shahr,E?fah?n,51.5528,32.8578,"173,329","173,329",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mal?yer,Hamad?n,48.82,34.2942,"170,237","170,237",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mah?b?d,?z?arb?yj?n-e Gharb?,45.721,36.765,"168,393","168,393",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Saqqez,Kordest?n,46.2736,36.25,"165,258","165,258",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Sh?hr?d,Semn?n,54.9764,36.4181,"165,000","150,129",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bandar-e M?hshahr,Kh?zest?n,49.1886,30.5567,"162,797","162,797",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Rafsanj?n,Kerm?n,55.9939,30.4067,"161,909","161,909",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Gonbad-e K?v?s,Golest?n,55.1672,37.25,"151,910","151,910",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Marvdasht,F?rs,52.8063,29.8763,"148,858","148,858",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Kam?lshahr,Alborz,50.8717,35.8622,"141,669","141,669",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Jahrom,F?rs,53.5696,28.5014,"141,634","141,634",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Torbat-e ?eydar?yeh,Khor?s?n-e Ra?av?,59.2194,35.2739,"140,019","140,019",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mar?v?n,Kordest?n,46.1761,35.5269,"136,654","136,654",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Shahre??,E?fah?n,51.8642,32.0089,"134,952","134,952",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Z?bol,S?st?n va Bal?chest?n,61.495,31.0306,"134,950","134,950",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Y?s?j,Kohg?l?yeh va Bowyer A?mad,51.5833,30.6667,"134,532","134,532",admin,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Khorramshahr,Kh?zest?n,48.1842,30.4408,"133,097","133,097",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Marand,?z?arb?yj?n-e Sharq?,45.7741,38.4306,"130,825","130,825",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,J?roft,Kerm?n,57.7406,28.6781,"130,429","130,429",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Salm?s,?z?arb?yj?n-e Gharb?,44.7667,38.2,"127,864","127,864",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bam,Kerm?n,58.3569,29.1061,"127,396","127,396",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Behbah?n,Kh?zest?n,50.2417,30.5958,"122,604","122,604",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Dor?d,Lorest?n,49.075,33.4933,"121,638","121,638",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Naz?ar?b?d,Alborz,50.6075,35.9522,"119,512","119,512",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Mo?ammad Shahr,Alborz,50.9172,35.7631,"119,418","119,418",,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bandar-e Anzal?,G?l?n,49.4578,37.4731,"118,564","118,564",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,?r?nshahr,S?st?n va Bal?chest?n,60.6847,27.2025,"113,750","113,750",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Fas?,F?rs,53.6505,28.936,"110,825","110,825",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Bor?zj?n,B?shehr,51.2189,29.27,"110,567","110,567",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,B?neh,Kordest?n,45.8853,35.9975,"110,218","110,218",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Ch?bah?r,S?st?n va Bal?chest?n,60.6431,25.2919,"106,739","106,739",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Rob?? Kar?m,Tehr?n,51.0828,35.4847,"105,393","105,393",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,K?shmar,Khor?s?n-e Ra?av?,58.4656,35.2383,"102,282","102,282",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Sh?shtar,Kh?zest?n,48.8483,32.0497,"101,878","101,878",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Ahar,?z?arb?yj?n-e Sharq?,47.0662,38.4775,"100,641","100,641",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Masjed Soleym?n,Kh?zest?n,49.2902,31.958,"100,497","100,497",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+Iran,IR,Torbat-e J?m,Khor?s?n-e Ra?av?,60.6225,35.2439,"100,449","100,449",minor,Iran,https://simplemaps.com/static/data/country-cities/ir/ir.csv
+North Korea,KP,Pyongyang,P’y?ngyang,125.7475,39.0167,"2,863,000","2,863,000",primary,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Hamh?ng,Hamnam,127.5333,39.9167,"768,551","768,551",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Nampo,Namp’o,125.4,38.7333,"703,317","366,815",,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Ch’?ngjin,Hambuk,129.7833,41.7833,"667,929","667,929",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Sunch’?n,P’y?ngnam,125.9333,39.4167,"437,000","437,000",,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,W?nsan,Kangw?n,127.4335,39.1714,"363,127","363,127",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Sin?iju,P’y?ngbuk,124.4,40.1,"359,341","359,341",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Tanch’?n,Hamnam,128.911,40.458,"345,875","345,875",,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Kaech’?n,P’y?ngnam,125.9061,39.6986,"319,554","319,554",,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Kaes?ng,Kaes?ng,126.5528,37.9717,"308,440","308,440",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Sariw?n,Hwangbuk,125.7399,38.5324,"307,764","307,764",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,P’y?ngs?ng-si,P’y?ngnam,125.85,39.25,"284,386","284,386",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Haeju,Hwangnam,125.7167,38.0333,"273,300","273,300",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Kanggye,Chagang,126.6,40.9667,"251,971","251,971",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Rajin,Ras?n,130.3844,42.3444,"196,954","196,954",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
+North Korea,KP,Hyesan,Ryanggang,128.1833,41.4,"192,680","192,680",admin,DPRK,https://simplemaps.com/static/data/country-cities/kp/kp.csv
