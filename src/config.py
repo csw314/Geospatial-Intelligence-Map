@@ -5,6 +5,7 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal, cast
 
 from dotenv import load_dotenv
 
@@ -21,6 +22,7 @@ DEFAULT_TILE_ATTRIBUTION = (
     'contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 )
 DEFAULT_TILE_LAYER_NAME = "CARTO Voyager"
+CoordinateAuditMode = Literal["off", "warn", "strict"]
 
 
 @dataclass(frozen=True)
@@ -31,6 +33,7 @@ class AppSettings:
     tile_url: str
     tile_attribution: str
     tile_layer_name: str
+    coordinate_audit_mode: CoordinateAuditMode
     debug: bool
 
 
@@ -39,10 +42,17 @@ def load_settings() -> AppSettings:
 
     load_dotenv(PROJECT_ROOT / ".env")
     data_dir = Path(os.getenv("GLOBAL_LOCATION_DATA_DIR", str(DATA_DIR))).resolve()
+    audit_mode_text = os.getenv("COORDINATE_AUDIT_MODE", "warn").strip().lower()
+    coordinate_audit_mode: CoordinateAuditMode = (
+        cast(CoordinateAuditMode, audit_mode_text)
+        if audit_mode_text in {"off", "warn", "strict"}
+        else "warn"
+    )
     return AppSettings(
         data_dir=data_dir,
         tile_url=os.getenv("GLOBAL_LOCATION_TILE_URL", DEFAULT_TILE_URL),
         tile_attribution=os.getenv("GLOBAL_LOCATION_TILE_ATTRIBUTION", DEFAULT_TILE_ATTRIBUTION),
         tile_layer_name=os.getenv("GLOBAL_LOCATION_TILE_LAYER_NAME", DEFAULT_TILE_LAYER_NAME),
+        coordinate_audit_mode=coordinate_audit_mode,
         debug=os.getenv("DASH_DEBUG", "false").strip().lower() in {"1", "true", "yes", "on"},
     )

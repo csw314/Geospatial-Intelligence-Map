@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from src.data.schemas import LocationRecord
-from src.utils.search import record_matches_query, search_records
+from src.utils.search import build_search_index, record_matches_query, search_records
 
 
 def test_search_across_relevant_fields(sample_records: list[LocationRecord]) -> None:
@@ -71,3 +71,20 @@ def test_search_finds_us_site_by_service_host_and_quality(
     assert by_site[0].record.operator_country == "United States"
     assert by_service[0].record.name in {"Anqing Air Base", "Ramstein Air Base"}
     assert by_quality[0].record.name == "Ramstein Air Base"
+
+
+def test_search_index_supports_representative_queries(
+    sample_records: list[LocationRecord],
+) -> None:
+    search_index = build_search_index(sample_records)
+
+    assert len(search_index) == len(sample_records)
+    assert search_records(sample_records, "Chongqing", search_index=search_index)[
+        0
+    ].record.name == ("Chongqing")
+    assert search_records(sample_records, "Air Force", search_index=search_index)
+    assert search_records(sample_records, "China", search_index=search_index)
+    assert search_records(sample_records, "Ramstein", search_index=search_index)[0].record.name == (
+        "Ramstein Air Base"
+    )
+    assert search_records(sample_records, "no-such-place", search_index=search_index) == []

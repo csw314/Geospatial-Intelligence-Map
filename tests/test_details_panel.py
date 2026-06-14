@@ -72,3 +72,25 @@ def test_us_site_details_use_grouped_sections_and_caveat(
     assert "Representative point" in text
     assert "$2,500M" in text
     assert "unit of observation is a site" in text
+
+
+def test_us_site_details_display_coordinate_audit_warning(
+    sample_records: list[LocationRecord],
+) -> None:
+    record = _record_by_name(sample_records, "Ramstein Air Base").model_copy(
+        update={
+            "coordinate_audit_status": "high_confidence_mismatch",
+            "coordinate_audit_severity": "high",
+            "coordinate_audit_reason": "country_or_territory_mismatch",
+            "coordinate_audit_detected_geography": "Spain",
+            "coordinate_audit_possible_correction_type": "manual_review",
+            "coordinate_audit_distance_km": 1000.0,
+        }
+    )
+
+    text = _collect_text(render_details_panel(record))
+
+    assert "Coordinate audit warning" in text
+    assert "Coordinate-audit status" in text
+    assert "country_or_territory_mismatch" in text
+    assert "Spain" in text

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import re
 import socket
 import threading
@@ -64,6 +65,10 @@ def browser() -> Iterator[object]:
                 except Error:
                     continue
             if browser_instance is None:
+                if os.getenv("CI"):
+                    raise RuntimeError(
+                        f"Chromium is not installed for Playwright in CI: {bundled_error}"
+                    ) from bundled_error
                 pytest.skip(f"Chromium is not installed for Playwright: {bundled_error}")
         yield browser_instance
         browser_instance.close()
@@ -98,6 +103,39 @@ def _set_layer(page: Page, layer: str, checked: bool) -> None:
         control.uncheck(force=True)
 
 
+def _search(page: Page, query: str) -> None:
+    page.locator("#search-input").fill(query)
+    page.locator("#search-input").press("Enter")
+
+
+def _search_and_open(page: Page, query: str, result_text: str) -> None:
+    _search(page, query)
+    result = page.locator(".search-result-item").filter(has_text=result_text).first
+    expect(result).to_be_visible(timeout=10_000)
+    result.click()
+
+
+def test_application_startup(page: Page) -> None:
+    expect(page.locator("#map")).to_be_visible()
+    expect(page.locator(".leaflet-container")).to_be_visible()
+    expect(page.locator("#visible-count")).to_contain_text("9,371 visible", timeout=10_000)
+
+
+def test_layer_toolbar_visible(page: Page) -> None:
+    expect(page.locator("#layer-toolbar")).to_be_visible(timeout=10_000)
+    expect(page.locator('#active-layers input[value="global_metros"]')).to_be_checked()
+    expect(page.locator('#active-layers input[value="adversary_military"]')).to_be_checked()
+    expect(page.locator('#active-layers input[value="us_military"]')).to_be_checked()
+
+
+def test_duplicate_floating_utilities_are_absent(page: Page) -> None:
+    expect(page.locator(".map-control-group")).to_have_count(0)
+    expect(page.locator("#map-reset-view")).to_have_count(0)
+    expect(page.locator("#map-fit-screen")).to_have_count(0)
+    expect(page.locator("#map-full-map-toggle")).to_have_count(0)
+    expect(page.locator("#map-sidebar-toggle")).to_have_count(0)
+
+
 def test_marker_click_opens_and_closes_details(page: Page) -> None:
     marker = page.locator(".location-marker, .metro-marker, .us-marker").first
     expect(marker).to_be_visible(timeout=10_000)
@@ -109,47 +147,66 @@ def test_marker_click_opens_and_closes_details(page: Page) -> None:
     expect(page.locator("#details-panel")).to_have_class(re.compile(r".*\bis-collapsed\b.*"))
 
 
-def test_layer_toolbar_search_top_bar_and_mobile_details(page: Page) -> None:
-    expect(page.locator("#layer-toolbar")).to_be_visible(timeout=10_000)
-    expect(page.locator(".map-control-group")).to_have_count(0)
-    expect(page.locator("#map-reset-view")).to_have_count(0)
-
+def test_metro_only_view(page: Page) -> None:
     _set_layer(page, "adversary_military", False)
     _set_layer(page, "us_military", False)
     expect(page.locator("#visible-count")).to_contain_text("7,027 visible", timeout=10_000)
     expect(page.locator("#visible-count")).to_contain_text("Global metros: 7,027")
 
+
+def test_adversary_only_view(page: Page) -> None:
     _set_layer(page, "global_metros", False)
-    _set_layer(page, "us_military", True)
+    _set_layer(page, "us_military", False)
+    expect(page.locator("#visible-count")).to_contain_text("718 visible", timeout=10_000)
+    expect(page.locator("#visible-count")).to_contain_text("Adversary military: 718")
+
+
+def test_us_only_view(page: Page) -> None:
+    _set_layer(page, "global_metros", False)
+    _set_layer(page, "adversary_military", False)
     expect(page.locator("#visible-count")).to_contain_text("1,626 visible", timeout=10_000)
     expect(page.locator("#visible-count")).to_contain_text("U.S. military: 1,626")
 
-    _set_layer(page, "global_metros", True)
-    _set_layer(page, "adversary_military", True)
+
+def test_all_military_view(page: Page) -> None:
+    _set_layer(page, "global_metros", False)
+    expect(page.locator("#visible-count")).to_contain_text("2,344 visible", timeout=10_000)
+
+
+def test_all_three_layers_view(page: Page) -> None:
+    expect(page.locator("#visible-count")).to_contain_text("9,371 visible", timeout=10_000)
+
+
+def test_metro_and_adversary_view(page: Page) -> None:
     _set_layer(page, "us_military", False)
     expect(page.locator("#visible-count")).to_contain_text("7,745 visible", timeout=10_000)
 
-    _set_layer(page, "global_metros", False)
-    _set_layer(page, "us_military", True)
-    expect(page.locator("#visible-count")).to_contain_text("2,344 visible", timeout=10_000)
 
-    _set_layer(page, "global_metros", True)
-    _set_layer(page, "adversary_military", True)
-    _set_layer(page, "us_military", True)
-    page.locator("#search-input").fill("Tokyo")
-    result = page.locator(".search-result-item").filter(has_text="Tokyo").first
-    expect(result).to_be_visible(timeout=10_000)
-    result.click()
+def test_global_city_search_and_details(page: Page) -> None:
+    _search_and_open(page, "Tokyo", "Tokyo")
     _expect_details_open(page, "Tokyo")
     expect(page.locator("#details-panel")).to_contain_text("Population source", timeout=10_000)
+    expect(page.locator("#details-panel")).to_contain_text("Sources and Research Links")
 
-    page.locator("#search-input").fill("Ramstein")
-    result = page.locator(".search-result-item").filter(has_text="Ramstein AB").first
-    expect(result).to_be_visible(timeout=10_000)
-    result.click()
+
+def test_us_site_search_and_details(page: Page) -> None:
+    _search_and_open(page, "Ramstein", "Ramstein AB")
     _expect_details_open(page, "Ramstein AB")
     expect(page.locator("#details-panel")).to_contain_text("Coordinate quality", timeout=10_000)
+    expect(page.locator("#details-panel")).to_contain_text("Site Identity")
 
+
+def test_coordinate_audit_warning_display(page: Page) -> None:
+    _search_and_open(page, "Camp Morse", "Camp Morse")
+    _expect_details_open(page, "Camp Morse")
+    expect(page.locator("#details-panel")).to_contain_text(
+        "Coordinate audit warning",
+        timeout=10_000,
+    )
+    expect(page.locator("#quality-warning-banner")).to_be_visible(timeout=10_000)
+
+
+def test_top_bar_controls(page: Page) -> None:
     page.get_by_role("button", name="Reset View").click()
     expect(page.locator("#visible-count")).to_contain_text("visible", timeout=10_000)
     page.get_by_role("button", name="Fit to Screen").click()
@@ -159,6 +216,25 @@ def test_layer_toolbar_search_top_bar_and_mobile_details(page: Page) -> None:
     page.get_by_role("button", name="Collapse Sidebar").click()
     expect(page.locator("#app-shell")).to_have_class(re.compile(r".*\bis-sidebar-collapsed\b.*"))
 
+
+def test_type_selection_preservation(page: Page) -> None:
+    page.locator("#clear-all-types").click()
+    expect(page.locator("#visible-count")).to_contain_text("0 visible", timeout=10_000)
+    _set_layer(page, "global_metros", False)
+    expect(page.locator("#visible-count")).to_contain_text("0 visible", timeout=10_000)
+    page.locator("#select-all-types").click()
+    expect(page.locator("#visible-count")).not_to_contain_text("0 visible", timeout=10_000)
+
+
+def test_zoom_to_selected_behavior(page: Page) -> None:
+    _search_and_open(page, "Tokyo", "Tokyo")
+    _expect_details_open(page, "Tokyo")
+    page.locator("#zoom-to-selected").click()
+    expect(page.locator("#details-panel")).not_to_have_class(re.compile(r".*\bis-collapsed\b.*"))
+
+
+def test_mobile_layout(page: Page) -> None:
+    _search_and_open(page, "Ramstein", "Ramstein AB")
     page.set_viewport_size({"width": 390, "height": 760})
     expect(page.locator("#details-panel")).not_to_have_class(re.compile(r".*\bis-collapsed\b.*"))
     expect(page.locator("#layer-toolbar")).to_be_visible()

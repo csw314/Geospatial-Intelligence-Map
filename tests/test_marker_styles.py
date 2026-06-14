@@ -47,6 +47,7 @@ def test_metro_geojson_has_distinct_marker_properties(
 
     assert metro_feature["properties"]["type_code"] == "MET"
     assert metro_feature["properties"]["type"] == "Metro Area"
+    assert metro_feature["properties"]["marker_shape"] == "rounded_square"
     assert "popup_html" not in metro_feature["properties"]
     assert "raw" not in metro_feature["properties"]
 
@@ -63,6 +64,9 @@ def test_us_military_geojson_has_service_marker_properties(
 
     assert us_feature["properties"]["type_code"] == "AF"
     assert us_feature["properties"]["type"] == "Air Force"
+    assert us_feature["properties"]["service_branch"] == "Air Force"
+    assert us_feature["properties"]["source_file"] == "us_military_sites.csv"
+    assert us_feature["properties"]["marker_shape"] == "diamond"
     assert us_feature["properties"]["marker_color"] == US_SERVICE_STYLES["Air Force"]["color"]
 
 

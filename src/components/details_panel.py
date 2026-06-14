@@ -82,6 +82,24 @@ def _detail_section(title: str, rows: list[Any]) -> Any:
     )
 
 
+def _coordinate_audit_notice(record: LocationRecord) -> Any:
+    if record.map_layer != "us_military" or record.coordinate_audit_status in {None, "pass"}:
+        return None
+    return html.Div(
+        className="coordinate-audit-notice",
+        children=[
+            html.Div("Coordinate audit warning", className="coordinate-audit-title"),
+            html.Div(
+                (
+                    "Supplied coordinates appear inconsistent with the stated host geography. "
+                    "The map preserves and displays the source-provided point."
+                ),
+                className="coordinate-audit-message",
+            ),
+        ],
+    )
+
+
 def _global_city_sections(record: LocationRecord) -> list[Any]:
     return [
         _detail_section(
@@ -163,6 +181,20 @@ def _us_military_sections(record: LocationRecord) -> list[Any]:
                 _detail_row("Latitude", format_decimal(record.latitude)),
                 _detail_row("Longitude", format_decimal(record.longitude)),
                 _detail_row("Coordinate quality", record.coordinate_quality),
+                _detail_row("Coordinate-audit status", record.coordinate_audit_status),
+                _detail_row("Coordinate-audit reason", record.coordinate_audit_reason),
+                _detail_row(
+                    "Detected geography",
+                    record.coordinate_audit_detected_geography,
+                ),
+                _detail_row(
+                    "Possible correction type",
+                    record.coordinate_audit_possible_correction_type,
+                ),
+                _detail_row(
+                    "Distance from expected region",
+                    _format_optional_number(record.coordinate_audit_distance_km, " km"),
+                ),
                 _link_row(
                     "Coordinate source", record.coordinate_source_url, "Open coordinate source"
                 ),
@@ -316,6 +348,7 @@ def render_details_panel(record: LocationRecord | None) -> Any:
                 ],
             ),
             html.H2(record.name, className="details-title"),
+            _coordinate_audit_notice(record),
             html.Div(_detail_sections(record), className="details-sections"),
             html.Div(
                 className="coordinate-copy",

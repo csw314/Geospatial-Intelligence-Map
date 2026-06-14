@@ -101,7 +101,7 @@ def build_search_box() -> Any:
                 id="search-input",
                 type="search",
                 placeholder="Search locations",
-                debounce=False,
+                debounce=True,
                 className="search-input",
                 autoComplete="off",
             ),

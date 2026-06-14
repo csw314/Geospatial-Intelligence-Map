@@ -54,6 +54,22 @@ def render_quality_summary(quality: dict[str, Any]) -> Any:
                         f"Duplicate coordinates: "
                         f"{source.get('duplicate_coordinate_count', 0):,}"
                     ),
+                    html.Div(f"Audited: {source.get('records_audited', 0):,}"),
+                    html.Div(f"Audit passed: {source.get('audit_passed', 0):,}"),
+                    html.Div(f"Audit warnings: {source.get('audit_warnings', 0):,}"),
+                    html.Div(
+                        f"Audit high-confidence mismatches: "
+                        f"{source.get('audit_high_confidence_mismatches', 0):,}"
+                    ),
+                    html.Div(
+                        f"Probable coordinate swaps: "
+                        f"{source.get('audit_probable_coordinate_swaps', 0):,}"
+                    ),
+                    html.Div(
+                        f"Probable longitude-sign errors: "
+                        f"{source.get('audit_probable_longitude_sign_errors', 0):,}"
+                    ),
+                    html.Div(f"Audit unverified: {source.get('audit_unverified', 0):,}"),
                     html.Div(f"Missing optional: {missing_text}"),
                 ],
             )

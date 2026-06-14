@@ -54,6 +54,7 @@ SEARCHABLE_FIELDS = (
     "nearest_city",
     "coordinate_quality",
 )
+SearchIndex = dict[str, str]
 
 
 @dataclass(frozen=True)
@@ -81,18 +82,41 @@ def _record_values(record: LocationRecord) -> list[str]:
     return values
 
 
-def record_matches_query(record: LocationRecord, query: str | None) -> bool:
+def build_search_document(record: LocationRecord) -> str:
+    """Build one normalized search document for a record."""
+
+    return " ".join(normalize_text(value).casefold() for value in _record_values(record))
+
+
+def build_search_index(records: Sequence[LocationRecord]) -> SearchIndex:
+    """Build immutable normalized search text for startup-time records."""
+
+    return {record.id: build_search_document(record) for record in records}
+
+
+def record_matches_query(
+    record: LocationRecord,
+    query: str | None,
+    *,
+    search_index: SearchIndex | None = None,
+) -> bool:
     """Return True when the record matches a case-insensitive query."""
 
     normalized_query = _normalized_query(query)
     if not normalized_query:
         return True
-    return any(
-        normalized_query in normalize_text(value).casefold() for value in _record_values(record)
-    )
+    document = search_index.get(record.id) if search_index is not None else None
+    if document is None:
+        document = build_search_document(record)
+    return normalized_query in document
 
 
-def _rank_record(record: LocationRecord, query: str) -> int | None:
+def _rank_record(
+    record: LocationRecord,
+    query: str,
+    *,
+    search_index: SearchIndex | None = None,
+) -> int | None:
     normalized_query = _normalized_query(query)
     if not normalized_query:
         return 0
@@ -103,7 +127,9 @@ def _rank_record(record: LocationRecord, query: str) -> int | None:
         for value in (record.iata, record.icao)
         if value is not None
     ]
-    values = [normalize_text(value).casefold() for value in _record_values(record)]
+    document = search_index.get(record.id) if search_index is not None else None
+    if document is None:
+        document = build_search_document(record)
 
     if name == normalized_query:
         return 0
@@ -113,9 +139,9 @@ def _rank_record(record: LocationRecord, query: str) -> int | None:
         return 2
     if any(value.startswith(normalized_query) for value in identifiers):
         return 3
-    if any(value.startswith(normalized_query) for value in values):
+    if document.startswith(normalized_query) or f" {normalized_query}" in document:
         return 4
-    if any(normalized_query in value for value in values):
+    if normalized_query in document:
         return 5
     return None
 
@@ -125,6 +151,7 @@ def search_records(
     query: str | None,
     *,
     limit: int = 25,
+    search_index: SearchIndex | None = None,
 ) -> list[SearchResult]:
     """Search records and return deterministic ranked results."""
 
@@ -134,7 +161,7 @@ def search_records(
 
     results: list[SearchResult] = []
     for record in records:
-        rank = _rank_record(record, normalized_query)
+        rank = _rank_record(record, normalized_query, search_index=search_index)
         if rank is None:
             continue
         label_bits = [record.name, record.country, record.type]
@@ -155,6 +182,7 @@ def filter_records(
     types: Sequence[str] | None = None,
     source_files: Sequence[str] | None = None,
     query: str | None = None,
+    search_index: SearchIndex | None = None,
 ) -> list[LocationRecord]:
     """Apply country, type, source, and text filters."""
 
@@ -185,7 +213,7 @@ def filter_records(
             continue
         if source_set is not None and record.source_file not in source_set:
             continue
-        if not record_matches_query(record, query):
+        if not record_matches_query(record, query, search_index=search_index):
             continue
         filtered.append(record)
     return filtered

@@ -17,6 +17,22 @@ from src.data.load_locations import LocationDataset
 from src.utils.marker_styles import legend_payload
 
 
+def build_warning_banner(quality: dict[str, Any]) -> Any:
+    """Build a prominent application-level warning banner when needed."""
+
+    warnings = quality.get("critical_warnings", [])
+    if not warnings:
+        return None
+    return html.Div(
+        id="quality-warning-banner",
+        className="quality-warning-banner",
+        children=[
+            html.Div("Data requires review", className="quality-warning-title"),
+            html.Ul([html.Li(warning) for warning in warnings], className="quality-warning-list"),
+        ],
+    )
+
+
 def build_layout(dataset: LocationDataset, settings: AppSettings) -> Any:
     """Build the full application layout."""
 
@@ -37,6 +53,7 @@ def build_layout(dataset: LocationDataset, settings: AppSettings) -> Any:
             ),
             html.Div(id="map-resize-sentinel", className="visually-hidden"),
             build_top_bar(dataset.quality_report.plotted_rows),
+            build_warning_banner(quality),
             html.Div(
                 id="workspace",
                 className="workspace",

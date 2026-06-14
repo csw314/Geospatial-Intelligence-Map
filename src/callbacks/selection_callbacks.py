@@ -10,7 +10,7 @@ from dash import ALL, Input, Output, State, ctx, no_update
 from src.components.details_panel import render_details_panel
 from src.data.schemas import LocationRecord
 from src.utils.marker_styles import all_types
-from src.utils.search import filter_records
+from src.utils.search import SearchIndex, build_search_index, filter_records
 
 FILTER_TRIGGER_IDS = {
     "country-filter",
@@ -50,6 +50,7 @@ def selected_id_after_filter_change(
     types: Sequence[str] | None = None,
     source_files: Sequence[str] | None = None,
     query: str | None = None,
+    search_index: SearchIndex | None = None,
 ) -> str | None | Any:
     """Keep a selection only when the selected record remains visible."""
 
@@ -63,6 +64,7 @@ def selected_id_after_filter_change(
         types=types if types is not None else all_types(records),
         source_files=source_files,
         query=query,
+        search_index=search_index,
     )
     if any(record.id == selected_id for record in filtered):
         return no_update
@@ -82,6 +84,7 @@ def resolve_selected_location(
     types: Sequence[str] | None = None,
     source_files: Sequence[str] | None = None,
     query: str | None = None,
+    search_index: SearchIndex | None = None,
 ) -> str | None | Any:
     """Resolve the next selected record ID for a Dash trigger."""
 
@@ -104,6 +107,7 @@ def resolve_selected_location(
                 types=types,
                 source_files=source_files,
                 query=query,
+                search_index=search_index,
             )
     return no_update
 
@@ -112,6 +116,7 @@ def register_selection_callbacks(app: Any, records: list[LocationRecord]) -> Non
     """Register selection and detail callbacks."""
 
     record_by_id = {record.id: record for record in records}
+    search_index = build_search_index(records)
 
     @app.callback(
         Output("selected-location-id", "data"),
@@ -152,6 +157,7 @@ def register_selection_callbacks(app: Any, records: list[LocationRecord]) -> Non
             types=selected_types,
             source_files=selected_sources,
             query=query,
+            search_index=search_index,
         )
 
     @app.callback(

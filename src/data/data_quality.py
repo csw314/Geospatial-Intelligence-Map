@@ -23,6 +23,18 @@ class SourceQualityReport:
     rows_with_invalid_population: int = 0
     rows_with_numeric_parse_warnings: int = 0
     duplicate_coordinate_count: int = 0
+    records_audited: int = 0
+    audit_passed: int = 0
+    audit_warnings: int = 0
+    audit_high_confidence_mismatches: int = 0
+    audit_probable_coordinate_swaps: int = 0
+    audit_probable_longitude_sign_errors: int = 0
+    audit_probable_latitude_sign_errors: int = 0
+    audit_unverified: int = 0
+    validation_errors: list[str] = field(default_factory=list)
+    validation_warnings: list[str] = field(default_factory=list)
+    expected_row_count_failed: bool = False
+    schema_validation_failed: bool = False
     missing_optional_fields: dict[str, int] = field(default_factory=dict)
     parsing_warnings: list[str] = field(default_factory=list)
     load_error: str | None = None
@@ -79,9 +91,40 @@ class DataQualityReport:
 
         items: list[str] = []
         for source in self.sources:
+            items.extend(
+                f"{source.source_file}: {warning}" for warning in source.validation_warnings
+            )
+            items.extend(f"{source.source_file}: {error}" for error in source.validation_errors)
             items.extend(source.parsing_warnings)
             if source.load_error:
                 items.append(f"{source.source_file}: {source.load_error}")
+        return items
+
+    @property
+    def critical_warnings(self) -> list[str]:
+        """Warnings that should be displayed prominently in the application shell."""
+
+        items: list[str] = []
+        for source in self.sources:
+            if source.load_error:
+                items.append(f"{source.source_file} failed to load: {source.load_error}")
+            if source.schema_validation_failed:
+                items.append(
+                    f"{source.source_file} failed required schema validation; "
+                    "the map may be incomplete."
+                )
+            if source.expected_row_count_failed:
+                items.append(
+                    f"{source.source_file} did not match expected source counts; "
+                    "the dataset requires review."
+                )
+            if source.audit_high_confidence_mismatches:
+                items.append(
+                    f"{source.source_file} has "
+                    f"{source.audit_high_confidence_mismatches:,} high-confidence "
+                    "coordinate audit mismatches. The map displays source-provided "
+                    "coordinates that require review."
+                )
         return items
 
     @property
@@ -142,6 +185,7 @@ class DataQualityReport:
             "global_metro_records": self.global_metro_records,
             "adversary_military_records": self.adversary_military_records,
             "us_military_records": self.us_military_records,
+            "critical_warnings": self.critical_warnings,
             "sources": [source.to_dict() for source in self.sources],
             "duplicate_coordinates": [
                 duplicate.to_dict() for duplicate in self.duplicate_coordinates

@@ -112,15 +112,18 @@ def record_to_feature(
         marker_color = METRO_MARKER_COLOR
         type_color = "#86efac"
         type_code_value = "MET"
+        marker_shape = "rounded_square"
     elif record.map_layer == "us_military":
         service_style = US_SERVICE_STYLES.get(record.service_branch or record.type, {})
         marker_color = service_style.get("color", US_MARKER_COLOR)
         type_color = service_style.get("border", US_MARKER_BORDER)
         type_code_value = service_style.get("code", type_style.code)
+        marker_shape = "diamond"
     else:
         marker_color = COUNTRY_COLORS.get(canonical_country(record.country), DEFAULT_MARKER_COLOR)
         type_color = type_style.color
         type_code_value = type_style.code
+        marker_shape = "circle"
     return {
         "type": "Feature",
         "geometry": {
@@ -133,7 +136,10 @@ def record_to_feature(
             "country": display_country(record.country),
             "map_layer": record.map_layer,
             "type": record.type,
+            "service_branch": record.service_branch,
+            "source_file": record.source_file,
             "marker_color": marker_color,
+            "marker_shape": marker_shape,
             "type_color": type_color,
             "type_code": type_code_value,
             "selected": record.id == selected_id,

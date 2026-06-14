@@ -15,12 +15,11 @@ def create_app() -> Dash:
     """Create and configure the Dash application."""
 
     settings = load_settings()
-    dataset = load_location_dataset(settings.data_dir)
+    dataset = load_location_dataset(settings.data_dir, audit_mode=settings.coordinate_audit_mode)
     dash_app = Dash(
         __name__,
         external_stylesheets=[dbc.themes.BOOTSTRAP],
         title="Global Location Map",
-        suppress_callback_exceptions=True,
     )
     dash_app.layout = build_layout(dataset, settings)
     register_callbacks(dash_app, dataset.records)

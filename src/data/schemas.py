@@ -85,6 +85,12 @@ class LocationRecord(BaseModel):
     plant_replacement_value_m: float | None = None
     coordinate_source_url: str | None = None
     dataset_source_url: str | None = None
+    coordinate_audit_status: str | None = None
+    coordinate_audit_severity: str | None = None
+    coordinate_audit_reason: str | None = None
+    coordinate_audit_detected_geography: str | None = None
+    coordinate_audit_possible_correction_type: str | None = None
+    coordinate_audit_distance_km: float | None = None
     notes: str | None = None
     raw: dict[str, Any]
 

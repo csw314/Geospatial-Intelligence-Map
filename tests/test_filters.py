@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from src.callbacks.filter_callbacks import (
+    resolve_type_selection,
     selected_id_visible_in_records,
     type_options_for_country,
     types_for_country,
@@ -205,3 +206,60 @@ def test_us_layer_matches_host_country_not_operator_country(
         "Ramstein Air Base"
     ]
     assert filter_records(sample_records, country="United States") == []
+
+
+def test_type_selection_preserves_intersection() -> None:
+    previous_options = [
+        {"label": "Air Base", "value": "Air Base"},
+        {"label": "Metro Area", "value": "Metro Area"},
+    ]
+
+    assert resolve_type_selection(
+        ["Air Base", "Air Defense"],
+        ["Air Base"],
+        previous_options,
+        "country-filter",
+    ) == ["Air Base"]
+    assert (
+        resolve_type_selection(
+            ["Air Defense"],
+            ["Metro Area"],
+            previous_options,
+            "country-filter",
+        )
+        == []
+    )
+
+
+def test_type_selection_buttons_are_explicit() -> None:
+    previous_options = [{"label": "Air Base", "value": "Air Base"}]
+
+    assert resolve_type_selection(
+        ["Air Base", "Air Defense"],
+        ["Air Base"],
+        previous_options,
+        "select-all-types",
+    ) == ["Air Base", "Air Defense"]
+    assert (
+        resolve_type_selection(
+            ["Air Base", "Air Defense"],
+            ["Air Base"],
+            previous_options,
+            "clear-all-types",
+        )
+        == []
+    )
+
+
+def test_previous_all_type_selection_expands_to_new_all() -> None:
+    previous_options = [
+        {"label": "Air Base", "value": "Air Base"},
+        {"label": "Metro Area", "value": "Metro Area"},
+    ]
+
+    assert resolve_type_selection(
+        ["Air Base", "Air Defense"],
+        ["Air Base", "Metro Area"],
+        previous_options,
+        "active-layers",
+    ) == ["Air Base", "Air Defense"]

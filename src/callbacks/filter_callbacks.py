@@ -12,7 +12,12 @@ from src.data.schemas import LocationRecord
 from src.utils.display import canonical_country
 from src.utils.layers import ALL_MAP_LAYERS
 from src.utils.marker_styles import all_types, records_to_geojson
-from src.utils.search import filter_records, search_records
+from src.utils.search import (
+    build_search_index,
+    filter_records,
+    record_matches_query,
+    search_records,
+)
 
 
 def types_for_filter_context(
@@ -81,6 +86,27 @@ def _option_values(options: list[dict[str, Any]] | None) -> list[str]:
     return [str(option["value"]) for option in options]
 
 
+def resolve_type_selection(
+    available_types: list[str],
+    previous_types: list[str] | None,
+    previous_options: list[dict[str, Any]] | None,
+    triggered_id: Any,
+) -> list[str]:
+    """Resolve selected type values while preserving user intent."""
+
+    if triggered_id == "clear-all-types":
+        return []
+    if triggered_id == "select-all-types":
+        return available_types
+
+    previous_available = _option_values(previous_options)
+    if previous_types is None:
+        return available_types
+    if previous_available and set(previous_types) == set(previous_available):
+        return available_types
+    return [type_name for type_name in previous_types if type_name in set(available_types)]
+
+
 def selected_id_visible_in_records(
     records: list[LocationRecord],
     selected_id: str | None,
@@ -95,6 +121,8 @@ def selected_id_visible_in_records(
 def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
     """Register filter and search callbacks."""
 
+    search_index = build_search_index(records)
+
     @app.callback(
         Output("type-filter", "options"),
         Output("type-filter", "value"),
@@ -104,6 +132,7 @@ def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
         Input("select-all-types", "n_clicks"),
         Input("clear-all-types", "n_clicks"),
         State("type-filter", "value"),
+        State("type-filter", "options"),
         prevent_initial_call=True,
     )
     def update_type_selection(
@@ -112,7 +141,8 @@ def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
         selected_sources: list[str] | None,
         _select_clicks: int | None,
         _clear_clicks: int | None,
-        _selected_types: list[str] | None,
+        selected_types: list[str] | None,
+        previous_options: list[dict[str, Any]] | None,
     ) -> tuple[list[dict[str, str]], list[str]]:
         options = type_options_for_country(
             records,
@@ -121,10 +151,12 @@ def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
             source_files=selected_sources,
         )
         available_types = _option_values(options)
-        triggered = ctx.triggered_id
-        if triggered == "clear-all-types":
-            return options, []
-        return options, available_types
+        return options, resolve_type_selection(
+            available_types,
+            selected_types,
+            previous_options,
+            ctx.triggered_id,
+        )
 
     @app.callback(
         Output("locations-layer", "data"),
@@ -145,15 +177,7 @@ def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
         query: str | None,
         selected_id: str | None,
     ) -> tuple[dict[str, Any], str, Any]:
-        filtered = filter_records(
-            records,
-            country=country,
-            active_layers=active_layers,
-            types=selected_types if selected_types is not None else all_types(records),
-            source_files=selected_sources,
-            query=query,
-        )
-        search_base = filter_records(
+        base_filtered = filter_records(
             records,
             country=country,
             active_layers=active_layers,
@@ -161,7 +185,21 @@ def register_filter_callbacks(app: Any, records: list[LocationRecord]) -> None:
             source_files=selected_sources,
             query=None,
         )
-        search_results = search_records(search_base, query, limit=20)
+        filtered = (
+            [
+                record
+                for record in base_filtered
+                if record_matches_query(record, query, search_index=search_index)
+            ]
+            if query
+            else base_filtered
+        )
+        search_results = search_records(
+            base_filtered,
+            query,
+            limit=20,
+            search_index=search_index,
+        )
         layer_counts = Counter(record.map_layer for record in filtered)
         count_text = (
             f"{len(filtered):,} visible of {len(records):,} plotted | "

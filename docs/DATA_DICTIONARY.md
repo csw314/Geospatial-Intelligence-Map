@@ -15,6 +15,12 @@
 - `region`: source regional text.
 - `admin_area`: global city `Admin1_Name` or U.S. site `Admin_Area`.
 - `raw`: original source row values preserved for auditability.
+- `coordinate_audit_status`: `pass`, `warning`, `high_confidence_mismatch`, or `unverified` for audited U.S. records.
+- `coordinate_audit_severity`: `none`, `low`, `medium`, or `high`.
+- `coordinate_audit_reason`: concise audit classification such as `probable_lat_lon_swap`, `probable_longitude_sign_error`, `group_outlier`, or `country_or_territory_mismatch`.
+- `coordinate_audit_detected_geography`: matching offline envelope when determinable.
+- `coordinate_audit_possible_correction_type`: recommendation category only; source coordinates are never changed.
+- `coordinate_audit_distance_km`: approximate distance from expected geography or cluster where available.
 
 ## Adversary Military Fields
 
@@ -87,3 +93,5 @@ Buildings are parsed as optional integers. Square footage, acreage, and plant re
 The aggregate report includes total rows, plotted rows, excluded rows, Counterforce and Countervalue totals, layer totals, source reports, duplicate-coordinate groups, and flattened warnings.
 
 Each source report includes source encoding, loaded rows, plotted rows, coordinate cleanup counts, invalid-coordinate exclusions, invalid/missing population rows, numeric parse warnings, duplicate-coordinate record count, missing optional fields, parser warnings, and load errors.
+
+Source reports also include validation errors/warnings, expected row-count mismatch flags, schema validation flags, records audited, audit pass/warning/high-confidence/unverified counts, probable coordinate swaps, probable longitude-sign errors, and probable latitude-sign errors.

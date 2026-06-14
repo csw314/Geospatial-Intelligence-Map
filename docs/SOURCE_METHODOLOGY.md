@@ -68,3 +68,13 @@ Methodology caveats:
 - Coordinate reference system is WGS 84 / CRS84 longitude-latitude points.
 - Closed, inactive, excess, or awaiting-disposal records can remain in BSR data. Presence in the file does not prove current operational status.
 - The terms base, installation, and site are not interchangeable. Use `Record_ID` as the stable row key for this export.
+
+## Coordinate Plausibility Audit
+
+The application includes an offline audit focused on gross inconsistencies in `us_military_sites.csv`. It uses local envelopes in `data/reference/geographic_envelopes.json`, not runtime geocoding. The reference contains broad country, territory, U.S. state, and selected named-place envelopes for cases represented in the source.
+
+The audit can classify rows as `pass`, `warning`, `high_confidence_mismatch`, or `unverified`. It can recommend review categories such as latitude/longitude swap, longitude-sign flip, latitude-sign flip, group outlier, named-place mismatch, or unrelated-country mismatch. These are recommendations only. The application never changes source coordinates automatically.
+
+Known source-data cases flagged by the audit include Camp Morse, Camp Buehring, Batt West Property Site 2, Riverine Range, the Lajes-area outliers, NAV Hospital Beaufort, and Iwo Jima-3181.
+
+Because the audit uses generalized offline envelopes, it is intended to detect gross errors rather than certify exact locations. Border points, coastlines, small islands, overseas territories, and approximate representative points can require human review.
