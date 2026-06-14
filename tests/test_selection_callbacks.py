@@ -149,3 +149,33 @@ def test_search_filter_change_clears_hidden_selection(
         )
         is None
     )
+
+
+def test_layer_filter_change_preserves_selection_when_layer_remains_visible(
+    sample_records: list[LocationRecord],
+) -> None:
+    city = _record_by_name(sample_records, "Chongqing")
+
+    assert (
+        selected_id_after_filter_change(
+            sample_records,
+            city.id,
+            active_layers=["global_metros", "us_military"],
+        )
+        is no_update
+    )
+
+
+def test_layer_filter_change_clears_selection_when_layer_hidden(
+    sample_records: list[LocationRecord],
+) -> None:
+    city = _record_by_name(sample_records, "Chongqing")
+
+    assert (
+        selected_id_after_filter_change(
+            sample_records,
+            city.id,
+            active_layers=["adversary_military", "us_military"],
+        )
+        is None
+    )

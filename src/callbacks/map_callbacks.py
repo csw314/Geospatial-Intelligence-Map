@@ -19,19 +19,17 @@ def register_map_callbacks(app: Any, records: list[LocationRecord]) -> None:
         Output("map", "center"),
         Output("map", "zoom"),
         Input("reset-view", "n_clicks"),
-        Input("map-reset-view", "n_clicks"),
         Input("selected-location-id", "data"),
         Input("zoom-to-selected", "n_clicks"),
         prevent_initial_call=True,
     )
     def update_map_view(
         _reset_clicks: int | None,
-        _map_reset_clicks: int | None,
         selected_id: str | None,
         _zoom_clicks: int | None,
     ) -> tuple[list[float], int] | tuple[Any, Any]:
         triggered = ctx.triggered_id
-        if triggered in {"reset-view", "map-reset-view"}:
+        if triggered == "reset-view":
             return INITIAL_CENTER, INITIAL_ZOOM
         if triggered in {"selected-location-id", "zoom-to-selected"} and selected_id:
             record = record_by_id.get(selected_id)

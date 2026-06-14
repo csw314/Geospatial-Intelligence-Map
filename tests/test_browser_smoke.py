@@ -90,8 +90,16 @@ def _expect_any_details_open(page: Page) -> None:
     expect(page.locator(".details-title")).to_be_visible(timeout=10_000)
 
 
-def test_marker_click_opens_closes_and_reopens_details(page: Page) -> None:
-    marker = page.locator(".location-marker, .metro-marker").first
+def _set_layer(page: Page, layer: str, checked: bool) -> None:
+    control = page.locator(f'#active-layers input[value="{layer}"]')
+    if checked:
+        control.check(force=True)
+    else:
+        control.uncheck(force=True)
+
+
+def test_marker_click_opens_and_closes_details(page: Page) -> None:
+    marker = page.locator(".location-marker, .metro-marker, .us-marker").first
     expect(marker).to_be_visible(timeout=10_000)
 
     marker.click()
@@ -100,30 +108,58 @@ def test_marker_click_opens_closes_and_reopens_details(page: Page) -> None:
     page.locator("#close-details").click()
     expect(page.locator("#details-panel")).to_have_class(re.compile(r".*\bis-collapsed\b.*"))
 
-    marker = page.locator(".location-marker, .metro-marker").first
-    expect(marker).to_be_visible(timeout=10_000)
-    marker.click()
-    _expect_any_details_open(page)
 
+def test_layer_toolbar_search_top_bar_and_mobile_details(page: Page) -> None:
+    expect(page.locator("#layer-toolbar")).to_be_visible(timeout=10_000)
+    expect(page.locator(".map-control-group")).to_have_count(0)
+    expect(page.locator("#map-reset-view")).to_have_count(0)
 
-def test_filters_search_result_reset_and_mobile_details(page: Page) -> None:
-    page.locator('#country-filter input[value="DPRK"]').check(force=True)
-    expect(page.locator("#visible-count")).to_contain_text("38 visible", timeout=10_000)
-    expect(page.locator('#type-filter input[value="Metro Area"]')).to_be_attached()
-    expect(page.locator('#type-filter input[value="Missile operating base"]')).to_be_attached()
+    _set_layer(page, "adversary_military", False)
+    _set_layer(page, "us_military", False)
+    expect(page.locator("#visible-count")).to_contain_text("7,027 visible", timeout=10_000)
+    expect(page.locator("#visible-count")).to_contain_text("Global metros: 7,027")
 
-    page.locator('#location-category-filter input[value="Countervalue"]').check(force=True)
-    expect(page.locator("#visible-count")).to_contain_text("16 visible", timeout=10_000)
+    _set_layer(page, "global_metros", False)
+    _set_layer(page, "us_military", True)
+    expect(page.locator("#visible-count")).to_contain_text("1,626 visible", timeout=10_000)
+    expect(page.locator("#visible-count")).to_contain_text("U.S. military: 1,626")
 
-    page.locator("#search-input").fill("Pyongyang")
-    result = page.locator(".search-result-item").filter(has_text="Pyongyang").first
+    _set_layer(page, "global_metros", True)
+    _set_layer(page, "adversary_military", True)
+    _set_layer(page, "us_military", False)
+    expect(page.locator("#visible-count")).to_contain_text("7,745 visible", timeout=10_000)
+
+    _set_layer(page, "global_metros", False)
+    _set_layer(page, "us_military", True)
+    expect(page.locator("#visible-count")).to_contain_text("2,344 visible", timeout=10_000)
+
+    _set_layer(page, "global_metros", True)
+    _set_layer(page, "adversary_military", True)
+    _set_layer(page, "us_military", True)
+    page.locator("#search-input").fill("Tokyo")
+    result = page.locator(".search-result-item").filter(has_text="Tokyo").first
     expect(result).to_be_visible(timeout=10_000)
     result.click()
-    _expect_details_open(page, "Pyongyang")
+    _expect_details_open(page, "Tokyo")
+    expect(page.locator("#details-panel")).to_contain_text("Population source", timeout=10_000)
 
-    page.get_by_role("button", name="Reset View").first.click()
-    expect(page.locator("#visible-count")).to_contain_text("1 visible", timeout=10_000)
+    page.locator("#search-input").fill("Ramstein")
+    result = page.locator(".search-result-item").filter(has_text="Ramstein AB").first
+    expect(result).to_be_visible(timeout=10_000)
+    result.click()
+    _expect_details_open(page, "Ramstein AB")
+    expect(page.locator("#details-panel")).to_contain_text("Coordinate quality", timeout=10_000)
+
+    page.get_by_role("button", name="Reset View").click()
+    expect(page.locator("#visible-count")).to_contain_text("visible", timeout=10_000)
+    page.get_by_role("button", name="Fit to Screen").click()
+    expect(page.locator("#map")).to_be_visible()
+    page.get_by_role("button", name="Full Map").click()
+    expect(page.locator("#app-shell")).to_have_class(re.compile(r".*\bis-full-map\b.*"))
+    page.get_by_role("button", name="Collapse Sidebar").click()
+    expect(page.locator("#app-shell")).to_have_class(re.compile(r".*\bis-sidebar-collapsed\b.*"))
 
     page.set_viewport_size({"width": 390, "height": 760})
     expect(page.locator("#details-panel")).not_to_have_class(re.compile(r".*\bis-collapsed\b.*"))
-    expect(page.locator(".details-title")).to_contain_text("Pyongyang")
+    expect(page.locator("#layer-toolbar")).to_be_visible()
+    expect(page.locator(".details-title")).to_contain_text("Ramstein AB")

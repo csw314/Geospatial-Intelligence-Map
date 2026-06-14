@@ -3,11 +3,9 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
-from html import escape
 from typing import Any
 
 from src.data.schemas import LocationRecord
-from src.utils.copy_helpers import format_lat_lon
 from src.utils.display import canonical_country, display_country
 
 COUNTRY_COLORS = {
@@ -16,12 +14,26 @@ COUNTRY_COLORS = {
     "Iran": "#7c3aed",
     "DPRK": "#be123c",
 }
-CATEGORY_COLORS = {
-    "Counterforce": "#334155",
-    "Countervalue": "#15803d",
-}
 DEFAULT_MARKER_COLOR = "#4b5563"
 METRO_MARKER_COLOR = "#15803d"
+US_MARKER_COLOR = "#1f2937"
+US_MARKER_BORDER = "#f59e0b"
+LAYER_COLORS = {
+    "global_metros": METRO_MARKER_COLOR,
+    "adversary_military": DEFAULT_MARKER_COLOR,
+    "us_military": US_MARKER_COLOR,
+}
+US_SERVICE_STYLES = {
+    "Army": {"color": "#365314", "border": "#bef264", "code": "ARM"},
+    "Air Force": {"color": "#075985", "border": "#7dd3fc", "code": "AF"},
+    "Navy": {"color": "#1e3a8a", "border": "#bfdbfe", "code": "NAV"},
+    "Marine Corps": {"color": "#7f1d1d", "border": "#fecaca", "code": "MC"},
+    "Washington Headquarters Services": {
+        "color": "#3f3f46",
+        "border": "#e4e4e7",
+        "code": "WHS",
+    },
+}
 
 TYPE_PALETTE = (
     "#0f766e",
@@ -83,47 +95,6 @@ def all_types(records: list[LocationRecord]) -> list[str]:
     return sorted({record.type for record in records}, key=str.casefold)
 
 
-def _format_optional_int(value: int | None) -> str | None:
-    if value is None:
-        return None
-    return f"{value:,}"
-
-
-def _popup_html(record: LocationRecord) -> str:
-    optional_fields = [
-        ("Region", record.region),
-        ("Category Source", record.category_source),
-        ("Alternate names", record.alternate_names),
-        ("IATA", record.iata),
-        ("ICAO", record.icao),
-        ("Use", record.use),
-        ("Subordinate", record.subordinate),
-        ("Runways", record.runways),
-        ("Tenants", record.tenants),
-        ("ISO2", record.iso2),
-        ("Population", _format_optional_int(record.population)),
-        ("Population Proper", _format_optional_int(record.population_proper)),
-        ("Capital Status", record.capital_status),
-        ("Source Country Name", record.source_country_name),
-        ("Source URL", record.source_url),
-        ("Notes", record.notes),
-    ]
-    rows = [
-        ("Name", record.name),
-        ("Country", display_country(record.country)),
-        ("Type", record.type),
-        ("Coordinates", format_lat_lon(record.latitude, record.longitude)),
-        ("Source", record.source_file),
-        ("Location category", record.location_category),
-    ]
-    rows.extend((label, value) for label, value in optional_fields if value)
-    body = "".join(
-        f"<div><strong>{escape(label)}:</strong> {escape(str(value))}</div>"
-        for label, value in rows
-    )
-    return f'<div class="marker-popup">{body}</div>'
-
-
 def record_to_feature(
     record: LocationRecord,
     *,
@@ -137,13 +108,19 @@ def record_to_feature(
         color=DEFAULT_MARKER_COLOR,
         code=type_code(record.type),
     )
-    marker_color = (
-        METRO_MARKER_COLOR
-        if record.dataset_type == "metro_area"
-        else COUNTRY_COLORS.get(canonical_country(record.country), DEFAULT_MARKER_COLOR)
-    )
-    type_color = "#86efac" if record.dataset_type == "metro_area" else type_style.color
-    type_code_value = "MET" if record.dataset_type == "metro_area" else type_style.code
+    if record.map_layer == "global_metros":
+        marker_color = METRO_MARKER_COLOR
+        type_color = "#86efac"
+        type_code_value = "MET"
+    elif record.map_layer == "us_military":
+        service_style = US_SERVICE_STYLES.get(record.service_branch or record.type, {})
+        marker_color = service_style.get("color", US_MARKER_COLOR)
+        type_color = service_style.get("border", US_MARKER_BORDER)
+        type_code_value = service_style.get("code", type_style.code)
+    else:
+        marker_color = COUNTRY_COLORS.get(canonical_country(record.country), DEFAULT_MARKER_COLOR)
+        type_color = type_style.color
+        type_code_value = type_style.code
     return {
         "type": "Feature",
         "geometry": {
@@ -153,19 +130,13 @@ def record_to_feature(
         "properties": {
             "id": record.id,
             "name": record.name,
-            "country": record.country,
+            "country": display_country(record.country),
+            "map_layer": record.map_layer,
             "type": record.type,
-            "source_file": record.source_file,
-            "location_category": record.location_category,
-            "dataset_type": record.dataset_type,
-            "latitude": record.latitude,
-            "longitude": record.longitude,
-            "region": record.region,
             "marker_color": marker_color,
             "type_color": type_color,
             "type_code": type_code_value,
             "selected": record.id == selected_id,
-            "popup_html": _popup_html(record),
         },
     }
 
@@ -192,7 +163,8 @@ def legend_payload(records: list[LocationRecord]) -> dict[str, Any]:
 
     type_styles = build_type_styles(all_types(records))
     return {
+        "layers": LAYER_COLORS,
         "countries": COUNTRY_COLORS,
-        "categories": CATEGORY_COLORS,
+        "us_services": US_SERVICE_STYLES,
         "types": [style.to_dict() for style in type_styles.values()],
     }

@@ -25,6 +25,13 @@ from src.data.normalize_dprk import (
     OPTIONAL_COLUMNS as DPRK_OPTIONAL_COLUMNS,
 )
 from src.data.normalize_dprk import normalize_dprk_row
+from src.data.normalize_global_cities import (
+    EXPECTED_COLUMNS as GLOBAL_CITIES_EXPECTED_COLUMNS,
+)
+from src.data.normalize_global_cities import (
+    OPTIONAL_COLUMNS as GLOBAL_CITIES_OPTIONAL_COLUMNS,
+)
+from src.data.normalize_global_cities import normalize_global_city_row
 from src.data.normalize_iran import (
     EXPECTED_COLUMNS as IRAN_EXPECTED_COLUMNS,
 )
@@ -32,13 +39,6 @@ from src.data.normalize_iran import (
     OPTIONAL_COLUMNS as IRAN_OPTIONAL_COLUMNS,
 )
 from src.data.normalize_iran import normalize_iran_row
-from src.data.normalize_metro_areas import (
-    EXPECTED_COLUMNS as METRO_EXPECTED_COLUMNS,
-)
-from src.data.normalize_metro_areas import (
-    OPTIONAL_COLUMNS as METRO_OPTIONAL_COLUMNS,
-)
-from src.data.normalize_metro_areas import normalize_metro_area_row
 from src.data.normalize_russia import (
     EXPECTED_COLUMNS as RUSSIA_EXPECTED_COLUMNS,
 )
@@ -46,6 +46,13 @@ from src.data.normalize_russia import (
     OPTIONAL_COLUMNS as RUSSIA_OPTIONAL_COLUMNS,
 )
 from src.data.normalize_russia import normalize_russia_row
+from src.data.normalize_us_military import (
+    EXPECTED_COLUMNS as US_MILITARY_EXPECTED_COLUMNS,
+)
+from src.data.normalize_us_military import (
+    OPTIONAL_COLUMNS as US_MILITARY_OPTIONAL_COLUMNS,
+)
+from src.data.normalize_us_military import normalize_us_military_row
 from src.data.schemas import LocationRecord
 from src.utils.text_cleaning import normalize_text, row_needed_text_cleanup
 
@@ -62,6 +69,8 @@ class SourceSpec:
     normalizer: Callable[[Mapping[str, Any], int], Any]
     alternative_file_names: tuple[str, ...] = ()
     dataset_type: str = "military"
+    map_layer: str = "adversary_military"
+    location_category: str = "Counterforce"
 
 
 @dataclass(frozen=True)
@@ -96,6 +105,8 @@ SOURCE_SPECS = (
     SourceSpec(
         file_name="russia_data.csv",
         dataset_type="military",
+        map_layer="adversary_military",
+        location_category="Counterforce",
         expected_columns=RUSSIA_EXPECTED_COLUMNS,
         optional_columns=RUSSIA_OPTIONAL_COLUMNS,
         normalizer=normalize_russia_row,
@@ -103,6 +114,8 @@ SOURCE_SPECS = (
     SourceSpec(
         file_name="china_data.csv",
         dataset_type="military",
+        map_layer="adversary_military",
+        location_category="Counterforce",
         expected_columns=CHINA_EXPECTED_COLUMNS,
         optional_columns=CHINA_OPTIONAL_COLUMNS,
         normalizer=normalize_china_row,
@@ -110,6 +123,8 @@ SOURCE_SPECS = (
     SourceSpec(
         file_name="iran_data.csv",
         dataset_type="military",
+        map_layer="adversary_military",
+        location_category="Counterforce",
         expected_columns=IRAN_EXPECTED_COLUMNS,
         optional_columns=IRAN_OPTIONAL_COLUMNS,
         normalizer=normalize_iran_row,
@@ -117,17 +132,34 @@ SOURCE_SPECS = (
     SourceSpec(
         file_name="dprk_data.csv",
         dataset_type="military",
+        map_layer="adversary_military",
+        location_category="Counterforce",
         expected_columns=DPRK_EXPECTED_COLUMNS,
         optional_columns=DPRK_OPTIONAL_COLUMNS,
         normalizer=normalize_dprk_row,
     ),
     SourceSpec(
-        file_name="metro_areas.csv",
-        alternative_file_names=("metro_area.csv",),
+        file_name="global_cities_metros_100k.csv",
+        alternative_file_names=("Global_Cities_Metros_100k_Locations_Core.csv",),
         dataset_type="metro_area",
-        expected_columns=METRO_EXPECTED_COLUMNS,
-        optional_columns=METRO_OPTIONAL_COLUMNS,
-        normalizer=normalize_metro_area_row,
+        map_layer="global_metros",
+        location_category="Countervalue",
+        expected_columns=GLOBAL_CITIES_EXPECTED_COLUMNS,
+        optional_columns=GLOBAL_CITIES_OPTIONAL_COLUMNS,
+        normalizer=normalize_global_city_row,
+    ),
+    SourceSpec(
+        file_name="us_military_sites.csv",
+        alternative_file_names=(
+            "US_Military_Site.csv",
+            "US_Military_Sites_Worldwide_FY2024_Geospatial.csv",
+        ),
+        dataset_type="military",
+        map_layer="us_military",
+        location_category="Military Site",
+        expected_columns=US_MILITARY_EXPECTED_COLUMNS,
+        optional_columns=US_MILITARY_OPTIONAL_COLUMNS,
+        normalizer=normalize_us_military_row,
     ),
 )
 
@@ -204,7 +236,12 @@ def _load_source(
     data_dir: Path,
     spec: SourceSpec,
 ) -> tuple[list[LocationRecord], SourceQualityReport]:
-    report = SourceQualityReport(source_file=spec.file_name, dataset_type=spec.dataset_type)
+    report = SourceQualityReport(
+        source_file=spec.file_name,
+        dataset_type=spec.dataset_type,
+        map_layer=spec.map_layer,
+        location_category=spec.location_category,
+    )
     records: list[LocationRecord] = []
 
     try:
@@ -250,6 +287,7 @@ def _load_source(
         if normalized.coordinate_cleaned or _coordinate_fields_needed_cleanup(row_dict):
             report.rows_with_cleaned_coordinates += 1
         report.rows_with_invalid_population += normalized.invalid_population_count
+        report.rows_with_numeric_parse_warnings += normalized.invalid_numeric_count
         for warning in normalized.warnings:
             report.parsing_warnings.append(f"Row {row_number}: {warning}")
         records.append(normalized.record)

@@ -8,6 +8,7 @@ from typing import Any
 
 from src.data.schemas import LocationRecord
 from src.utils.display import canonical_country
+from src.utils.layers import normalize_active_layers
 from src.utils.text_cleaning import normalize_text
 
 SEARCHABLE_FIELDS = (
@@ -23,14 +24,35 @@ SEARCHABLE_FIELDS = (
     "subordinate",
     "tenants",
     "source_file",
+    "map_layer",
     "country",
+    "operator_country",
     "location_category",
     "dataset_type",
     "iso2",
+    "iso3",
+    "admin_area",
+    "timezone",
     "population",
     "population_proper",
+    "population_source",
+    "population_bamwor",
+    "population_simplemaps",
+    "population_starting_list",
+    "population_size_class",
     "capital_status",
+    "capital_classification",
+    "country_gdp_per_capita_usd",
+    "country_gdp_ppp_usd",
+    "primary_source",
     "source_country_name",
+    "component",
+    "service_branch",
+    "component_status",
+    "location_class",
+    "geographic_scope",
+    "nearest_city",
+    "coordinate_quality",
 )
 
 
@@ -128,7 +150,8 @@ def filter_records(
     records: Iterable[LocationRecord],
     *,
     country: str | None = "All",
-    location_category: str | None = "All",
+    active_layers: Sequence[str] | None = None,
+    location_category: str | None = None,
     types: Sequence[str] | None = None,
     source_files: Sequence[str] | None = None,
     query: str | None = None,
@@ -137,8 +160,9 @@ def filter_records(
 
     type_set = set(types) if types is not None else None
     source_set = set(source_files) if source_files is not None else None
+    layer_set = normalize_active_layers(active_layers)
     country_filter = canonical_country(country)
-    if type_set == set() or source_set == set():
+    if type_set == set() or source_set == set() or layer_set == set():
         return []
 
     filtered: list[LocationRecord] = []
@@ -154,6 +178,8 @@ def filter_records(
             and location_category != "All"
             and record.location_category != location_category
         ):
+            continue
+        if record.map_layer not in layer_set:
             continue
         if type_set is not None and record.type not in type_set:
             continue

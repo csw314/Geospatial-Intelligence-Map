@@ -12,6 +12,8 @@ class SourceQualityReport:
 
     source_file: str
     dataset_type: str = "military"
+    map_layer: str = "adversary_military"
+    location_category: str = "Counterforce"
     encoding: str | None = None
     total_rows: int = 0
     plotted_rows: int = 0
@@ -19,6 +21,7 @@ class SourceQualityReport:
     rows_with_cleaned_coordinates: int = 0
     rows_excluded_invalid_coordinates: int = 0
     rows_with_invalid_population: int = 0
+    rows_with_numeric_parse_warnings: int = 0
     duplicate_coordinate_count: int = 0
     missing_optional_fields: dict[str, int] = field(default_factory=dict)
     parsing_warnings: list[str] = field(default_factory=list)
@@ -86,7 +89,9 @@ class DataQualityReport:
         """Total plotted Counterforce records."""
 
         return sum(
-            source.plotted_rows for source in self.sources if source.dataset_type == "military"
+            source.plotted_rows
+            for source in self.sources
+            if source.location_category == "Counterforce"
         )
 
     @property
@@ -94,7 +99,35 @@ class DataQualityReport:
         """Total plotted Countervalue records."""
 
         return sum(
-            source.plotted_rows for source in self.sources if source.dataset_type == "metro_area"
+            source.plotted_rows
+            for source in self.sources
+            if source.location_category == "Countervalue"
+        )
+
+    @property
+    def global_metro_records(self) -> int:
+        """Total plotted records in the global metro layer."""
+
+        return sum(
+            source.plotted_rows for source in self.sources if source.map_layer == "global_metros"
+        )
+
+    @property
+    def adversary_military_records(self) -> int:
+        """Total plotted records in the adversary military layer."""
+
+        return sum(
+            source.plotted_rows
+            for source in self.sources
+            if source.map_layer == "adversary_military"
+        )
+
+    @property
+    def us_military_records(self) -> int:
+        """Total plotted records in the U.S. military layer."""
+
+        return sum(
+            source.plotted_rows for source in self.sources if source.map_layer == "us_military"
         )
 
     def to_dict(self) -> dict[str, Any]:
@@ -106,6 +139,9 @@ class DataQualityReport:
             "excluded_rows": self.excluded_rows,
             "counterforce_records": self.counterforce_records,
             "countervalue_records": self.countervalue_records,
+            "global_metro_records": self.global_metro_records,
+            "adversary_military_records": self.adversary_military_records,
+            "us_military_records": self.us_military_records,
             "sources": [source.to_dict() for source in self.sources],
             "duplicate_coordinates": [
                 duplicate.to_dict() for duplicate in self.duplicate_coordinates
@@ -121,4 +157,5 @@ class NormalizedLocation:
     record: Any
     coordinate_cleaned: bool = False
     invalid_population_count: int = 0
+    invalid_numeric_count: int = 0
     warnings: tuple[str, ...] = ()

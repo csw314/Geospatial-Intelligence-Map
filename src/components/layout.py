@@ -7,6 +7,7 @@ from typing import Any
 from dash import dcc, html
 
 from src.components.details_panel import render_details_panel
+from src.components.layer_toolbar import build_layer_toolbar
 from src.components.legend import build_legend
 from src.components.map_view import build_map
 from src.components.sidebar import build_sidebar
@@ -44,36 +45,8 @@ def build_layout(dataset: LocationDataset, settings: AppSettings) -> Any:
                     html.Main(
                         className="map-stage",
                         children=[
+                            build_layer_toolbar(),
                             build_map(dataset.records, settings),
-                            html.Div(
-                                className="map-control-group",
-                                children=[
-                                    html.Button(
-                                        "Reset View",
-                                        id="map-reset-view",
-                                        className="map-control-button",
-                                        type="button",
-                                    ),
-                                    html.Button(
-                                        "Fit to Screen",
-                                        id="map-fit-screen",
-                                        className="map-control-button",
-                                        type="button",
-                                    ),
-                                    html.Button(
-                                        "Full Map",
-                                        id="map-full-map-toggle",
-                                        className="map-control-button",
-                                        type="button",
-                                    ),
-                                    html.Button(
-                                        "Collapse Sidebar",
-                                        id="map-sidebar-toggle",
-                                        className="map-control-button",
-                                        type="button",
-                                    ),
-                                ],
-                            ),
                             build_legend(legend_payload(dataset.records)),
                         ],
                     ),

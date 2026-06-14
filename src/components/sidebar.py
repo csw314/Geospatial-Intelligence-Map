@@ -8,7 +8,6 @@ from dash import html
 
 from src.components.filters import (
     build_country_filter,
-    build_location_category_filter,
     build_search_box,
     build_source_filter,
     build_type_filter,
@@ -48,6 +47,10 @@ def render_quality_summary(quality: dict[str, Any]) -> Any:
                         f"{source.get('rows_with_invalid_population', 0):,}"
                     ),
                     html.Div(
+                        f"Numeric parse warnings: "
+                        f"{source.get('rows_with_numeric_parse_warnings', 0):,}"
+                    ),
+                    html.Div(
                         f"Duplicate coordinates: "
                         f"{source.get('duplicate_coordinate_count', 0):,}"
                     ),
@@ -85,15 +88,22 @@ def render_quality_summary(quality: dict[str, Any]) -> Any:
                     ),
                     html.Div(
                         [
-                            html.Span(f"{quality.get('counterforce_records', 0):,}"),
-                            html.Small("counterforce"),
+                            html.Span(f"{quality.get('global_metro_records', 0):,}"),
+                            html.Small("global metros"),
                         ],
                         className="quality-kpi",
                     ),
                     html.Div(
                         [
-                            html.Span(f"{quality.get('countervalue_records', 0):,}"),
-                            html.Small("countervalue"),
+                            html.Span(f"{quality.get('adversary_military_records', 0):,}"),
+                            html.Small("adversary"),
+                        ],
+                        className="quality-kpi",
+                    ),
+                    html.Div(
+                        [
+                            html.Span(f"{quality.get('us_military_records', 0):,}"),
+                            html.Small("U.S. sites"),
                         ],
                         className="quality-kpi",
                     ),
@@ -127,12 +137,6 @@ def build_sidebar(records: list[LocationRecord], quality: dict[str, Any]) -> Any
                     html.Div("Filters", className="section-heading"),
                     html.Label("Country", className="control-label", htmlFor="country-filter"),
                     build_country_filter(records),
-                    html.Label(
-                        "Location Category",
-                        className="control-label",
-                        htmlFor="location-category-filter",
-                    ),
-                    build_location_category_filter(),
                     html.Label("Type", className="control-label", htmlFor="type-filter"),
                     build_type_filter(records),
                     html.Label("Source File", className="control-label", htmlFor="source-filter"),

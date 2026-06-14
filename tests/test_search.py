@@ -29,10 +29,12 @@ def test_search_finds_metro_by_city_region_and_population(
     by_region = search_records(sample_records, "Chongqing")
     by_population = search_records(sample_records, "32,054,159")
 
-    assert by_city[0].record.source_file == "metro_areas.csv"
+    assert by_city[0].record.source_file == "global_cities_metros_100k.csv"
     assert by_city[0].record.location_category == "Countervalue"
     assert by_region[0].record.name == "Chongqing"
     assert by_population[0].record.name == "Chongqing"
+    assert search_records(sample_records, "Asia/Shanghai")[0].record.name == "Chongqing"
+    assert search_records(sample_records, "Bamwor")[0].record.name == "Chongqing"
 
 
 def test_search_finds_iran_by_name_and_notes(sample_records: list[LocationRecord]) -> None:
@@ -55,3 +57,17 @@ def test_search_finds_dprk_by_name_and_category_source(
     assert by_name[0].record.country == "DPRK"
     assert by_name[0].record.location_category == "Counterforce"
     assert by_source[0].record.name == "Sakkanmol Missile Operating Base"
+
+
+def test_search_finds_us_site_by_service_host_and_quality(
+    sample_records: list[LocationRecord],
+) -> None:
+    by_site = search_records(sample_records, "Ramstein")
+    by_service = search_records(sample_records, "Air Force")
+    by_quality = search_records(sample_records, "Representative point")
+
+    assert by_site[0].record.source_file == "us_military_sites.csv"
+    assert by_site[0].record.country == "Germany"
+    assert by_site[0].record.operator_country == "United States"
+    assert by_service[0].record.name in {"Anqing Air Base", "Ramstein Air Base"}
+    assert by_quality[0].record.name == "Ramstein Air Base"

@@ -73,6 +73,7 @@ def normalize_metro_area_row(row: Mapping[str, Any], row_number: int) -> Normali
     record = LocationRecord(
         id=f"{SOURCE_FILE}:{row_number}:{slugify(name)}",
         source_file=SOURCE_FILE,
+        map_layer="global_metros",
         country=cleaned.get("Country") or "Unknown",
         location_category="Countervalue",
         dataset_type="metro_area",

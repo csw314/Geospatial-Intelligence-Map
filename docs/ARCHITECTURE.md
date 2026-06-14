@@ -1,31 +1,49 @@
 # Architecture
 
-The app keeps CSV parsing and validation outside Dash callbacks.
+The app keeps CSV parsing and validation outside Dash callbacks. Runtime data is loaded once during `create_app()` by `load_location_dataset()`.
 
-- `src/data`: reads CSV files, normalizes military and metro rows, validates coordinates, parses metro population values, and builds quality reports.
-- `src/utils`: pure filtering, search, coordinate formatting, and GeoJSON generation.
-- `src/components`: Dash layout factories.
-- `src/callbacks`: Dash callback registration for filters, search, selection, details, map viewport, and responsive layout state.
+## Modules
 
-The central loader registers one `SourceSpec` per dataset. Russia, China, Iran, and DPRK normalizers emit `Counterforce` / `military` records. The metro normalizer emits `Countervalue` / `metro_area` records from `metro_areas.csv` and falls back to `metro_area.csv` if only the singular filename exists.
+- `src/data`: CSV loading, source-specific normalizers, Pydantic schemas, coordinate parsing, and quality reports.
+- `src/utils`: pure filtering, search, display helpers, layer constants, and GeoJSON marker generation.
+- `src/components`: Dash layout factories for the top bar, sidebar, layer toolbar, map, legend, and details drawer.
+- `src/callbacks`: Dash callbacks for filtering, search result rendering, selection, details, map viewport, and layout state.
 
-Country-specific normalizers live in:
+## Data Flow
 
-- `src/data/normalize_russia.py`
-- `src/data/normalize_china.py`
-- `src/data/normalize_iran.py`
-- `src/data/normalize_dprk.py`
-- `src/data/normalize_metro_areas.py`
+`src/data/load_locations.py` registers one `SourceSpec` per active CSV:
 
-Iran maps `Notes` into `notes`. DPRK maps `Category Source` into `category_source` and `Notes` into `notes`. Rows with invalid or missing coordinates raise a row-level validation error, are excluded from plotted records, and are reported in the per-source data-quality warnings.
+- Russia, China, Iran, and DPRK normalizers emit `map_layer="adversary_military"`, `location_category="Counterforce"`, and `dataset_type="military"`.
+- `normalize_global_cities.py` emits `map_layer="global_metros"`, `location_category="Countervalue"`, and `dataset_type="metro_area"`.
+- `normalize_us_military.py` emits `map_layer="us_military"`, `location_category="Military Site"`, `dataset_type="military"`, `country=Host_Country`, and `operator_country="United States"`.
 
-The map layer is rendered as clustered GeoJSON using Dash Leaflet. Filter changes rebuild the server-side GeoJSON payload so clusters reflect the current visible record set. Marker styling branches on `dataset_type`, keeping military markers intact while rendering metro areas with a distinct civilian marker.
+The legacy `normalize_metro_areas.py` module remains for direct regression tests and historical reference, but `metro_areas.csv` is archived and not registered as an active source.
 
-Search and filtering are pure utilities. The Dash callbacks combine Country, Location Category, Source File, Type, and text search filters before rebuilding map data and search results. Search covers common normalized fields plus country-specific notes/category-source fields and metro population/source fields.
+Each normalizer preserves original row values in `record.raw`. The loader records source encoding, row counts, invalid-coordinate exclusions, numeric warnings, optional-field gaps, load errors, and duplicate-coordinate groups. Duplicate coordinates are reported globally but records are retained.
 
-## Layout Flow
+## Filtering And Search
 
-The root layout uses a full-height app shell with a top bar, collapsible sidebar, map stage, overlay legend, and overlay details drawer. The map keeps the available space because details no longer permanently occupy a grid column.
+The above-map toolbar owns logical layer visibility through the `active-layers` checklist. `filter_records()` applies active layers, country, type, source file, and query filters in deterministic order. Country matching uses canonical DPRK handling, while U.S. site country matching uses host country.
+
+Type options are contextual to active layers, selected country, and selected source files. Search scans normalized fields plus `record.raw`, so source-specific metadata remains discoverable without exposing raw metadata in GeoJSON.
+
+Selection is stored as `selected-location-id`. Filter or layer changes keep the selected ID only if the selected record remains visible. Search-result selection and marker selection both use the same selected-ID path.
+
+## Map And GeoJSON
+
+The map still uses Dash Leaflet and one clustered `dl.GeoJSON` layer. Active logical layers are unioned server-side before GeoJSON generation. This avoids multiple overlapping cluster engines and keeps global zoom performance predictable.
+
+GeoJSON properties are minimal: record ID, name, display country, `map_layer`, type/service text, marker colors, type code, and selected state. Complete source metadata is rendered from the server-side record in the details drawer.
+
+Marker styling is layer-aware:
+
+- `global_metros`: green civilian marker with `MET`.
+- `adversary_military`: country-colored military marker.
+- `us_military`: distinct U.S. service marker family using service abbreviations.
+
+## Layout Controls
+
+The root app shell contains the top bar, workspace grid, sidebar, map stage, legend, and details drawer. The duplicate floating custom map utility group has been removed. Top-bar buttons remain the only custom controls for sidebar collapse, fit-to-screen, full-map mode, and reset view.
 
 `src/callbacks/layout_callbacks.py` owns layout-only state:
 
@@ -34,6 +52,6 @@ The root layout uses a full-height app shell with a top bar, collapsible sidebar
 - `details_open`
 - `resize_nonce`
 
-These flags only update CSS classes and button labels. They do not reload CSV data, reset filters, clear search text, or alter selected markers. Selecting a marker opens the details drawer; closing the drawer does not clear the selected marker.
+These flags update CSS classes and button labels. They do not reload CSV data, reset filters, clear search text, or change the selected record except through the normal details close/selection path.
 
-The same module registers a clientside callback that responds to layout state changes by dispatching browser resize events and attempting Leaflet `invalidateSize` when a map instance is available. This is needed because Leaflet maps may render stale tiles after parent containers change size.
+The clientside resize callback dispatches browser resize events and attempts Leaflet `invalidateSize()` after sidebar, full-map, details, and fit-to-screen changes.

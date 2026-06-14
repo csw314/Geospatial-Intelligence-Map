@@ -33,6 +33,7 @@ def test_normalize_metro_area_row() -> None:
     record = normalized.record
     assert record.id == "metro_areas.csv:2:chongqing"
     assert record.source_file == "metro_areas.csv"
+    assert record.map_layer == "global_metros"
     assert record.location_category == "Countervalue"
     assert record.dataset_type == "metro_area"
     assert record.type == "Metro Area"

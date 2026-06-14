@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, cast
 
 import dash_bootstrap_components as dbc
 from dash import dcc, html
@@ -25,37 +25,20 @@ def country_filter_options(records: list[LocationRecord]) -> list[dict[str, str]
 
 
 def build_country_filter(records: list[LocationRecord]) -> Any:
-    """Build the country radio control."""
+    """Build the searchable country dropdown."""
 
-    return dbc.RadioItems(
+    return dcc.Dropdown(
         id="country-filter",
-        className="filter-control",
-        inputClassName="filter-input",
-        labelClassName="filter-label",
-        options=country_filter_options(records),
+        options=cast(Any, country_filter_options(records)),
         value="All",
-    )
-
-
-def build_location_category_filter() -> Any:
-    """Build the location-category radio control."""
-
-    return dbc.RadioItems(
-        id="location-category-filter",
-        className="filter-control",
-        inputClassName="filter-input",
-        labelClassName="filter-label",
-        options=[
-            {"label": "All", "value": "All"},
-            {"label": "Counterforce", "value": "Counterforce"},
-            {"label": "Countervalue", "value": "Countervalue"},
-        ],
-        value="All",
+        clearable=True,
+        searchable=True,
+        className="filter-dropdown",
     )
 
 
 def build_type_filter(records: list[LocationRecord]) -> Any:
-    """Build the dynamic type checklist."""
+    """Build the searchable dynamic type multi-select."""
 
     types = all_types(records)
     return html.Div(
@@ -79,13 +62,17 @@ def build_type_filter(records: list[LocationRecord]) -> Any:
                     ),
                 ],
             ),
-            dbc.Checklist(
+            dcc.Dropdown(
                 id="type-filter",
-                className="type-checklist",
-                inputClassName="filter-input",
-                labelClassName="filter-label",
-                options=[{"label": type_name, "value": type_name} for type_name in types],
+                options=cast(
+                    Any,
+                    [{"label": type_name, "value": type_name} for type_name in types],
+                ),
                 value=types,
+                multi=True,
+                clearable=True,
+                searchable=True,
+                className="filter-dropdown",
             ),
         ]
     )

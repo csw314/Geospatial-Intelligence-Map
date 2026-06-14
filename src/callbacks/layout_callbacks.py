@@ -111,11 +111,11 @@ def layout_state_for_trigger(
 ) -> LayoutState | Any:
     """Resolve the next layout state for a Dash trigger."""
 
-    if triggered_id in {"sidebar-toggle", "map-sidebar-toggle"}:
+    if triggered_id == "sidebar-toggle":
         return reduce_layout_state(state, "toggle_sidebar")
-    if triggered_id in {"full-map-toggle", "map-full-map-toggle"}:
+    if triggered_id == "full-map-toggle":
         return reduce_layout_state(state, "toggle_full_map")
-    if triggered_id in {"fit-screen", "map-fit-screen"}:
+    if triggered_id == "fit-screen":
         return reduce_layout_state(state, "fit_to_screen")
     if triggered_id == "close-details":
         return reduce_layout_state(state, "close_details")
@@ -130,22 +130,16 @@ def register_layout_callbacks(app: Any) -> None:
     @app.callback(
         Output("layout-state", "data"),
         Input("sidebar-toggle", "n_clicks"),
-        Input("map-sidebar-toggle", "n_clicks"),
         Input("full-map-toggle", "n_clicks"),
-        Input("map-full-map-toggle", "n_clicks"),
         Input("fit-screen", "n_clicks"),
-        Input("map-fit-screen", "n_clicks"),
         Input("selected-location-id", "data"),
         State("layout-state", "data"),
         prevent_initial_call=True,
     )
     def update_layout_state(
         _sidebar_clicks: int | None,
-        _map_sidebar_clicks: int | None,
         _full_map_clicks: int | None,
-        _map_full_map_clicks: int | None,
         _fit_clicks: int | None,
-        _map_fit_clicks: int | None,
         selected_id: str | None,
         state: dict[str, Any] | None,
     ) -> LayoutState | Any:
@@ -155,19 +149,17 @@ def register_layout_callbacks(app: Any) -> None:
         Output("app-shell", "className"),
         Output("details-panel", "className"),
         Output("full-map-toggle", "children"),
-        Output("map-full-map-toggle", "children"),
         Output("sidebar-toggle", "children"),
-        Output("map-sidebar-toggle", "children"),
         Input("layout-state", "data"),
     )
     def update_layout_classes(
         state: dict[str, Any] | None,
-    ) -> tuple[str, str, str, str, str, str]:
+    ) -> tuple[str, str, str, str]:
         shell_class = app_shell_class(state)
         panel_class = details_panel_class(state)
         full_label = full_map_label(state)
         side_label = sidebar_label(state)
-        return shell_class, panel_class, full_label, full_label, side_label, side_label
+        return shell_class, panel_class, full_label, side_label
 
     app.clientside_callback(
         """

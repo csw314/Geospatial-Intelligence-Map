@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from collections import Counter
+
 from dash import Dash
 
 from app import create_app
@@ -21,3 +23,7 @@ def test_layout_builds_from_real_dataset() -> None:
 
     assert layout is not None
     assert dataset.quality_report.plotted_rows > 0
+    counts = Counter(record.map_layer for record in dataset.records)
+    assert counts["global_metros"] == 7027
+    assert counts["us_military"] == 1626
+    assert counts["adversary_military"] > 0

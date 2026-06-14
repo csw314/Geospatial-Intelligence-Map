@@ -19,10 +19,11 @@ function(feature, latlng) {
         return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[ch];
     });
     const selected = Boolean(p.selected);
-    const isMetro = p.dataset_type === "metro_area";
-    const size = selected ? (isMetro ? 40 : 38) : (isMetro ? 32 : 31);
-    const markerClass = `${isMetro ? "metro-marker" : "location-marker"}` +
-        `${selected ? " is-selected" : ""}`;
+    const isMetro = p.map_layer === "global_metros";
+    const isUs = p.map_layer === "us_military";
+    const size = selected ? (isMetro ? 40 : isUs ? 39 : 38) : (isMetro ? 32 : isUs ? 33 : 31);
+    const markerBaseClass = isMetro ? "metro-marker" : isUs ? "us-marker" : "location-marker";
+    const markerClass = `${markerBaseClass}${selected ? " is-selected" : ""}`;
     const html = `
         <div class="${markerClass}"
              style="--marker-color:${p.marker_color};--type-color:${p.type_color};">
@@ -42,7 +43,11 @@ function(feature, latlng) {
     const tooltip = `<strong>${escapeHtml(p.name)}</strong><br>` +
         `${escapeHtml(p.country)} | ${escapeHtml(p.type)}`;
     marker.bindTooltip(tooltip, {direction: "top", offset: [0, -12], opacity: 0.95});
-    marker.bindPopup(p.popup_html || "");
+    marker.bindPopup(
+        `<div class="marker-popup"><strong>${escapeHtml(p.name)}</strong><br>` +
+        `${escapeHtml(p.country)} | ${escapeHtml(p.type)}<br>` +
+        `Select marker for full details.</div>`
+    );
     return marker;
 }
 """

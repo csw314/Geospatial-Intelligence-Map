@@ -80,7 +80,7 @@ def test_selected_location_state_controls_details_panel_visibility() -> None:
     assert "is-collapsed" in details_panel_class(closed)
 
 
-def test_layout_contains_responsive_map_controls() -> None:
+def test_layout_contains_top_bar_controls_and_layer_toolbar() -> None:
     settings = load_settings()
     dataset = load_location_dataset(settings.data_dir)
     layout = build_layout(dataset, settings)
@@ -91,8 +91,11 @@ def test_layout_contains_responsive_map_controls() -> None:
     assert "sidebar-toggle" in ids
     assert "full-map-toggle" in ids
     assert "fit-screen" in ids
-    assert "map-sidebar-toggle" in ids
-    assert "map-full-map-toggle" in ids
-    assert "map-fit-screen" in ids
-    assert "map-reset-view" in ids
+    assert "reset-view" in ids
+    assert "layer-toolbar" in ids
+    assert "active-layers" in ids
     assert "close-details" in ids
+    assert "map-sidebar-toggle" not in ids
+    assert "map-full-map-toggle" not in ids
+    assert "map-fit-screen" not in ids
+    assert "map-reset-view" not in ids

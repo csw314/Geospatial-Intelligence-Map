@@ -1,84 +1,106 @@
 # Global Location Map
 
-Production-style Dash application for visualizing provided military/location CSVs and metro-area/city CSVs in one interactive global map.
+Dash and Dash Leaflet application for viewing three additive global map layers:
 
-<img src="assets/Screenshot 2026-06-12 170319.png" alt="App Screenshot" width="500">
+- Global Metro Areas / Countervalue
+- Russia, China, Iran, and North Korea Military Sites
+- U.S. Military Sites
+
+The app is a neutral public-data visualization tool. It does not provide scoring, targeting, routing, prioritization, vulnerability assessment, military recommendations, or operational analysis.
 
 ## Tech Stack
 
 - Python 3.11+
 - Dash, Dash Leaflet, dash-bootstrap-components
 - pandas and Pydantic
-- pytest, Ruff, Black, mypy
+- pytest, Ruff, Black, mypy, Playwright
 
-## Folder Structure
+## Active Runtime Data
 
-```text
-app.py
-assets/styles.css
-data/raw/russia_data.csv
-data/raw/china_data.csv
-data/raw/iran_data.csv
-data/raw/dprk_data.csv
-data/raw/metro_areas.csv
-src/data/
-src/components/
-src/callbacks/
-src/utils/
-tests/
-docs/
-```
+Runtime loading is CSV-only. The app reads these files once at startup from `data/raw/`:
 
-## Data Sources
+- `russia_data.csv`
+- `china_data.csv`
+- `iran_data.csv`
+- `dprk_data.csv`
+- `global_cities_metros_100k.csv` - 7,027 rows, 7,027 valid coordinates, 180 countries
+- `us_military_sites.csv` - 1,626 rows, 1,626 valid coordinates, 40 host countries/jurisdictions
 
-The app reads:
+The legacy `metro_areas.csv` file was archived to `data/archive/metro_areas_legacy.csv` and is not loaded. Supporting workbooks are retained under `docs/source-data/`; the application does not read XLSX files.
 
-- `data/raw/russia_data.csv`
-- `data/raw/china_data.csv`
-- `data/raw/iran_data.csv`
-- `data/raw/dprk_data.csv`
-- `data/raw/metro_areas.csv`
+Expected global-city columns:
 
-Expected Russia columns: `Oblast`, `Name`, `Latitude`, `Longitude`, `Country`, `Type`.
+`Record_ID`, `Location_Name`, `Location_Type`, `Country`, `ISO2`, `ISO3`, `Region`, `Admin1_Name`, `Latitude`, `Longitude`, `Timezone`, `Population`, `Population_Source`, `Population_Bamwor`, `Population_SimpleMaps`, `Population_Starting_List`, `Population_Size_Class`, `Capital_Classification`, `Country_GDP_Per_Capita_USD`, `Country_GDP_PPP_USD`, `OpenStreetMap_URL`, `Wikipedia_Search_URL`, `Image_Research_URL`, `Primary_Source`, `Starting_List_Included`.
 
-Expected China columns: `Name`, `Alternate names`, `IATA`, `ICAO`, `Use`, `Subordinate`, `Coordinates`, `Latitude`, `Longitude`, `Runways`, `Tenants`, `Type`.
+Expected U.S. military-site columns:
 
-Expected Iran columns: `Country`, `Type`, `Name`, `Latitude`, `Longitude`, `Notes`.
+`Record_ID`, `Site`, `Component`, `Service_Branch`, `Component_Status`, `Host_Country`, `Admin_Area`, `Location_Class`, `Geographic_Scope`, `Nearest_City`, `Latitude`, `Longitude`, `Coordinate_Quality`, `Buildings_Owned`, `Buildings_Owned_SqFt`, `Buildings_Leased`, `Buildings_Leased_SqFt`, `Buildings_Other`, `Buildings_Other_SqFt`, `Acres_Owned`, `Total_Acres`, `Plant_Replacement_Value_M`, `Coordinate_Source_URL`, `Dataset_Source_URL`, `Notes`.
 
-Expected DPRK columns: `Category Source`, `Country`, `Name`, `Type`, `Latitude`, `Longitude`, `Notes`.
+Expected U.S. service totals:
 
-Expected metro columns: `Country`, `ISO2`, `Metro Area / City`, `Admin Region`, `Longitude`, `Latitude`, `Population`, `Population Proper`, `Capital Status`, `Source Country Name`, `Source URL`.
+- Army: 623
+- Air Force: 469
+- Navy: 452
+- Marine Corps: 80
+- Washington Headquarters Services: 2
 
-Russia, China, Iran, and DPRK records are loaded as `Counterforce` / `military`. Metro-area records are loaded as `Countervalue` / `metro_area` and use a distinct civilian marker style.
+## Normalization Model
+
+Every CSV row is normalized to a Pydantic `LocationRecord`. The key visibility field is `map_layer`:
+
+- `global_metros`: global city and metro records, `Countervalue`, `metro_area`
+- `adversary_military`: Russia, China, Iran, and DPRK records, `Counterforce`, `military`
+- `us_military`: U.S.-operated site records, `Military Site`, `military`
+
+For U.S. records, `country` is the host country so geographic filtering works. `operator_country` is `United States`. U.S. sites are not classified as Counterforce.
+
+Global city population values are not a single harmonized metro statistic. The details drawer shows the selected `Population`, `Population_Source`, and individual Bamwor, SimpleMaps, and starting-list values where available.
+
+U.S. records are site-level observations. Multiple sites can belong to one installation, and colocated records are retained. Coordinates are public representative points or approximate centroids, not boundaries, entrances, or tactical coordinates. `Coordinate_Quality` is displayed and searchable.
 
 ## Cleaning And Validation
 
-CSV loading tries `utf-8`, `utf-8-sig`, `cp1252`, then `latin1`. Text fields are trimmed and non-breaking spaces are normalized. Latitude must be between `-90` and `90`; longitude must be between `-180` and `180`. China rows with invalid direct latitude or longitude attempt recovery from the `Coordinates` field. Iran and DPRK rows with invalid or missing coordinates are excluded and reported. Metro population strings such as `32,054,159` are parsed into integers; rows with missing or invalid population values remain plotted and are reported in data quality.
+CSV loading tries `utf-8`, `utf-8-sig`, `cp1252`, then `latin1`. Text is normalized, latitude must be between `-90` and `90`, and longitude must be between `-180` and `180`. China rows can recover coordinates from a combined `Coordinates` field. Invalid coordinate rows are excluded and reported.
 
-The UI shows total rows, plotted rows, counterforce/countervalue counts, coordinate fixes, excluded invalid-coordinate rows, invalid/missing population rows, duplicate coordinate counts, missing optional fields, and parsing warnings.
+Comma-formatted population, square-footage, acreage, GDP, and replacement-value fields are parsed into numeric values when possible. Non-empty numeric values that fail parsing are reported as warnings. Original source columns are preserved in `record.raw` for auditability.
 
-## Filters
+The data-quality panel reports total rows, plotted rows, excluded rows, per-layer counts, per-source loaded/plotted counts, invalid coordinate exclusions, numeric parsing warnings, missing optional fields, duplicate-coordinate groups, source encoding, and load errors.
 
-The `Location Category` filter appears under `Country`:
+## Filters And Search
 
-- `All`: shows military/counterforce records and metro/countervalue records.
-- `Counterforce`: shows only `russia_data.csv`, `china_data.csv`, `iran_data.csv`, and `dprk_data.csv`.
-- `Countervalue`: shows only `metro_areas.csv`.
+The layer toolbar sits above the map and uses independent switches. Any combination is valid: metro-only, adversary-only, U.S.-only, metros plus adversary, all military without metros, all three layers, or no layers.
 
-The `Country` options are generated from loaded data and include Russia, China, Iran, DPRK, and countries present in `metro_areas.csv`. The `Type` options update from the active Country, Location Category, and Source File filters. Search respects the active filters and can find Iran/DPRK rows by name, country, type, notes, and DPRK category source; metro rows can be found by city, country, ISO2, admin region, population text, capital status, and source country name.
+The sidebar includes:
 
-## Layout Controls
+- Searchable Country dropdown with `All` and canonical `DPRK / North Korea` display.
+- Searchable multi-select Type dropdown. Options update from active layers, country, and source files.
+- Source File checklist as an advanced filter.
+- Text search.
 
-The dashboard is designed as a full-height geospatial workspace. The top bar and map overlay both include controls for layout and viewport management:
+Search covers normalized fields and source-specific raw metadata. Global-city search includes names, type, country, ISO codes, region, admin area, timezone, population fields, population source, size class, capital classification, and primary source. U.S. search includes site, component, service branch, status, host country, admin area, location class, geographic scope, nearest city, coordinate quality, and notes.
 
-- `Full Map`: toggles a focused map mode with a compact top bar and overlay panels.
-- `Fit to Screen`: preserves filters, search text, selected markers, center, and zoom while forcing the map container to recalculate its size.
-- `Collapse Sidebar`: hides the filter/search/data-quality sidebar to give the map more width; use `Show Sidebar` to restore it.
-- `Reset View`: returns the map to the initial Eurasian/global view.
+The visible-count text reports total visible records plus visible global metros, adversary military sites, and U.S. military sites. Reset View only resets the viewport; it does not clear filters, layers, search text, or selection.
 
-The details panel opens as a drawer when a location is selected. Closing the details panel clears the active selection, while `Clear Selection` does the same from inside the panel. On narrower screens, filters become a drawer and details become a bottom sheet.
+## Markers, Legend, And Details
 
-Known browser-resize note: Leaflet sometimes needs an explicit resize after parent layout changes. The app sends a small clientside resize signal after Full Map, Fit to Screen, sidebar collapse, and details drawer changes so tiles and clustered markers repaint correctly.
+The map uses one clustered GeoJSON layer populated from the union of active logical layers. GeoJSON properties are intentionally small: id, name, country, layer, type/service, marker style fields, and selected state.
+
+Marker families:
+
+- Global metros: green civilian marker with `MET`.
+- Adversary military: existing country-colored military markers for Russia, China, Iran, and DPRK.
+- U.S. military: distinct diamond marker with service codes such as `ARM`, `AF`, `NAV`, `MC`, and `WHS`.
+
+The legend explains map layers, adversary country colors, U.S. service styling, and type codes. Selecting a marker or search result opens a source-aware details drawer. URLs render as descriptive links that open in a new tab. Missing values are omitted.
+
+Top-bar controls:
+
+- `Collapse Sidebar` / `Show Sidebar`
+- `Fit to Screen`
+- `Full Map` / `Exit Full Map`
+- `Reset View`
+
+The duplicate floating map utility group has been removed. Standard Leaflet zoom, scale, fullscreen, and basemap controls remain.
 
 ## Local Setup
 
@@ -93,9 +115,7 @@ python app.py
 
 Open `http://127.0.0.1:8050/`.
 
-## Basemap
-
-The default basemap is CARTO Voyager raster tiles, which provide English/Latin-friendly labels for the primary map view and require no API key for local development. Override the tile URL, attribution, or layer name with `GLOBAL_LOCATION_TILE_URL`, `GLOBAL_LOCATION_TILE_ATTRIBUTION`, and `GLOBAL_LOCATION_TILE_LAYER_NAME`.
+The default basemap is CARTO Voyager. Override it with `GLOBAL_LOCATION_TILE_URL`, `GLOBAL_LOCATION_TILE_ATTRIBUTION`, and `GLOBAL_LOCATION_TILE_LAYER_NAME`.
 
 ## Quality Gates
 
@@ -106,24 +126,17 @@ python -m black --check .
 python -m mypy src
 ```
 
-Browser smoke tests use Playwright with Chromium. Install the browser once with:
+Browser smoke tests use Playwright with Chromium:
 
 ```powershell
 python -m playwright install chromium
+python -m pytest -m browser
 ```
 
-## Adding A Country Or Metro CSV
+## Adding A Source
 
-Add a new normalizer in `src/data/`, define expected and optional columns, add a `SourceSpec` in `src/data/load_locations.py`, and map source-specific fields into `LocationRecord`. For future military/counterforce datasets, follow `src/data/normalize_iran.py` or `src/data/normalize_dprk.py`, set `location_category` to `Counterforce`, set `dataset_type` to `military`, and preserve source notes in `notes` when available. For future metro/city datasets, follow `src/data/normalize_metro_areas.py`, set `location_category` to `Countervalue`, set `dataset_type` to `metro_area`, and preserve original source values in `raw`.
+Add a normalizer in `src/data/`, define expected and optional columns, add a `SourceSpec` in `src/data/load_locations.py`, and map source-specific fields into `LocationRecord`. Set `map_layer` explicitly. Preserve source provenance and raw values. Do not add runtime Excel dependencies.
 
-## Adding Marker Types
+## Limitations
 
-Types are derived dynamically from loaded data. To adjust styling, update `TYPE_PALETTE` or `type_code()` in `src/utils/marker_styles.py`.
-
-## Known Data Quality Issues
-
-Some CSVs use cp1252-compatible bytes and contain non-breaking spaces or Windows-style punctuation. Optional metadata fields are missing in some rows, especially Russia `Oblast`, China `Tenants`, and Iran `Notes`. DPRK currently contains rows with missing coordinates; those rows are excluded and counted in the data-quality report. Metro rows with invalid coordinates are excluded; metro rows with missing or invalid population values remain visible and are counted in the data-quality report.
-
-## Limitations And Non-Goals
-
-This is a neutral geospatial visualization tool. It does not provide scoring, targeting, routing, prioritization, vulnerability assessment, military recommendations, or operational analysis.
+The city layer is point-based and does not include metro polygons or harmonized urban-area boundaries. Country GDP fields are national indicators, not city metrics. U.S. site records are public BSR site records and are not a complete inventory of classified, temporary, contingency, or access locations.

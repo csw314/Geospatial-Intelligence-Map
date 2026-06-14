@@ -59,7 +59,9 @@ def normalize_china_row(row: Mapping[str, Any], row_number: int) -> NormalizedLo
     record = LocationRecord(
         id=f"{SOURCE_FILE}:{row_number}:{slugify(name)}",
         source_file=SOURCE_FILE,
+        map_layer="adversary_military",
         country="China",
+        operator_country="China",
         location_category="Counterforce",
         dataset_type="military",
         name=name,

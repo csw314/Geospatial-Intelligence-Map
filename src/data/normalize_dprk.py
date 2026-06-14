@@ -38,7 +38,9 @@ def normalize_dprk_row(row: Mapping[str, Any], row_number: int) -> NormalizedLoc
     record = LocationRecord(
         id=f"{SOURCE_FILE}:{row_number}:{slugify(name)}",
         source_file=SOURCE_FILE,
+        map_layer="adversary_military",
         country=cleaned.get("Country") or "DPRK",
+        operator_country="DPRK",
         location_category="Counterforce",
         dataset_type="military",
         name=name,

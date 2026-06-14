@@ -7,20 +7,21 @@ from typing import Any
 from dash import html
 
 from src.utils.display import display_country
+from src.utils.layers import MAP_LAYER_SHORT_LABELS
 
 
 def build_legend(legend: dict[str, Any]) -> Any:
     """Build a collapsible map legend."""
 
-    category_items = [
+    layer_items = [
         html.Div(
             className="legend-row",
             children=[
                 html.Span(className="legend-dot", style={"--legend-color": color}),
-                html.Span(category),
+                html.Span(MAP_LAYER_SHORT_LABELS.get(layer, layer)),
             ],
         )
-        for category, color in legend.get("categories", {}).items()
+        for layer, color in legend.get("layers", {}).items()
     ]
     country_items = [
         html.Div(
@@ -31,6 +32,23 @@ def build_legend(legend: dict[str, Any]) -> Any:
             ],
         )
         for country, color in legend.get("countries", {}).items()
+    ]
+    service_items = [
+        html.Div(
+            className="legend-row",
+            children=[
+                html.Span(
+                    service_item.get("code", "?"),
+                    className="legend-type-code",
+                    style={
+                        "--legend-color": service_item.get("color", "#1f2937"),
+                        "--legend-border": service_item.get("border", "#f59e0b"),
+                    },
+                ),
+                html.Span(service_name),
+            ],
+        )
+        for service_name, service_item in legend.get("us_services", {}).items()
     ]
     type_items = [
         html.Div(
@@ -51,11 +69,13 @@ def build_legend(legend: dict[str, Any]) -> Any:
         open=False,
         children=[
             html.Summary("Legend"),
-            html.Div("Location Category", className="legend-heading"),
-            html.Div(category_items, className="legend-group"),
-            html.Div("Country", className="legend-heading"),
+            html.Div("Map Layers", className="legend-heading"),
+            html.Div(layer_items, className="legend-group"),
+            html.Div("Adversary Country", className="legend-heading"),
             html.Div(country_items, className="legend-group"),
-            html.Div("Type", className="legend-heading"),
+            html.Div("U.S. Service", className="legend-heading"),
+            html.Div(service_items, className="legend-group"),
+            html.Div("Type Codes", className="legend-heading"),
             html.Div(type_items, className="legend-group legend-type-list"),
         ],
     )

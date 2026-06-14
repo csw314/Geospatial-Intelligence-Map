@@ -146,13 +146,11 @@ body {
     gap: 6px;
 }
 
-.type-checklist {
-    max-height: 230px;
-    overflow: auto;
-    padding: 8px 10px;
-    border: 1px solid var(--border);
+.filter-dropdown .Select-control,
+.filter-dropdown .Select-menu-outer {
+    border-color: var(--border);
     border-radius: 8px;
-    background: var(--panel-soft);
+    font-size: 13px;
 }
 
 .filter-input {
@@ -291,49 +289,49 @@ body {
     min-width: 0;
     min-height: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.layer-toolbar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+}
+
+.layer-toolbar-title {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #334155;
+}
+
+.layer-switches {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+}
+
+.layer-switch-label {
+    color: #1f2937;
+    font-size: 13px;
+    font-weight: 650;
 }
 
 .map {
     width: 100%;
-    height: 100%;
+    height: auto;
+    flex: 1 1 auto;
+    min-height: 0;
     background: #dbeafe;
-}
-
-.map-control-group {
-    position: absolute;
-    top: 76px;
-    left: 12px;
-    z-index: 520;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    max-width: min(520px, calc(100% - 24px));
-    padding: 6px;
-    border: 1px solid rgba(15, 23, 42, 0.14);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
-}
-
-.map-control-button {
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    background: #ffffff;
-    color: #172033;
-    font-size: 12px;
-    font-weight: 760;
-    line-height: 1;
-    min-height: 30px;
-    padding: 7px 9px;
-    cursor: pointer;
-}
-
-.map-control-button:hover,
-.map-control-button:focus {
-    border-color: var(--primary);
-    color: var(--primary-dark);
-    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.12);
-    outline: none;
 }
 
 .map-legend {
@@ -394,6 +392,7 @@ body {
     justify-content: center;
     background: var(--legend-color);
     color: #ffffff;
+    border: 2px solid var(--legend-border, transparent);
     font-size: 10px;
     font-weight: 800;
 }
@@ -446,6 +445,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.details-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-section-title {
+    margin-bottom: 4px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .detail-row {
@@ -526,6 +539,27 @@ body {
     font-weight: 850;
 }
 
+.us-marker {
+    width: 33px;
+    height: 33px;
+    border-radius: 6px;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--marker-color);
+    border: 3px solid var(--type-color);
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.35);
+    color: #ffffff;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 850;
+}
+
+.us-marker span {
+    transform: rotate(-45deg);
+}
+
 .metro-marker {
     width: 32px;
     height: 32px;
@@ -545,6 +579,13 @@ body {
 .location-marker.is-selected {
     width: 38px;
     height: 38px;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 4px #facc15, 0 7px 16px rgba(15, 23, 42, 0.45);
+}
+
+.us-marker.is-selected {
+    width: 39px;
+    height: 39px;
     border-color: #ffffff;
     box-shadow: 0 0 0 4px #facc15, 0 7px 16px rgba(15, 23, 42, 0.45);
 }
@@ -640,10 +681,6 @@ body {
     display: none;
 }
 
-.app-shell.is-full-map .map-control-group {
-    top: 12px;
-}
-
 @media (max-width: 1180px) {
     .workspace {
         grid-template-columns: 300px minmax(0, 1fr);
@@ -711,15 +748,17 @@ body {
         transform: translateY(calc(100% + 18px));
     }
 
-    .map-control-group {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        max-width: none;
-    }
-
     .top-bar-actions {
         gap: 5px;
+    }
+
+    .layer-toolbar {
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .layer-toolbar-title {
+        width: 100%;
     }
 
     .top-bar-actions .btn {
