@@ -14,7 +14,7 @@ The app keeps CSV parsing and validation outside Dash callbacks. Runtime data is
 `src/data/load_locations.py` registers one `SourceSpec` per active CSV:
 
 - Russia, China, Iran, and DPRK normalizers emit `map_layer="adversary_military"`, `location_category="Counterforce"`, and `dataset_type="military"`.
-- `normalize_global_cities.py` emits `map_layer="global_metros"`, `location_category="Countervalue"`, and `dataset_type="metro_area"`.
+- `normalize_global_cities.py` emits `map_layer="global_metros"`, `location_category="Non-Military"`, and `dataset_type="metro_area"`.
 - `normalize_us_military.py` emits `map_layer="us_military"`, `location_category="Military Site"`, `dataset_type="military"`, `country=Host_Country`, and `operator_country="United States"`.
 
 The legacy `normalize_metro_areas.py` module remains for direct regression tests and historical reference, but `metro_areas.csv` is archived and not registered as an active source.

@@ -138,13 +138,13 @@ class DataQualityReport:
         )
 
     @property
-    def countervalue_records(self) -> int:
-        """Total plotted Countervalue records."""
+    def non_military_records(self) -> int:
+        """Total plotted Non-Military records."""
 
         return sum(
             source.plotted_rows
             for source in self.sources
-            if source.location_category == "Countervalue"
+            if source.location_category == "Non-Military"
         )
 
     @property
@@ -181,7 +181,7 @@ class DataQualityReport:
             "plotted_rows": self.plotted_rows,
             "excluded_rows": self.excluded_rows,
             "counterforce_records": self.counterforce_records,
-            "countervalue_records": self.countervalue_records,
+            "non_military_records": self.non_military_records,
             "global_metro_records": self.global_metro_records,
             "adversary_military_records": self.adversary_military_records,
             "us_military_records": self.us_military_records,

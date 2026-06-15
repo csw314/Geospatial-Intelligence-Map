@@ -42,7 +42,7 @@ def test_normalize_global_city_row_maps_required_fields() -> None:
     assert record.id == "global_cities_metros_100k.csv:G000003:chongqing"
     assert record.source_file == "global_cities_metros_100k.csv"
     assert record.map_layer == "global_metros"
-    assert record.location_category == "Countervalue"
+    assert record.location_category == "Non-Military"
     assert record.dataset_type == "metro_area"
     assert record.name == "Chongqing"
     assert record.type == "City / administrative seat"

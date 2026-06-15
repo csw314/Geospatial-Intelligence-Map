@@ -157,7 +157,7 @@ SOURCE_SPECS = (
         alternative_file_names=("Global_Cities_Metros_100k_Locations_Core.csv",),
         dataset_type="metro_area",
         map_layer="global_metros",
-        location_category="Countervalue",
+        location_category="Non-Military",
         required_columns=_required_columns(
             GLOBAL_CITIES_EXPECTED_COLUMNS,
             GLOBAL_CITIES_OPTIONAL_COLUMNS,

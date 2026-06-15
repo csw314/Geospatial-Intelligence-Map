@@ -112,7 +112,7 @@ def normalize_global_city_row(row: Mapping[str, Any], row_number: int) -> Normal
         source_file=SOURCE_FILE,
         map_layer="global_metros",
         country=cleaned.get("Country") or "Unknown",
-        location_category="Countervalue",
+        location_category="Non-Military",
         dataset_type="metro_area",
         name=name,
         type=location_type,

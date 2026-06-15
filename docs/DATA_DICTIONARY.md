@@ -7,7 +7,7 @@
 - `map_layer`: `global_metros`, `adversary_military`, or `us_military`.
 - `country`: geographic country used by the Country filter. For U.S. sites this is `Host_Country`.
 - `operator_country`: military operator when applicable. U.S. sites use `United States`; metro records are null.
-- `location_category`: `Counterforce`, `Countervalue`, or `Military Site`.
+- `location_category`: `Counterforce`, `Non-Military`, or `Military Site`.
 - `dataset_type`: `military` or `metro_area`.
 - `name`: display name.
 - `type`: source type, location type, or U.S. service branch.
@@ -90,7 +90,7 @@ Buildings are parsed as optional integers. Square footage, acreage, and plant re
 
 ## Quality Metrics
 
-The aggregate report includes total rows, plotted rows, excluded rows, Counterforce and Countervalue totals, layer totals, source reports, duplicate-coordinate groups, and flattened warnings.
+The aggregate report includes total rows, plotted rows, excluded rows, Counterforce and Non-Military totals, layer totals, source reports, duplicate-coordinate groups, and flattened warnings.
 
 Each source report includes source encoding, loaded rows, plotted rows, coordinate cleanup counts, invalid-coordinate exclusions, invalid/missing population rows, numeric parse warnings, duplicate-coordinate record count, missing optional fields, parser warnings, and load errors.
 

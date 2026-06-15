@@ -75,7 +75,7 @@ def normalize_metro_area_row(row: Mapping[str, Any], row_number: int) -> Normali
         source_file=SOURCE_FILE,
         map_layer="global_metros",
         country=cleaned.get("Country") or "Unknown",
-        location_category="Countervalue",
+        location_category="Non-Military",
         dataset_type="metro_area",
         name=name,
         type="Metro Area",

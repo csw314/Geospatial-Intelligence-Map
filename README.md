@@ -2,7 +2,7 @@
 
 Dash and Dash Leaflet application for viewing three additive global map layers:
 
-- Global Metro Areas / Countervalue
+- Global Metro Areas / Non-Military
 - Russia, China, Iran, and North Korea Military Sites
 - U.S. Military Sites
 
@@ -48,7 +48,7 @@ Expected U.S. service totals:
 
 Every CSV row is normalized to a Pydantic `LocationRecord`. The key visibility field is `map_layer`:
 
-- `global_metros`: global city and metro records, `Countervalue`, `metro_area`
+- `global_metros`: global city and metro records, `Non-Military`, `metro_area`
 - `adversary_military`: Russia, China, Iran, and DPRK records, `Counterforce`, `military`
 - `us_military`: U.S.-operated site records, `Military Site`, `military`
 

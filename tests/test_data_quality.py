@@ -89,7 +89,7 @@ def test_data_quality_report_generation(tmp_path: Path) -> None:
     assert report.total_rows == 12
     assert report.plotted_rows == 9
     assert report.counterforce_records == 4
-    assert report.countervalue_records == 2
+    assert report.non_military_records == 2
     assert report.global_metro_records == 2
     assert report.adversary_military_records == 4
     assert report.us_military_records == 3

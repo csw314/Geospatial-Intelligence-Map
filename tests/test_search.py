@@ -30,7 +30,7 @@ def test_search_finds_metro_by_city_region_and_population(
     by_population = search_records(sample_records, "32,054,159")
 
     assert by_city[0].record.source_file == "global_cities_metros_100k.csv"
-    assert by_city[0].record.location_category == "Countervalue"
+    assert by_city[0].record.location_category == "Non-Military"
     assert by_region[0].record.name == "Chongqing"
     assert by_population[0].record.name == "Chongqing"
     assert search_records(sample_records, "Asia/Shanghai")[0].record.name == "Chongqing"

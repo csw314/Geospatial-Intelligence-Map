@@ -16,7 +16,7 @@ SourceFile = Literal[
     "metro_areas.csv",
 ]
 MapLayer = Literal["global_metros", "adversary_military", "us_military"]
-LocationCategory = Literal["Counterforce", "Countervalue", "Military Site"]
+LocationCategory = Literal["Counterforce", "Non-Military", "Military Site"]
 DatasetType = Literal["military", "metro_area"]
 
 

@@ -11,7 +11,7 @@ ADVERSARY_MILITARY: MapLayer = "adversary_military"
 US_MILITARY: MapLayer = "us_military"
 ALL_MAP_LAYERS: tuple[MapLayer, ...] = (GLOBAL_METROS, ADVERSARY_MILITARY, US_MILITARY)
 MAP_LAYER_LABELS: dict[MapLayer, str] = {
-    GLOBAL_METROS: "Global Metro Areas / Countervalue",
+    GLOBAL_METROS: "Global Metro Areas / Non-Military",
     ADVERSARY_MILITARY: "Russia, China, Iran, and North Korea Military Sites",
     US_MILITARY: "U.S. Military Sites",
 }
